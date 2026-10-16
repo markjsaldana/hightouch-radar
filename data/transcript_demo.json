@@ -1,0 +1,173 @@
+{
+  "file": {
+    "name": "larkspur-evaluation-call.txt",
+    "path": "samples/transcripts/larkspur-evaluation-call.txt",
+    "source": "Gong export",
+    "duration": "38 min",
+    "speakers": 4
+  },
+  "prospect": {
+    "name": "Larkspur Home",
+    "industry": "Home goods retail",
+    "size": "Mid-market",
+    "region": "EMEA",
+    "personas": [
+      "Marketing",
+      "Data"
+    ],
+    "competitorId": "segment",
+    "stage": "Evaluation",
+    "nextStep": "Demo Thursday"
+  },
+  "parsing": [
+    "Read 38 minutes, 4 speakers (2 from Larkspur)",
+    "Found Segment in the deal, mentioned 6 times",
+    "Matched buyers: Head of CRM (Marketing), Data Engineering Lead (Data)",
+    "Stage: Evaluation. Next step: demo Thursday",
+    "Grouped 10 buyer statements into 3 concerns"
+  ],
+  "concerns": [
+    {
+      "concern": "Marketing waits on the data team for every audience",
+      "quote": "My team can't wait two weeks for every audience, not in peak season.",
+      "speaker": "Priya Nair, Head of CRM",
+      "at": "00:01:30",
+      "mentions": 4,
+      "objection": 2
+    },
+    {
+      "concern": "Why add another tool next to Segment",
+      "quote": "My worry is we already have Segment, so why are we adding another tool?",
+      "speaker": "Priya Nair, Head of CRM",
+      "at": "00:05:20",
+      "mentions": 3,
+      "objection": 1
+    },
+    {
+      "concern": "Customer data must stay in their EU warehouse",
+      "quote": "Legal will ask whether customer data leaves our EU Snowflake region.",
+      "speaker": "Tom Ellery, Data Engineering Lead",
+      "at": "00:18:22",
+      "mentions": 3
+    }
+  ],
+  "resources": [
+    {
+      "kind": "caseStudy",
+      "ref": "fernhill-self-serve",
+      "addresses": [
+        1,
+        2
+      ],
+      "why": "UK retailer, same buyer, replaced Segment's audiences. Audience launch went from 2 weeks to 1 day."
+    },
+    {
+      "kind": "reference",
+      "ref": "vasa",
+      "addresses": [
+        2,
+        3
+      ],
+      "why": "EMEA retailer that kept Segment. Their Head of Data has been through a GDPR review and can talk to Tom directly."
+    },
+    {
+      "kind": "caseStudy",
+      "ref": "vasa-alongside",
+      "addresses": [
+        3
+      ],
+      "why": "Zero customer data copies outside the EU warehouse. Send to legal before they ask."
+    },
+    {
+      "kind": "objection",
+      "ref": "2",
+      "addresses": [
+        1
+      ],
+      "why": "Say this before Thursday, then prove it by building an audience live on their loyalty model."
+    }
+  ],
+  "email": {
+    "to": "Priya Nair, Tom Ellery",
+    "subject": "Before Thursday: two retailers that had your questions",
+    "paragraphs": [
+      {
+        "text": "Hi Priya and Tom,"
+      },
+      {
+        "text": "Thanks for Monday. You raised three things, and I'd like to answer them before the demo."
+      },
+      {
+        "text": "Waiting on the data team for every audience. Fernhill Grocers in Manchester had the same two-week queue. After their data team modeled the loyalty data, the CRM team started launching audiences in a day.",
+        "resource": 1,
+        "linkText": "Fernhill's story"
+      },
+      {
+        "text": "Adding a tool next to Segment. You'd keep Segment for tracking. Vasa Outdoor runs both: Segment collects events, and Hightouch builds audiences on what's already in Snowflake.",
+        "resource": 3,
+        "linkText": "How Vasa runs both"
+      },
+      {
+        "text": "Keeping data in your EU region. No customer data left Vasa's EU warehouse, and their Head of Data has been through the GDPR review with us. Tom, I can set up a 30-minute call with them this week if that helps."
+      },
+      {
+        "text": "On Thursday Sam will build an audience live on your loyalty model, with no ticket to the data team."
+      }
+    ],
+    "signoff": "Dana"
+  },
+  "form": {
+    "fields": [
+      {
+        "label": "Company",
+        "value": "Larkspur Home"
+      },
+      {
+        "label": "Industry · size · region",
+        "value": "Retail · Mid-market · EMEA"
+      },
+      {
+        "label": "Buyer",
+        "value": "Marketing"
+      },
+      {
+        "label": "Competitor",
+        "value": "Segment"
+      },
+      {
+        "label": "Stage",
+        "value": "Evaluation"
+      },
+      {
+        "label": "Main concern",
+        "value": "Adding another tool next to Segment"
+      }
+    ],
+    "concerns": [
+      2
+    ],
+    "resources": [
+      1,
+      2
+    ],
+    "missed": "The transcript of this call found 2 more concerns the form didn't: the data-team bottleneck and EU data residency.",
+    "email": {
+      "to": "Priya Nair",
+      "subject": "Keeping Segment and adding Hightouch",
+      "paragraphs": [
+        {
+          "text": "Hi Priya,"
+        },
+        {
+          "text": "Thanks for Monday. On your question about adding a tool next to Segment: you'd keep it. Vasa Outdoor uses Segment to collect events and Hightouch to build audiences on their Snowflake data.",
+          "resource": 3,
+          "linkText": "How Vasa runs both"
+        },
+        {
+          "text": "Their Head of Data is happy to talk about how the two fit together. Want me to set up a call before Thursday's demo?"
+        }
+      ],
+      "signoff": "Dana"
+    }
+  }
+}

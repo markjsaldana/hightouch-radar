@@ -14,7 +14,7 @@ export function SiteHeader() {
           </span>
           <span className="truncate font-semibold tracking-tight">{siteName}</span>
           <span className="hidden rounded-full border border-line px-2 py-0.5 text-xs text-muted sm:inline">
-            Unofficial work sample
+            Sales enablement assistant proposal
           </span>
         </Link>
         <ThemeToggle />

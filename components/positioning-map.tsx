@@ -72,7 +72,7 @@ export function PositioningMap() {
           </div>
         </div>
         <figcaption className="mt-2 text-xs text-muted">
-          My point of view, not measured data. Hover or tap a dot for the reasoning.
+          A point of view, not measured data. Hover or tap a dot for the reasoning.
         </figcaption>
       </figure>
 

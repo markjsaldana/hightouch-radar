@@ -50,7 +50,7 @@
   "objections": [
     {
       "objection": "\"Segment has a no-code audience builder now.\"",
-      "response": "\"It's a good addition. The question is what it's building on. Ask how those audiences stay in sync when the data team changes the warehouse model, and who fixes it when they don't.\""
+      "response": "\"It's a good addition. What is it building on? Ask how those audiences stay in sync when the data team changes the warehouse model, and who fixes it when they don't.\""
     },
     {
       "objection": "\"We already have Segment. Why add another tool?\"",

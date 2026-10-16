@@ -133,3 +133,95 @@ export type RoutingLog = {
   entries: RoutingEntry[];
   kpis: Kpi[];
 };
+
+export type Region = "North America" | "EMEA" | "APAC" | "LATAM";
+export type CompanySize = "Commercial" | "Mid-market" | "Enterprise";
+export type UseCase =
+  | "Audience activation"
+  | "Lifecycle marketing"
+  | "Paid media"
+  | "AI Decisioning"
+  | "Personalization"
+  | "Identity resolution"
+  | "Data governance"
+  | "Sales & CRM sync";
+export type ReferenceStatus = "Available" | "Limited" | "Resting";
+export type ReferenceFormat = "Reference call" | "Peer email" | "Site visit" | "Webinar";
+
+export type Customer = {
+  id: string;
+  name: string;
+  industry: string;
+  size: CompanySize;
+  region: Region;
+  hq: string;
+  // [longitude, latitude] of the HQ city, for the references map.
+  coords: [number, number];
+  warehouse: string;
+  useCases: UseCase[];
+  competitor: { id: string; outcome: "Replaced" | "Runs alongside" | "Chose over" } | null;
+  // null: a customer with a case study who hasn't agreed to take reference calls.
+  reference: {
+    status: ReferenceStatus;
+    contactRole: string;
+    personas: Persona[];
+    formats: ReferenceFormat[];
+    lastUsed: string;
+    goodFor: string;
+  } | null;
+};
+
+export type CaseStudy = {
+  id: string;
+  customerId: string;
+  title: string;
+  visibility: "Public" | "Internal only";
+  useCases: UseCase[];
+  challenge: string;
+  solution: string;
+  results: { value: string; label: string }[];
+  quote: { text: string; role: string };
+};
+
+// What the deal assistant demo pulls out of one sample call transcript.
+// Concern and resource numbers in `addresses` and `form` are 1-based ranks;
+// `objection` and an objection resource's `ref` index battlecard.objections.
+export type DealResource = {
+  kind: "caseStudy" | "reference" | "objection";
+  ref: string;
+  addresses: number[];
+  why: string;
+};
+
+// A follow-up email draft. `resource` is the 1-based rank of a resource to link.
+export type DemoEmail = {
+  to: string;
+  subject: string;
+  paragraphs: { text: string; resource?: number; linkText?: string }[];
+  signoff: string;
+};
+
+export type TranscriptDemo = {
+  file: { name: string; path: string; source: string; duration: string; speakers: number };
+  prospect: {
+    name: string;
+    industry: string;
+    size: CompanySize;
+    region: Region;
+    personas: Persona[];
+    competitorId: string;
+    stage: string;
+    nextStep: string;
+  };
+  parsing: string[];
+  concerns: { concern: string; quote: string; speaker: string; at: string; mentions: number; objection?: number }[];
+  resources: DealResource[];
+  email: DemoEmail;
+  form: {
+    fields: { label: string; value: string }[];
+    concerns: number[];
+    resources: number[];
+    missed: string;
+    email: DemoEmail;
+  };
+};

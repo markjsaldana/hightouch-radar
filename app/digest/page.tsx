@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { MessageSquareQuote, TrendingUp } from "lucide-react";
 import { Chip, ConfidenceBadge, ImpactBadge } from "@/components/badges";
+import { DigestCharts } from "@/components/digest-charts";
 import { PageHeader } from "@/components/page-header";
 import { SignalsTable } from "@/components/signals-table";
 import { competitorName, digest, signalById, signals } from "@/lib/data";
@@ -25,7 +26,7 @@ export default function Page() {
       <div className="rounded-xl border border-line bg-surface">
         <div className="flex flex-wrap items-center justify-between gap-3 border-b border-line px-5 py-4">
           <div>
-            <p className="text-xs text-muted">Competitive Radar · Weekly digest</p>
+            <p className="text-xs text-muted">Deal Radar · Weekly digest</p>
             <p className="mt-0.5 text-lg font-semibold">
               Week of {formatLongDate(digest.weekOf)} · {thisWeek.length} signals ·{" "}
               <span className="text-bad">{needAction} need action</span>
@@ -68,6 +69,13 @@ export default function Page() {
           </ol>
         </section>
       </div>
+
+      <section className="mt-12">
+        <h2 className="text-xl font-semibold tracking-tight">At a glance</h2>
+        <div className="mt-4">
+          <DigestCharts />
+        </div>
+      </section>
 
       <section className="mt-12">
         <h2 className="text-xl font-semibold tracking-tight">All signals</h2>

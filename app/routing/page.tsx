@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ArrowRight, Bell, Globe, HeartHandshake, Lightbulb, Megaphone, MessageCircleQuestion } from "lucide-react";
 import { PageHeader } from "@/components/page-header";
+import { RoutingFlow } from "@/components/routing-flow";
 import { competitorName, routingLog, signalById } from "@/lib/data";
 import { formatShortDate } from "@/lib/format";
 import type { RoutingEntry } from "@/lib/types";
@@ -25,7 +26,7 @@ export default function Page() {
   return (
     <>
       <PageHeader
-        eyebrow="07 · Routing log"
+        eyebrow="08 · Routing log"
         title="Where intel went and what it changed"
         lede="The program is judged by what changes after a signal goes out. This log tracks those changes in deals, the roadmap, and the website."
         sample
@@ -43,7 +44,12 @@ export default function Page() {
         })}
       </div>
 
-      <ol className="relative mt-8 space-y-6 border-l border-line pl-6 sm:ml-2">
+      <div className="mt-6">
+        <RoutingFlow />
+      </div>
+
+      <h2 className="mt-12 text-xl font-semibold tracking-tight">The log</h2>
+      <ol className="relative mt-6 space-y-6 border-l border-line pl-6 sm:ml-2">
         {entries.map((e) => {
           const { icon: Icon, tone } = kinds[e.kind];
           const signal = signalById(e.signal);
@@ -76,7 +82,7 @@ export default function Page() {
       </ol>
 
       <section className="mt-14">
-        <h2 className="text-xl font-semibold tracking-tight">KPIs I&apos;d track</h2>
+        <h2 className="text-xl font-semibold tracking-tight">KPIs to track</h2>
         <p className="mt-1 max-w-2xl text-sm text-pretty text-muted">
           Targets are set after a baseline in days 61–90. Until then, any number would be a guess, so the scorecard
           shows what each KPI measures and the goal.
