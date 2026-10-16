@@ -45,7 +45,7 @@ const stages: Stage[] = [
     who: "AE",
     asks: "Here's the call transcript. What do they care about?",
     gets: "The buyer's top concerns in their own words, the case studies and talk tracks that answer them, and a follow-up email.",
-    href: "/plan#assistant",
+    href: "/assistant",
     source: "Deal assistant",
   },
   {
@@ -167,16 +167,16 @@ export default function Page() {
 
       <div className="mt-10 flex flex-wrap gap-3">
         <Link
-          href="/how-it-works"
+          href="/assistant"
           className="inline-flex items-center gap-2 rounded-lg bg-accent px-4 py-2.5 text-sm font-medium text-accent-fg transition-opacity hover:opacity-90"
         >
-          See how it works <ArrowRight className="size-4" aria-hidden />
+          Try the deal assistant <ArrowRight className="size-4" aria-hidden />
         </Link>
         <Link
-          href="/digest"
+          href="/how-it-works"
           className="inline-flex items-center gap-2 rounded-lg border border-line bg-surface px-4 py-2.5 text-sm font-medium transition-colors hover:bg-surface-2"
         >
-          Jump to this week&apos;s digest
+          See how it works
         </Link>
       </div>
     </>

@@ -48,14 +48,15 @@ export function CoverageHeatmap() {
       </div>
 
       {/* relative: the cells' sr-only labels are absolutely positioned and must stay inside the scroll box. */}
-      <div className="relative mt-4 overflow-x-auto">
+      <div className="relative mt-4 overflow-x-auto pr-16">
         <table className="w-full min-w-[42rem] border-separate border-spacing-0.5 text-xs">
           <thead>
             <tr>
               <th className="w-36" />
               {columns.map((col) => (
-                <th key={col} scope="col" className="h-24 align-bottom font-normal text-muted">
-                  <span className="mx-auto block w-4 [writing-mode:vertical-rl] rotate-180 text-left whitespace-nowrap">
+                <th key={col} scope="col" className="relative h-24 font-normal text-muted">
+                  {/* Tilted 45° so the labels read left to right, starting over their column. */}
+                  <span className="absolute bottom-2 left-1/2 origin-bottom-left -rotate-45 text-left text-[12px] whitespace-nowrap">
                     {col}
                   </span>
                 </th>
