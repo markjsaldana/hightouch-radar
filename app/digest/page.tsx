@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { MessageSquareQuote, TrendingUp } from "lucide-react";
 import { Chip, ConfidenceBadge, ImpactBadge } from "@/components/badges";
+import { DigestCharts } from "@/components/digest-charts";
 import { PageHeader } from "@/components/page-header";
 import { SignalsTable } from "@/components/signals-table";
 import { competitorName, digest, signalById, signals } from "@/lib/data";
@@ -68,6 +69,13 @@ export default function Page() {
           </ol>
         </section>
       </div>
+
+      <section className="mt-12">
+        <h2 className="text-xl font-semibold tracking-tight">At a glance</h2>
+        <div className="mt-4">
+          <DigestCharts />
+        </div>
+      </section>
 
       <section className="mt-12">
         <h2 className="text-xl font-semibold tracking-tight">All signals</h2>

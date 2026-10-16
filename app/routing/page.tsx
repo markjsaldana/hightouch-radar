@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ArrowRight, Bell, Globe, HeartHandshake, Lightbulb, Megaphone, MessageCircleQuestion } from "lucide-react";
 import { PageHeader } from "@/components/page-header";
+import { RoutingFlow } from "@/components/routing-flow";
 import { competitorName, routingLog, signalById } from "@/lib/data";
 import { formatShortDate } from "@/lib/format";
 import type { RoutingEntry } from "@/lib/types";
@@ -43,7 +44,12 @@ export default function Page() {
         })}
       </div>
 
-      <ol className="relative mt-8 space-y-6 border-l border-line pl-6 sm:ml-2">
+      <div className="mt-6">
+        <RoutingFlow />
+      </div>
+
+      <h2 className="mt-12 text-xl font-semibold tracking-tight">The log</h2>
+      <ol className="relative mt-6 space-y-6 border-l border-line pl-6 sm:ml-2">
         {entries.map((e) => {
           const { icon: Icon, tone } = kinds[e.kind];
           const signal = signalById(e.signal);

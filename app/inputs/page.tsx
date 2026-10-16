@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { Chip } from "@/components/badges";
+import { CoverageHeatmap } from "@/components/coverage-heatmap";
 import { PageHeader } from "@/components/page-header";
 import { SourceExplorer } from "@/components/source-explorer";
 import { competitors, rules, signalTypes, sources } from "@/lib/data";
@@ -118,7 +119,10 @@ export default function Page() {
         index={1}
         lede={`${sources.length} sources, public and internal. Pick one to see what the Radar checks. Three have saved before-and-after versions, so you can see exactly what changed and the signal it produced.`}
       >
-        <SourceExplorer diffs={diffs} initialSource="salesforce-pricing" />
+        <CoverageHeatmap />
+        <div className="mt-6">
+          <SourceExplorer diffs={diffs} initialSource="salesforce-pricing" />
+        </div>
       </Section>
 
       <Section

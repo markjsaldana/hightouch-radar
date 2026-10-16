@@ -155,6 +155,8 @@ export type Customer = {
   size: CompanySize;
   region: Region;
   hq: string;
+  // [longitude, latitude] of the HQ city, for the references map.
+  coords: [number, number];
   warehouse: string;
   useCases: UseCase[];
   competitor: { id: string; outcome: "Replaced" | "Runs alongside" | "Chose over" } | null;

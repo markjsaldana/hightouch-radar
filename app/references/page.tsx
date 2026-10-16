@@ -3,6 +3,7 @@ import { Lock, Quote } from "lucide-react";
 import { Chip } from "@/components/badges";
 import { PageHeader } from "@/components/page-header";
 import { ReferenceFinder } from "@/components/reference-finder";
+import { ResultValue } from "@/components/result-value";
 import { caseStudies, competitorName, customerById } from "@/lib/data";
 
 export const metadata: Metadata = { title: "References" };
@@ -107,7 +108,9 @@ export default function Page() {
                   {cs.results.map((r) => (
                     <div key={r.label} className="flex min-w-32 flex-1 flex-col-reverse bg-surface-2 px-3 py-2.5">
                       <dt className="mt-0.5 text-xs text-muted">{r.label}</dt>
-                      <dd className="font-semibold tabular-nums">{r.value}</dd>
+                      <dd>
+                        <ResultValue value={r.value} />
+                      </dd>
                     </div>
                   ))}
                 </dl>

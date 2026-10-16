@@ -5,7 +5,6 @@ import {
   Bot,
   Hand,
   Camera,
-  ChevronRight,
   Diff,
   Globe,
   Route,
@@ -13,7 +12,9 @@ import {
   UserCheck,
   Inbox,
 } from "lucide-react";
+import { ImpactGauge } from "@/components/impact-gauge";
 import { PageHeader } from "@/components/page-header";
+import { PipelineTrack } from "@/components/pipeline-track";
 import { competitorName, signalById, signalTypeLabel, sources } from "@/lib/data";
 
 export const metadata: Metadata = { title: "How it works" };
@@ -99,24 +100,8 @@ export default function Page() {
         sample
       />
 
-      {/* Flow strip: the whole pipeline at a glance. */}
-      <ol
-        aria-label="Steps"
-        className="flex flex-wrap items-center gap-x-1 gap-y-2 rounded-xl border border-line bg-surface p-3"
-      >
-        {steps.map(({ icon: Icon, title }, i) => (
-          <li key={title} className="flex items-center gap-1">
-            <a
-              href={`#step-${i + 1}`}
-              className="flex items-center gap-2 rounded-lg px-2.5 py-1.5 text-sm font-medium transition-colors hover:bg-surface-2"
-            >
-              <Icon className="size-4 text-accent" aria-hidden />
-              {title}
-            </a>
-            {i < steps.length - 1 ? <ChevronRight className="size-4 text-muted" aria-hidden /> : null}
-          </li>
-        ))}
-      </ol>
+      {/* Flow strip: the whole pipeline at a glance, following the reader down the page. */}
+      <PipelineTrack titles={steps.map((s) => s.title)} signalId={signal.id} />
 
       <div className="mt-6 flex flex-wrap items-baseline gap-x-2 text-sm text-muted">
         <span className="font-medium text-fg">Follow one change through:</span>
@@ -147,6 +132,11 @@ export default function Page() {
             <div className="rounded-lg border border-dashed border-line bg-surface-2 px-4 py-3 text-sm">
               <p className="font-mono text-[11px] tracking-wide text-muted uppercase">Signal #{signal.id}</p>
               <p className="mt-1 text-pretty">{trace}</p>
+              {i === 3 ? (
+                <div className="mt-3 border-t border-line pt-3">
+                  <ImpactGauge impact={signal.impact} label={`Deal impact · ${signal.urgency}`} />
+                </div>
+              ) : null}
             </div>
           </li>
         ))}

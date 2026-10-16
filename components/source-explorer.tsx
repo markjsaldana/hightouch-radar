@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import { ArrowDown, FileDiff, Lock } from "lucide-react";
 import { SignalCard } from "@/components/signal-card";
+import { useInView } from "@/lib/use-in-view";
 import { competitorName, competitors, signals, sources } from "@/lib/data";
 import type { SnapshotDiff } from "@/lib/diff";
 
@@ -40,6 +41,7 @@ export function SourceExplorer({
   const [filter, setFilter] = useState<Filter>("all");
   const [selectedId, setSelectedId] = useState(initialSource);
   const panelRef = useRef<HTMLDivElement>(null);
+  const [diffRef, diffSeen] = useInView<HTMLPreElement>(0.4);
 
   const visible = sources.filter((s) => matches(filter, s.competitorId));
   const selected = sources.find((s) => s.id === selectedId)!;
@@ -176,8 +178,16 @@ export function SourceExplorer({
                   {diff.meaningful === 1 ? "" : "s"} · {diff.cosmetic} cosmetic ignored
                 </p>
               </div>
-              <pre className="overflow-x-auto py-2 font-sans text-[13px] leading-6">
+              {/* Keyed by source so each selection replays: removed lines flag red, then added lines type in. */}
+              <pre key={selected.id} ref={diffRef} className="overflow-x-auto py-2 font-sans text-[13px] leading-6">
                 {diff.lines.map((line, i) => {
+                  const changed = diff.lines.slice(0, i).filter((l) => l.kind !== "same").length;
+                  const motion =
+                    line.kind === "same" || !diffSeen
+                      ? ""
+                      : line.kind === "del"
+                        ? "animate-flag"
+                        : "animate-type";
                   const tone =
                     line.kind === "same"
                       ? "text-muted"
@@ -188,7 +198,11 @@ export function SourceExplorer({
                           : "bg-bad-soft text-bad";
                   const mark = line.kind === "add" ? "+" : line.kind === "del" ? "−" : " ";
                   return (
-                    <div key={i} className={`flex px-5 ${tone}`}>
+                    <div
+                      key={i}
+                      className={`flex px-5 ${tone} ${motion}`}
+                      style={motion ? { animationDelay: `${300 + changed * 700}ms` } : undefined}
+                    >
                       <span className="w-5 shrink-0 select-none" aria-hidden>
                         {mark}
                       </span>

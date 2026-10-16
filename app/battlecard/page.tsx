@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { Bomb, CircleAlert, CircleCheck, MessagesSquare, Radar, Zap } from "lucide-react";
+import { BattlecardScorecard } from "@/components/battlecard-scorecard";
 import { PageHeader } from "@/components/page-header";
 import { PersonaTabs } from "@/components/persona-tabs";
 import { battlecard, competitorName, signalById } from "@/lib/data";
@@ -75,6 +76,10 @@ export default function Page() {
         </p>
         <p className="mt-2 text-lg leading-relaxed text-pretty">{battlecard.quickDismiss}</p>
       </section>
+
+      <div className="mt-6">
+        <BattlecardScorecard competitorId={battlecard.competitorId} />
+      </div>
 
       <div className="mt-6 grid gap-4 lg:grid-cols-2">
         <Block title="Where we win" section="Where we win" icon={<CircleCheck className="size-5 text-good" aria-hidden />}>

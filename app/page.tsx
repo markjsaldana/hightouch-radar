@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, Binoculars, Gauge, MessageSquareText } from "lucide-react";
 import { PageHeader } from "@/components/page-header";
+import { SalesCycleTrack, type Stage } from "@/components/sales-cycle-track";
 import { competitors, digest, signals, sources } from "@/lib/data";
 
 const pillars = [
@@ -22,7 +23,7 @@ const pillars = [
 ];
 
 // What an SDR or AE gets from the assistant at each stage, and where it comes from.
-const stages = [
+const stages: Stage[] = [
   {
     name: "Prospecting",
     who: "SDR",
@@ -130,28 +131,11 @@ export default function Page() {
       <section className="mt-12">
         <h2 className="text-xl font-semibold tracking-tight">Through the whole sales cycle</h2>
         <p className="mt-1 max-w-2xl text-sm text-pretty text-muted">
-          What a rep asks at each stage, what comes back, and the page in this site it comes from.
+          What a rep asks at each stage, and what comes back.
         </p>
-        <ol className="mt-5 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
-          {stages.map((stage, i) => (
-            <li key={stage.name} className="flex flex-col rounded-xl border border-line bg-surface p-5">
-              <p className="flex items-center justify-between gap-2">
-                <span className="font-mono text-xs text-accent">
-                  {String(i + 1).padStart(2, "0")} · {stage.name}
-                </span>
-                <span className="rounded-md bg-surface-2 px-1.5 py-0.5 text-xs font-medium text-muted">{stage.who}</span>
-              </p>
-              <p className="mt-3 font-medium text-pretty">&ldquo;{stage.asks}&rdquo;</p>
-              <p className="mt-1.5 text-sm text-pretty text-muted">{stage.gets}</p>
-              <Link
-                href={stage.href}
-                className="mt-auto inline-flex items-center gap-1 pt-4 text-sm font-medium text-accent hover:underline"
-              >
-                {stage.source} <ArrowRight className="size-3.5" aria-hidden />
-              </Link>
-            </li>
-          ))}
-        </ol>
+        <div className="mt-5">
+          <SalesCycleTrack stages={stages} />
+        </div>
       </section>
 
       <section className="mt-12">

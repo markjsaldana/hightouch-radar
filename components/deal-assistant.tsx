@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { ArrowUpRight, Bot, Check, CircleCheck, ClipboardList, Copy, FileText, Mail, RotateCcw, Sparkles, Upload } from "lucide-react";
+import { ConnectionMap, TranscriptScroller } from "@/components/deal-graphics";
 import { battlecard, caseStudyById, competitorName, customerById, transcriptDemo as demo } from "@/lib/data";
 import type { DealResource, DemoEmail } from "@/lib/types";
 
@@ -50,6 +51,7 @@ function resourceInfo(r: DealResource) {
     const customer = customerById(cs.customerId)!;
     return {
       label: "Case study",
+      short: `Case study · ${customer.name}`,
       title: cs.title,
       meta: `${customer.name}${cs.visibility === "Internal only" ? " · internal only" : ""}`,
       href: `/references#cs-${cs.id}`,
@@ -59,6 +61,7 @@ function resourceInfo(r: DealResource) {
     const c = customerById(r.ref)!;
     return {
       label: "Reference call",
+      short: `Reference · ${c.name}`,
       title: `${c.reference!.contactRole}, ${c.name}`,
       meta: `${c.region} · ${c.reference!.status.toLowerCase()}`,
       href: `/references#ref-${c.id}`,
@@ -67,6 +70,7 @@ function resourceInfo(r: DealResource) {
   const i = Number(r.ref);
   return {
     label: "Talk track",
+    short: "Talk track · battlecard",
     title: battlecard.objections[i].objection.replace(/^"|"$/g, ""),
     meta: `${competitor} battlecard`,
     href: `/battlecard#objection-${i}`,
@@ -256,7 +260,7 @@ function emailStep(email: DemoEmail): Step {
   };
 }
 
-function buildSteps(path: Path, chosen: Path | null, choose: (p: Path) => void): Step[] {
+function buildSteps(path: Path, chosen: Path | null, choose: (p: Path) => void, transcript: string[]): Step[] {
   const intro: Step = {
     from: "bot",
     rows: [
@@ -288,6 +292,7 @@ function buildSteps(path: Path, chosen: Path | null, choose: (p: Path) => void):
           <p key="h" className="font-medium">
             Reading the transcript…
           </p>,
+          <TranscriptScroller key="scroll" lines={transcript} />,
           ...demo.parsing.map((line) => (
             <p key={line} className="flex gap-2 text-muted">
               <CircleCheck className="mt-0.5 size-4 shrink-0 text-good" aria-hidden />
@@ -305,6 +310,12 @@ function buildSteps(path: Path, chosen: Path | null, choose: (p: Path) => void):
           ...demo.concerns.map((_, i) => <ConcernRow key={`c${i}`} rank={i + 1} />),
           <SectionLabel key="rl">Resources most likely to close this deal</SectionLabel>,
           ...demo.resources.map((_, i) => <ResourceRow key={`r${i}`} rank={i + 1} concerns={demo.concerns.map((_, n) => n + 1)} />),
+          <SectionLabel key="ml">Which resource answers which concern</SectionLabel>,
+          <ConnectionMap
+            key="map"
+            concerns={demo.concerns.map((c, i) => ({ rank: i + 1, label: c.concern }))}
+            resources={demo.resources.map((r, i) => ({ rank: i + 1, label: resourceInfo(r).short, addresses: r.addresses }))}
+          />,
           <p key="src" className="pt-1 font-mono text-xs text-muted">
             Sources: {demo.file.name} · References · {competitor} battlecard (objections)
           </p>,
@@ -355,7 +366,7 @@ function buildSteps(path: Path, chosen: Path | null, choose: (p: Path) => void):
   ];
 }
 
-export function DealAssistant() {
+export function DealAssistant({ transcript }: { transcript: string[] }) {
   const [path, setPath] = useState<Path>("transcript");
   const [run, setRun] = useState(0);
   // Beats revealed so far, counted across every row of every step.
@@ -372,7 +383,7 @@ export function DealAssistant() {
   }
 
   // The intro bubble has two rows (question, choice card); the rep answers after them.
-  const steps = buildSteps(path, beats > 2 ? path : null, choose);
+  const steps = buildSteps(path, beats > 2 ? path : null, choose, transcript);
   const total = steps.reduce((n, s) => n + s.rows.length, 0);
 
   // Start when the demo scrolls into view.

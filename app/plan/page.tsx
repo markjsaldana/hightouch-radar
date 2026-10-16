@@ -1,6 +1,10 @@
+import { readFileSync } from "node:fs";
+import path from "node:path";
 import type { Metadata } from "next";
+import { Hash, Lock } from "lucide-react";
 import { DealAssistant } from "@/components/deal-assistant";
 import { PageHeader } from "@/components/page-header";
+import { transcriptDemo } from "@/lib/data";
 import { personName } from "@/lib/site";
 
 export const metadata: Metadata = { title: "Build it" };
@@ -99,6 +103,11 @@ const buildSteps = [
   },
 ];
 
+// Read at build time so the demo can scroll the real sample transcript.
+const transcript = readFileSync(path.join(process.cwd(), transcriptDemo.file.path), "utf8").split("\n");
+
+const channels = ["deal-larkspur-home", "comp-alerts", "sales-emea", "segment-deals"];
+
 export default function Page() {
   return (
     <>
@@ -195,13 +204,57 @@ export default function Page() {
           </div>
         </div>
 
-        <figure className="mt-4 rounded-xl border border-dashed border-line bg-surface-2 p-5">
+        <figure className="mt-4 rounded-xl border border-dashed border-line bg-surface-2 p-3 sm:p-5">
           <figcaption className="text-xs text-muted">
             Mockup of one exchange, built from a sample call transcript, the battlecard, and the references library.
             Not a working tool. Links open the real pages in this site.
           </figcaption>
-          <div className="mt-4">
-            <DealAssistant />
+          {/* A Slack-style window, so it reads as something reps use where they already work. */}
+          <div className="mt-4 overflow-hidden rounded-xl border border-line bg-surface shadow-sm">
+            <div className="flex items-center gap-2 border-b border-line bg-surface-2 px-4 py-2">
+              <span className="flex gap-1.5" aria-hidden>
+                <span className="size-2.5 rounded-full bg-bad/60" />
+                <span className="size-2.5 rounded-full bg-warn/60" />
+                <span className="size-2.5 rounded-full bg-good/60" />
+              </span>
+              <span className="ml-2 text-xs text-muted">Slack · Hightouch sales</span>
+            </div>
+            <div className="grid md:grid-cols-[12rem_minmax(0,1fr)]">
+              <aside className="hidden border-r border-line bg-surface-2/60 p-3 text-sm md:block" aria-hidden>
+                <p className="px-2 text-xs font-medium text-muted">Channels</p>
+                <ul className="mt-1 space-y-0.5">
+                  {channels.map((c, i) => (
+                    <li
+                      key={c}
+                      className={`flex items-center gap-1.5 rounded-md px-2 py-1 ${i === 0 ? "bg-accent text-accent-fg" : "text-muted"}`}
+                    >
+                      <Hash className="size-3.5" />
+                      <span className="truncate">{c}</span>
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-4 px-2 text-xs font-medium text-muted">Apps</p>
+                <p className="mt-1 flex items-center gap-1.5 px-2 py-1 text-muted">
+                  <span className="size-2 rounded-full bg-good" />
+                  Deal Radar
+                </p>
+              </aside>
+              <div className="min-w-0">
+                <div className="flex items-center justify-between gap-2 border-b border-line px-4 py-2.5">
+                  <p className="flex items-center gap-1.5 text-sm font-semibold">
+                    <Hash className="size-4 text-muted" aria-hidden />
+                    deal-larkspur-home
+                  </p>
+                  <p className="flex items-center gap-1 text-xs text-muted">
+                    <Lock className="size-3" aria-hidden />
+                    Linked to CRM opportunity · {transcriptDemo.prospect.stage}
+                  </p>
+                </div>
+                <div className="p-4">
+                  <DealAssistant transcript={transcript} />
+                </div>
+              </div>
+            </div>
           </div>
         </figure>
 

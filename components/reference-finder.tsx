@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { BookOpen, MapPin, UserRound } from "lucide-react";
 import { Chip } from "@/components/badges";
+import { ReferenceMap } from "@/components/reference-map";
 import { caseStudies, competitorName, customers } from "@/lib/data";
 import { formatShortDate } from "@/lib/format";
 import type { ReferenceStatus } from "@/lib/types";
@@ -54,7 +55,13 @@ export function ReferenceFinder() {
 
   return (
     <div>
-      <div className="grid gap-3 rounded-xl border border-line bg-surface p-4 sm:grid-cols-2 lg:grid-cols-4">
+      <ReferenceMap
+        customers={referenceable}
+        visible={new Set(visible.map((c) => c.id))}
+        region={selected.region}
+        onRegion={(region) => setSelected((s) => ({ ...s, region }))}
+      />
+      <div className="mt-3 grid gap-3 rounded-xl border border-line bg-surface p-4 sm:grid-cols-2 lg:grid-cols-4">
         {facets.map((f) => (
           <label key={f.key} className="text-xs text-muted">
             {f.label}

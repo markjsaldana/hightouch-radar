@@ -18,6 +18,11 @@
   --good-soft: #e8f8f1;
   --bad: #b91c1c;
   --bad-soft: #fdecec;
+  /* Ordinal chart ramp (one hue, light to dark). Validated against the light surface. */
+  --seq-1: #a5a8f6;
+  --seq-2: #7c7ef0;
+  --seq-3: #5a54e6;
+  --seq-4: #3b32b8;
 }
 
 :root[data-theme="dark"] {
@@ -36,6 +41,11 @@
   --good-soft: #0f2a22;
   --bad: #f87171;
   --bad-soft: #2d1515;
+  /* Dark steps run the other way: the step nearest the surface is the darkest. */
+  --seq-1: #4a4bb5;
+  --seq-2: #6366e0;
+  --seq-3: #8b8cff;
+  --seq-4: #b8b9ff;
 }
 
 @theme inline {
@@ -56,6 +66,10 @@
   --color-good-soft: var(--good-soft);
   --color-bad: var(--bad);
   --color-bad-soft: var(--bad-soft);
+  --color-seq-1: var(--seq-1);
+  --color-seq-2: var(--seq-2);
+  --color-seq-3: var(--seq-3);
+  --color-seq-4: var(--seq-4);
 }
 
 html {
@@ -107,4 +121,94 @@ body {
 
 .animate-typing {
   animation: typing 1.2s infinite ease-in-out;
+}
+
+/* Graphics: reveal on scroll, flowing dashes, a pulsing dot. */
+@keyframes grow-x {
+  from {
+    transform: scaleX(0);
+  }
+}
+
+@keyframes dash-flow {
+  to {
+    stroke-dashoffset: -24;
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
+/* Snapshot diff: removed lines flag red, added lines type in left to right. */
+@keyframes flag {
+  from {
+    background-color: transparent;
+    color: var(--muted);
+  }
+}
+
+@keyframes type-in {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.animate-flag {
+  animation: flag 0.6s ease-out both;
+}
+
+.animate-type {
+  animation: type-in 1.1s steps(36, end) both;
+}
+
+/* Connector lines draw from start to end (paths use pathLength="1"). */
+@keyframes draw {
+  from {
+    stroke-dashoffset: 1;
+  }
+}
+
+.draw-line {
+  stroke-dasharray: 1;
+  animation: draw 0.9s ease-out both;
+}
+
+.animate-grow-x {
+  transform-origin: left;
+  animation: grow-x 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.animate-dash {
+  stroke-dasharray: 6 6;
+  animation: dash-flow 1s linear infinite;
+}
+
+.animate-pulse-ring {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: pulse-ring 1.6s ease-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-rise,
+  .animate-grow-x,
+  .animate-flag,
+  .draw-line,
+  .animate-type,
+  .animate-dash,
+  .animate-pulse-ring,
+  .animate-typing {
+    animation: none;
+  }
 }
