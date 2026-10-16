@@ -27,7 +27,7 @@ const automated = [
 const handsOn = [
   {
     title: "Mystery-shop calls",
-    body: "I book sales calls with competitors as a prospect to hear how their reps pitch, which objections they plant about us, and how they handle pricing questions. No changelog shows that.",
+    body: "The CI owner books sales calls with competitors as a prospect to hear how their reps pitch, which objections they plant about us, and how they handle pricing questions. No changelog shows that.",
   },
   {
     title: "Win-loss interviews",
@@ -39,7 +39,7 @@ const handsOn = [
   },
   {
     title: "Reviewing every AI draft",
-    body: "I own the point of view and anything a rep will say to a customer. Anything rated Rumor stays out of talk tracks.",
+    body: "The CI owner owns the point of view and anything a rep will say to a customer. Anything rated Rumor stays out of talk tracks.",
   },
 ];
 
@@ -73,7 +73,7 @@ export default function Page() {
     {
       icon: Tags,
       title: "Classify & score",
-      body: "AI does the first pass, then I review it. Each change gets a type, the personas it affects, and scores for deal impact, urgency, and confidence.",
+      body: "AI does the first pass, then the CI owner reviews it. Each change gets a type, the personas it affects, and scores for deal impact, urgency, and confidence.",
       trace: `${signalTypeLabel(signal.type)} · Impact ${signal.impact}/5 · ${signal.personas.join(", ")} · ${signal.confidence}.`,
     },
     {
@@ -95,7 +95,7 @@ export default function Page() {
       <PageHeader
         eyebrow="02 · How it works"
         title="From competitor change to sales-ready intel"
-        lede="Six steps run every week. Collection is mostly automated, and I review every change before it reaches a rep."
+        lede="Six steps run every week. Collection is mostly automated, and a person reviews every change before it reaches a rep."
         sample
       />
 
@@ -178,7 +178,7 @@ export default function Page() {
           <div className="rounded-lg bg-surface p-4">
             <h3 className="flex items-center gap-2 text-sm font-semibold">
               <Hand className="size-4 text-accent" aria-hidden />
-              Hands-on, by me
+              Hands-on, by the CI owner
             </h3>
             <ul className="mt-3 space-y-3 text-sm">
               {handsOn.map((item) => (
@@ -188,7 +188,7 @@ export default function Page() {
               ))}
             </ul>
             <p className="mt-4 border-t border-line pt-3 text-xs text-pretty text-muted">
-              Mystery-shop calls run within legal&apos;s guidelines. I never ask for confidential information, and
+              Mystery-shop calls run within legal&apos;s guidelines. The CI owner never asks for confidential information, and
               notes are shared as themes, not recordings.
             </p>
           </div>

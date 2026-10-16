@@ -49,7 +49,7 @@ export default function Page() {
       <section className="mt-14">
         <h2 className="text-xl font-semibold tracking-tight">Case studies</h2>
         <p className="mt-1 max-w-2xl text-sm text-pretty text-muted">
-          Public stories can go in any email. Internal-only stories are for reps to tell, not to send.
+          Public stories can go in any email. Internal-only stories are for reps to tell on calls, so keep them out of email.
         </p>
         <ul className="mt-4 grid gap-4 lg:grid-cols-2">
           {caseStudies.map((cs) => {

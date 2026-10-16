@@ -27,7 +27,7 @@
       { "value": "−23%", "label": "Paid social cost per acquisition" },
       { "value": "6 weeks", "label": "From signature to first live sync" }
     ],
-    "quote": { "text": "We didn't rip anything out. We stopped copying data around, and that's what got legal to sign off.", "role": "Head of Data" }
+    "quote": { "text": "We kept Segment and stopped copying data around. That's what got legal to sign off.", "role": "Head of Data" }
   },
   {
     "id": "northpass-decisioning",
@@ -46,7 +46,7 @@
   {
     "id": "tidewater-personalization",
     "customerId": "tidewater",
-    "title": "Tidewater launched personalized trip offers in a quarter, not a year",
+    "title": "Tidewater launched personalized trip offers in 11 weeks",
     "visibility": "Public",
     "useCases": ["Personalization", "AI Decisioning"],
     "challenge": "The suite rollout they'd scoped had a 12-month implementation plan before the first campaign.",

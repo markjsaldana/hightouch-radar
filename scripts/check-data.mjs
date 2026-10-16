@@ -115,6 +115,16 @@ for (const r of demo.resources) {
   r.addresses.forEach((n) => rank(`demo resource ${r.ref}`, n, demo.concerns));
 }
 demo.form.concerns.forEach((n) => rank("demo form concerns", n, demo.concerns));
+for (const [where, email] of [["demo email", demo.email], ["demo form email", demo.form.email]]) {
+  for (const p of email.paragraphs) {
+    if (p.resource === undefined) continue;
+    rank(where, p.resource, demo.resources);
+    // Emails go to the customer, so they can only link public case studies.
+    const r = demo.resources[p.resource - 1];
+    const cs = r?.kind === "caseStudy" && caseStudies.find((c) => c.id === r.ref);
+    if (!cs || cs.visibility !== "Public") errors.push(`${where}: resource ${p.resource} is not a public case study`);
+  }
+}
 demo.form.resources.forEach((n) => rank("demo form resources", n, demo.resources));
 for (const n of demo.form.resources) {
   const r = demo.resources[n - 1];

@@ -23,7 +23,7 @@ const pillars = [
 
 const whyHightouch = [
   {
-    title: "The category is crowded and moving fast.",
+    title: "Every deal has a competitor in it.",
     body: "Composable vs. packaged CDP comes up in almost every deal, and AI decisioning now puts engagement platforms and suites in the same evaluations.",
   },
   {
@@ -91,12 +91,14 @@ export default function Page() {
       </section>
 
       <section className="mt-12 rounded-xl border border-line bg-surface-2 p-6">
-        <p className="font-mono text-xs tracking-wide text-muted uppercase">Built from experience</p>
+        <p className="font-mono text-xs tracking-wide text-muted uppercase">Built to run in-house</p>
         <p className="mt-3 max-w-3xl text-pretty">
-          At Gymdesk, I ran an ongoing CI program tracking feature updates, pricing changes, and customer reviews
-          across more than a dozen competitors. That intel powered comparison pages that converted buyers
-          comparing solutions, and an AI sales tool that closed{" "}
-          <strong className="font-semibold">300+ deals in its first 90 days</strong>.
+          Every page here reads from a few JSON files and one pipeline script. Your team can fork it and run it,
+          or bring me in to set it up.{" "}
+          <Link href="/plan" className="font-medium text-accent hover:underline">
+            See how to build it
+          </Link>
+          .
         </p>
       </section>
 

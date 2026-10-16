@@ -1,7 +1,7 @@
 export const siteName = "Competitive Radar";
 
 export const siteDescription =
-  "How I would run competitive intelligence for Hightouch: the system, the inputs, and what sales receives each week. Unofficial work sample with sample data.";
+  "How Hightouch could run competitive intelligence: the system, the inputs, what sales receives each week, and how to build it internally. A sales intelligence system proposal, with sample data.";
 
 export const personName = "Mark Saldaña";
 

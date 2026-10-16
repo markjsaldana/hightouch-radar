@@ -76,7 +76,7 @@ export default function Page() {
       </ol>
 
       <section className="mt-14">
-        <h2 className="text-xl font-semibold tracking-tight">KPIs I&apos;d track</h2>
+        <h2 className="text-xl font-semibold tracking-tight">KPIs to track</h2>
         <p className="mt-1 max-w-2xl text-sm text-pretty text-muted">
           Targets are set after a baseline in days 61–90. Until then, any number would be a guess, so the scorecard
           shows what each KPI measures and the goal.

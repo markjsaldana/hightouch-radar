@@ -3,7 +3,34 @@ import { DealAssistant } from "@/components/deal-assistant";
 import { PageHeader } from "@/components/page-header";
 import { personName } from "@/lib/site";
 
-export const metadata: Metadata = { title: "First 90 days" };
+export const metadata: Metadata = { title: "Build it" };
+
+const paths = [
+  {
+    name: "On your own",
+    summary: "This repo is the starting point. Everything on the site comes from it.",
+    items: [
+      "Fork the repo. The JSON files in /data define every schema, and npm run check:data keeps them consistent.",
+      "Replace the sample data with your own competitors, sources, reference customers, and case studies.",
+      "Schedule scripts/radar.py weekly with a Claude API key. It drafts signals, and a person approves each one.",
+      "Follow the 90-day rollout below.",
+    ],
+    needsLabel: "You'll need",
+    needs: "One CI owner (usually in PMM), sales ops for Gong and CRM access, and an engineer for the pipeline setup.",
+  },
+  {
+    name: "With me",
+    summary: "I set it up with your team, run the first 90 days, and hand it over.",
+    items: [
+      "Run the 90-day rollout below alongside your PMM team.",
+      "Connect the pipeline to your real sources, call recordings, and CRM.",
+      "Build the deal assistant once the Radar has a quarter of data.",
+      "Train the person who keeps it running after handover.",
+    ],
+    needsLabel: "You get",
+    needs: "A Radar running on your real sources, an owner trained to run it, and written notes on every source and rule.",
+  },
+];
 
 const phases = [
   {
@@ -12,7 +39,7 @@ const phases = [
     items: [
       "Interview reps, SEs, PMs, and CS about where competitors show up and what they need in the moment.",
       "Audit existing competitive content and retire anything out of date.",
-      "Pull win-loss and call data to see which competitors we actually lose to.",
+      "Pull win-loss and call data to see which competitors you actually lose to.",
       "Pick the primary competitors based on that data.",
       "Ship v1 battlecards for the top 3.",
     ],
@@ -27,7 +54,7 @@ const phases = [
       "Start monthly mystery-shop calls, rotating through the primary competitors.",
       "Build the comparison matrix and the first comparison pages.",
     ],
-    done: "The Radar runs every week without me having to chase it.",
+    done: "The Radar runs every week without anyone having to chase it.",
   },
   {
     days: "Days 61–90",
@@ -68,7 +95,7 @@ const buildSteps = [
   },
   {
     title: "Turn gaps into intel requests",
-    body: "Concerns it can't answer come to me, and missing reference matches go to CS. They become new sources to track, new win-loss questions, or reference recruiting.",
+    body: "Concerns it can't answer go to the CI owner, and missing reference matches go to CS. They become new sources to track, new win-loss questions, or reference recruiting.",
   },
 ];
 
@@ -76,10 +103,36 @@ export default function Page() {
   return (
     <>
       <PageHeader
-        eyebrow="09 · First 90 days"
-        title="My first 90 days building this at Hightouch"
-        lede="Listen first, then build the system, then prove it changes win rates."
+        eyebrow="09 · Build it"
+        title="How Hightouch could build this internally"
+        lede="Everything on this site runs from one repo: the data, the pipeline, and what sales sees. A team could stand it up in 90 days, on its own or with me."
       />
+
+      <div className="grid gap-4 lg:grid-cols-2">
+        {paths.map((path) => (
+          <section key={path.name} className="flex flex-col rounded-xl border border-line bg-surface p-5">
+            <h2 className="text-lg font-semibold">{path.name}</h2>
+            <p className="mt-1 text-sm text-pretty text-muted">{path.summary}</p>
+            <ul className="mt-4 space-y-2.5 text-sm">
+              {path.items.map((item) => (
+                <li key={item} className="flex gap-2.5">
+                  <span className="mt-2 size-1.5 shrink-0 rounded-full bg-accent" aria-hidden />
+                  <span className="text-pretty">{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-auto border-t border-line pt-4 text-sm text-pretty [&:not(:first-child)]:mt-5">
+              <span className="text-xs font-medium tracking-wide text-muted uppercase">{path.needsLabel}</span>
+              <span className="mt-1 block">{path.needs}</span>
+            </p>
+          </section>
+        ))}
+      </div>
+
+      <h2 className="mt-14 text-xl font-semibold tracking-tight">The 90-day rollout</h2>
+      <p className="mt-1 mb-4 max-w-2xl text-sm text-pretty text-muted">
+        Listen first, then build the system, then prove it changes win rates. The same plan works either way.
+      </p>
 
       <ol className="grid gap-4 lg:grid-cols-3">
         {phases.map((p, i) => (
@@ -106,16 +159,16 @@ export default function Page() {
 
       <section className="mt-14">
         <p className="font-mono text-xs text-accent">Next · After day 90</p>
-        <h2 className="mt-1 text-2xl font-semibold tracking-tight">A positioning assistant for reps</h2>
+        <h2 className="mt-1 text-2xl font-semibold tracking-tight">Phase 2: a deal assistant for reps</h2>
         <p className="mt-3 max-w-3xl text-pretty text-muted">
-          At Gymdesk I built an AI sales tool that closed 300+ deals in its first 90 days. Once the Radar has a quarter
-          of data behind it, I&apos;d build the Hightouch version: a rep uploads the call transcript (or fills in a short
-          form) and gets back the buyer&apos;s top concerns and the resources most likely to close the deal.
+          Once the Radar has a quarter of data behind it, the same data can power an assistant: a rep uploads the call
+          transcript (or fills in a short form) and gets back the buyer&apos;s top concerns and the resources most
+          likely to close the deal.
         </p>
 
         <div className="mt-6 grid gap-4 lg:grid-cols-2">
           <div className="rounded-xl border border-line bg-surface p-5">
-            <h3 className="font-semibold">How I&apos;d build it</h3>
+            <h3 className="font-semibold">How to build it</h3>
             <ol className="mt-4 space-y-4 text-sm">
               {buildSteps.map((step, i) => (
                 <li key={step.title} className="flex gap-3">
@@ -153,7 +206,7 @@ export default function Page() {
         </figure>
 
         <p className="mt-4 max-w-3xl text-sm text-pretty text-muted">
-          <span className="font-medium text-fg">How I&apos;d measure it: </span>
+          <span className="font-medium text-fg">How to measure it: </span>
           reps using it each week, the share of competitive deals where it was used, win rate in those deals compared
           with the rest, and how many questions it couldn&apos;t answer.
         </p>
@@ -161,8 +214,7 @@ export default function Page() {
 
       <blockquote className="mt-12 rounded-xl bg-fg p-8 text-bg">
         <p className="text-xl leading-relaxed font-medium text-balance">
-          I ran this program at Gymdesk across more than a dozen competitors. This is how I&apos;d build it for
-          Hightouch.
+          Take this repo and build it on your own, or bring me in to set it up with your team and hand it over.
         </p>
         <footer className="mt-4 text-sm opacity-70">{personName}</footer>
       </blockquote>

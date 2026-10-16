@@ -67,7 +67,7 @@ export default function Page() {
 
       <Section
         index={0}
-        lede="Who we track, how closely, and my starting hypothesis for why each one wins. Win-loss interviews test the hypotheses in the first 60 days."
+        lede="Who we track, how closely, and a starting hypothesis for why each one wins. Win-loss interviews test the hypotheses in the first 60 days."
       >
         <div className="space-y-6">
           {tiers.map((tier) => (
@@ -110,7 +110,7 @@ export default function Page() {
           ))}
         </div>
         <p className="mt-3 text-xs text-muted">
-          ✓ = public fact, checked against the cited source. Everything else on the card is my hypothesis.
+          ✓ = public fact, checked against the cited source. Everything else on the card is a hypothesis.
         </p>
       </Section>
 
@@ -138,7 +138,7 @@ export default function Page() {
 
       <Section
         index={3}
-        lede="The scores decide who hears about a change and how fast. The AI proposes them, and I confirm or change them."
+        lede="The scores decide who hears about a change and how fast. The AI proposes them, and the CI owner confirms or changes them."
       >
         <div className="grid gap-4 lg:grid-cols-2">
           <div className="rounded-xl border border-line bg-surface p-5">

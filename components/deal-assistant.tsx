@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect, useRef, useState, type ReactNode } from "react";
-import { ArrowUpRight, Bot, CircleCheck, ClipboardList, FileText, RotateCcw, Sparkles, Upload } from "lucide-react";
+import { ArrowUpRight, Bot, Check, CircleCheck, ClipboardList, Copy, FileText, Mail, RotateCcw, Sparkles, Upload } from "lucide-react";
 import { battlecard, caseStudyById, competitorName, customerById, transcriptDemo as demo } from "@/lib/data";
-import type { DealResource } from "@/lib/types";
+import type { DealResource, DemoEmail } from "@/lib/types";
 
 type Path = "transcript" | "form";
 
@@ -181,6 +181,81 @@ function ResourceRow({ rank, concerns }: { rank: number; concerns: number[] }) {
 }
 
 // `chosen` highlights the picked option once the rep has answered.
+function emailLink(rank: number) {
+  return resourceInfo(demo.resources[rank - 1]).href;
+}
+
+function EmailCard({ email }: { email: DemoEmail }) {
+  const [copied, setCopied] = useState(false);
+
+  function copy() {
+    // Plain text with full URLs, ready to paste into any email client.
+    const body = email.paragraphs
+      .map((p) => (p.resource ? `${p.text}\n${p.linkText}: ${window.location.origin}${emailLink(p.resource)}` : p.text))
+      .join("\n\n");
+    navigator.clipboard
+      ?.writeText(`Subject: ${email.subject}\n\n${body}\n\n${email.signoff}`)
+      .then(() => {
+        setCopied(true);
+        window.setTimeout(() => setCopied(false), 2000);
+      })
+      .catch(() => {});
+  }
+
+  return (
+    <div className="overflow-hidden rounded-lg border border-line">
+      <div className="flex flex-wrap items-start justify-between gap-2 border-b border-line bg-surface-2 px-3 py-2 text-xs">
+        <dl className="grid grid-cols-[auto_1fr] gap-x-3 gap-y-0.5">
+          <dt className="text-muted">To</dt>
+          <dd>{email.to}</dd>
+          <dt className="text-muted">Subject</dt>
+          <dd className="font-medium">{email.subject}</dd>
+        </dl>
+        <button
+          type="button"
+          onClick={copy}
+          className="inline-flex items-center gap-1 rounded-md border border-line bg-surface px-2 py-1 text-muted transition-colors hover:text-fg"
+        >
+          {copied ? <Check className="size-3.5 text-good" aria-hidden /> : <Copy className="size-3.5" aria-hidden />}
+          {copied ? "Copied" : "Copy"}
+        </button>
+      </div>
+      <div className="space-y-2.5 px-3 py-3">
+        {email.paragraphs.map((p) => (
+          <p key={p.text} className="text-pretty">
+            {p.text}
+            {p.resource ? (
+              <>
+                {" "}
+                <a href={emailLink(p.resource)} className="font-medium text-accent hover:underline">
+                  {p.linkText}
+                </a>
+              </>
+            ) : null}
+          </p>
+        ))}
+        <p>{email.signoff}</p>
+      </div>
+    </div>
+  );
+}
+
+function emailStep(email: DemoEmail): Step {
+  return {
+    from: "bot",
+    rows: [
+      <p key="h" className="flex items-center gap-2 font-medium">
+        <Mail className="size-4 text-accent" aria-hidden />
+        Follow-up email, ready to send
+      </p>,
+      <EmailCard key="email" email={email} />,
+      <p key="note" className="text-xs text-muted">
+        Links go to public case studies only. Internal-only stories stay out of customer email.
+      </p>,
+    ],
+  };
+}
+
 function buildSteps(path: Path, chosen: Path | null, choose: (p: Path) => void): Step[] {
   const intro: Step = {
     from: "bot",
@@ -235,6 +310,7 @@ function buildSteps(path: Path, chosen: Path | null, choose: (p: Path) => void):
           </p>,
         ],
       },
+      emailStep(demo.email),
     ];
   }
 
@@ -275,6 +351,7 @@ function buildSteps(path: Path, chosen: Path | null, choose: (p: Path) => void):
         </div>,
       ],
     },
+    emailStep(demo.form.email),
   ];
 }
 
@@ -362,7 +439,7 @@ export function DealAssistant() {
   const starts = steps.map((_, i) => steps.slice(0, i).reduce((n, s) => n + s.rows.length, 0));
 
   return (
-    <div ref={ref} className="min-h-[60rem] space-y-3 text-sm sm:min-h-[52rem]">
+    <div ref={ref} className="min-h-[80rem] space-y-3 text-sm sm:min-h-[68rem]">
       {steps.map((step, i) => {
         const shown = Math.min(step.rows.length, beats - starts[i]);
         if (shown <= 0) return null;

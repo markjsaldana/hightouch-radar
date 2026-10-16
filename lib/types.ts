@@ -191,6 +191,14 @@ export type DealResource = {
   why: string;
 };
 
+// A follow-up email draft. `resource` is the 1-based rank of a resource to link.
+export type DemoEmail = {
+  to: string;
+  subject: string;
+  paragraphs: { text: string; resource?: number; linkText?: string }[];
+  signoff: string;
+};
+
 export type TranscriptDemo = {
   file: { name: string; path: string; source: string; duration: string; speakers: number };
   prospect: {
@@ -206,5 +214,12 @@ export type TranscriptDemo = {
   parsing: string[];
   concerns: { concern: string; quote: string; speaker: string; at: string; mentions: number; objection?: number }[];
   resources: DealResource[];
-  form: { fields: { label: string; value: string }[]; concerns: number[]; resources: number[]; missed: string };
+  email: DemoEmail;
+  form: {
+    fields: { label: string; value: string }[];
+    concerns: number[];
+    resources: number[];
+    missed: string;
+    email: DemoEmail;
+  };
 };

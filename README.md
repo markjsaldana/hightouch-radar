@@ -1,6 +1,6 @@
 # Competitive Radar
 
-An unofficial work sample showing how I'd run competitive intelligence for Hightouch: the system, its inputs, and what sales receives each week.
+A sales intelligence system proposal showing how Hightouch could run competitive intelligence: the system, its inputs, what sales receives each week, and how to build it internally, on your own or with me.
 
 **Sample data for illustration. Not real competitive claims.** Company names give category context. Ownership facts in `data/competitors.json` are public and sourced. Every event, rating, and talk track is invented.
 
