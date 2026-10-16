@@ -212,11 +212,12 @@ export default function Page() {
           reps using it each week, the share of competitive deals where it was used, win rate in those deals compared
           with the rest, and how many questions it couldn&apos;t answer.
         </p>
-        <p className="mt-4 text-sm">
+        <p className="mt-4 max-w-3xl text-sm text-pretty text-muted">
+          <span className="font-medium text-fg">When it gets built: </span>
+          in phase 2, once the Radar has about 3 months of signals, battlecards, and references for it to answer from.{" "}
           <Link href="/plan" className="font-medium text-accent hover:underline">
-            See how to build it
-          </Link>{" "}
-          <span className="text-muted">· it comes after the Radar has a quarter of data behind it.</span>
+            See the rollout plan
+          </Link>
         </p>
       </section>
     </>

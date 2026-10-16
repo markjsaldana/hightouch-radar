@@ -25,7 +25,7 @@ const paths = [
     items: [
       "Run the 90-day rollout below alongside your PMM team.",
       "Connect the pipeline to your real sources, call recordings, and CRM.",
-      "Build the deal assistant once the Radar has a quarter of data.",
+      "Build the deal assistant once the Radar has about 3 months of content.",
       "Train the person who keeps it running after handover.",
     ],
     needsLabel: "You get",
@@ -131,7 +131,7 @@ export default function Page() {
         <p className="font-mono text-xs text-accent">Next · After day 90</p>
         <h2 className="mt-1 text-xl font-semibold tracking-tight">Phase 2: the deal assistant</h2>
         <p className="mt-2 max-w-3xl text-pretty">
-          Once the Radar has a quarter of data, the same data powers the assistant reps use on every deal: upload the
+          Once the Radar has about 3 months of content, the same data powers the assistant reps use on every deal: upload the
           call transcript, get the buyer&apos;s concerns, the proof, and the follow-up email.
         </p>
         <Link
