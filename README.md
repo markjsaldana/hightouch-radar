@@ -1,6 +1,6 @@
-# Competitive Radar
+# Deal Radar
 
-A sales intelligence system proposal showing how Hightouch could run competitive intelligence: the system, its inputs, what sales receives each week, and how to build it internally, on your own or with me.
+A proposal for a sales enablement assistant that SDRs and AEs can rely on at every stage of the deal, from prospecting to renewal. It answers from current competitive intel, battlecards, and customer references, and cites a source for every line. The site shows the system behind it, what reps receive, and how Hightouch could build it internally, on its own or with me.
 
 **Sample data for illustration. Not real competitive claims.** Company names give category context. Ownership facts in `data/competitors.json` are public and sourced. Every event, rating, and talk track is invented.
 

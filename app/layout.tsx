@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"]
 
 export const metadata: Metadata = {
   title: {
-    default: `${siteName} · Sales intelligence system proposal`,
+    default: `${siteName} · Sales enablement assistant proposal`,
     template: `%s · ${siteName}`,
   },
   description: siteDescription,

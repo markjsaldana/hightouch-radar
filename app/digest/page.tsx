@@ -25,7 +25,7 @@ export default function Page() {
       <div className="rounded-xl border border-line bg-surface">
         <div className="flex flex-wrap items-center justify-between gap-3 border-b border-line px-5 py-4">
           <div>
-            <p className="text-xs text-muted">Competitive Radar · Weekly digest</p>
+            <p className="text-xs text-muted">Deal Radar · Weekly digest</p>
             <p className="mt-0.5 text-lg font-semibold">
               Week of {formatLongDate(digest.weekOf)} · {thisWeek.length} signals ·{" "}
               <span className="text-bad">{needAction} need action</span>

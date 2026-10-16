@@ -1,23 +1,75 @@
 import Link from "next/link";
-import { ArrowRight, Binoculars, Gauge, Send } from "lucide-react";
+import { ArrowRight, Binoculars, Gauge, MessageSquareText } from "lucide-react";
 import { PageHeader } from "@/components/page-header";
 import { competitors, digest, signals, sources } from "@/lib/data";
 
 const pillars = [
   {
     icon: Binoculars,
-    title: "Track",
-    body: "Features, pricing, positioning, reviews, hiring, and partnerships for every competitor in our deals, plus how their reps pitch on real sales calls.",
+    title: "Watch",
+    body: "Competitor launches, pricing, messaging, reviews, and hiring, plus how their reps pitch on real sales calls. Customer references and case studies sit alongside.",
   },
   {
     icon: Gauge,
-    title: "Interpret",
-    body: "Score each change for deal impact and decide who needs it: a rep, a PM, or a marketer.",
+    title: "Check",
+    body: "Each change is scored for deal impact and reviewed by a person before a rep sees it. Rumors never make it into a talk track.",
   },
   {
-    icon: Send,
-    title: "Deliver",
-    body: "Weekly digest, live battlecards, a comparison matrix, and alerts for urgent shifts.",
+    icon: MessageSquareText,
+    title: "Answer",
+    body: "Reps ask in Slack or the CRM and get what to say next for the deal in front of them, with the source for every line.",
+  },
+];
+
+// What an SDR or AE gets from the assistant at each stage, and where it comes from.
+const stages = [
+  {
+    name: "Prospecting",
+    who: "SDR",
+    asks: "Which of my accounts just felt a competitor change?",
+    gets: "A reason to reach out this week, such as a competitor's price change or renewal timing, with a two-line opener.",
+    href: "/digest",
+    source: "Weekly digest",
+  },
+  {
+    name: "Discovery",
+    who: "SDR → AE",
+    asks: "They use Segment. What should I ask?",
+    gets: "Landmine questions to plant before the evaluation, and the one-line answer if the competitor comes up.",
+    href: "/battlecard",
+    source: "Battlecard",
+  },
+  {
+    name: "Demo & evaluation",
+    who: "AE",
+    asks: "Here's the call transcript. What do they care about?",
+    gets: "The buyer's top concerns in their own words, the case studies and talk tracks that answer them, and a follow-up email.",
+    href: "/plan#assistant",
+    source: "Deal assistant",
+  },
+  {
+    name: "Technical validation",
+    who: "AE + SE",
+    asks: "Can they actually do this on the warehouse?",
+    gets: "A capability-by-capability answer with a source note on every cell, and what to test in the POC.",
+    href: "/matrix",
+    source: "Matrix",
+  },
+  {
+    name: "Proposal & negotiation",
+    who: "AE",
+    asks: "They want to talk to a customer like them.",
+    gets: "Reference customers matched on use case, region, industry, and competitor, with who to ask and when they were last used.",
+    href: "/references",
+    source: "References",
+  },
+  {
+    name: "Renewal",
+    who: "AE + CS",
+    asks: "A competitor is pitching my customer.",
+    gets: "A same-day alert when the competitor shows up, plus proof of value to date for the renewal conversation.",
+    href: "/routing",
+    source: "Routing log",
   },
 ];
 
@@ -31,8 +83,8 @@ const whyHightouch = [
     body: "Marketing wants speed, data teams want governance and one source of truth, and product wants real-time experimentation. One battlecard can't serve all three.",
   },
   {
-    title: "Reps need answers in the moment.",
-    body: "When a prospect brings up a competitor's launch on today's call, the rep needs one good line to say back.",
+    title: "Reps only use what they trust.",
+    body: "Every answer cites the signal, battlecard section, or customer story it came from. When the assistant doesn't know, it says so, and the question goes to the CI owner.",
   },
 ];
 
@@ -49,11 +101,11 @@ export default function Page() {
     <>
       <PageHeader
         eyebrow="01 · Overview"
-        title="What is the Radar?"
-        lede="An always-on competitive intelligence system that turns competitor changes into sales-ready intel every week."
+        title="A sales assistant for every stage of the deal"
+        lede="SDRs and AEs ask it what to say next, from the first cold email to the renewal call. It answers from current competitive intel, battlecards, and customer proof, and cites the source for every line."
       />
 
-      <section aria-label="What the Radar does" className="grid gap-4 sm:grid-cols-3">
+      <section aria-label="How the assistant works" className="grid gap-4 sm:grid-cols-3">
         {pillars.map(({ icon: Icon, title, body }) => (
           <div key={title} className="rounded-xl border border-line bg-surface p-5">
             <span className="grid size-9 place-items-center rounded-lg bg-accent-soft text-accent">
@@ -76,6 +128,33 @@ export default function Page() {
       <p className="mt-2 text-xs text-muted">Counts come from the sample data on the pages that follow.</p>
 
       <section className="mt-12">
+        <h2 className="text-xl font-semibold tracking-tight">Through the whole sales cycle</h2>
+        <p className="mt-1 max-w-2xl text-sm text-pretty text-muted">
+          What a rep asks at each stage, what comes back, and the page in this site it comes from.
+        </p>
+        <ol className="mt-5 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+          {stages.map((stage, i) => (
+            <li key={stage.name} className="flex flex-col rounded-xl border border-line bg-surface p-5">
+              <p className="flex items-center justify-between gap-2">
+                <span className="font-mono text-xs text-accent">
+                  {String(i + 1).padStart(2, "0")} · {stage.name}
+                </span>
+                <span className="rounded-md bg-surface-2 px-1.5 py-0.5 text-xs font-medium text-muted">{stage.who}</span>
+              </p>
+              <p className="mt-3 font-medium text-pretty">&ldquo;{stage.asks}&rdquo;</p>
+              <p className="mt-1.5 text-sm text-pretty text-muted">{stage.gets}</p>
+              <Link
+                href={stage.href}
+                className="mt-auto inline-flex items-center gap-1 pt-4 text-sm font-medium text-accent hover:underline"
+              >
+                {stage.source} <ArrowRight className="size-3.5" aria-hidden />
+              </Link>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      <section className="mt-12">
         <h2 className="text-xl font-semibold tracking-tight">Why this matters for Hightouch</h2>
         <ul className="mt-5 space-y-4">
           {whyHightouch.map((item, i) => (
@@ -93,7 +172,7 @@ export default function Page() {
       <section className="mt-12 rounded-xl border border-line bg-surface-2 p-6">
         <p className="font-mono text-xs tracking-wide text-muted uppercase">Built to run in-house</p>
         <p className="mt-3 max-w-3xl text-pretty">
-          Every page here reads from a few JSON files and one pipeline script. Your team can fork it and run it,
+          The assistant and every page here read from a few JSON files and one pipeline script. Your team can fork it and run it,
           or bring me in to set it up.{" "}
           <Link href="/plan" className="font-medium text-accent hover:underline">
             See how to build it

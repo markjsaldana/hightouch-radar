@@ -1,7 +1,7 @@
-export const siteName = "Competitive Radar";
+export const siteName = "Deal Radar";
 
 export const siteDescription =
-  "How Hightouch could run competitive intelligence: the system, the inputs, what sales receives each week, and how to build it internally. A sales intelligence system proposal, with sample data.";
+  "A sales enablement assistant SDRs and AEs can rely on through every stage of the deal, built on current competitive intel and customer proof. A proposal for how Hightouch could build it internally, with sample data.";
 
 export const personName = "Mark Saldaña";
 

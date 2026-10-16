@@ -95,7 +95,7 @@ export default function Page() {
       <PageHeader
         eyebrow="02 · How it works"
         title="From competitor change to sales-ready intel"
-        lede="Six steps run every week. Collection is mostly automated, and a person reviews every change before it reaches a rep."
+        lede="This is the engine behind the assistant. Six steps run every week. Collection is mostly automated, and a person reviews every change before it reaches a rep."
         sample
       />
 

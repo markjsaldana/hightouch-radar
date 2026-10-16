@@ -105,7 +105,7 @@ export default function Page() {
       <PageHeader
         eyebrow="09 · Build it"
         title="How Hightouch could build this internally"
-        lede="Everything on this site runs from one repo: the data, the pipeline, and what sales sees. A team could stand it up in 90 days, on its own or with me."
+        lede="Everything on this site runs from one repo: the data, the pipeline, and the assistant reps use. A team could stand it up in 90 days, on its own or with me."
       />
 
       <div className="grid gap-4 lg:grid-cols-2">
@@ -157,9 +157,9 @@ export default function Page() {
         ))}
       </ol>
 
-      <section className="mt-14">
+      <section id="assistant" className="mt-14 scroll-mt-32">
         <p className="font-mono text-xs text-accent">Next · After day 90</p>
-        <h2 className="mt-1 text-2xl font-semibold tracking-tight">Phase 2: a deal assistant for reps</h2>
+        <h2 className="mt-1 text-2xl font-semibold tracking-tight">Phase 2: the deal assistant reps talk to</h2>
         <p className="mt-3 max-w-3xl text-pretty text-muted">
           Once the Radar has a quarter of data behind it, the same data can power an assistant: a rep uploads the call
           transcript (or fills in a short form) and gets back the buyer&apos;s top concerns and the resources most
