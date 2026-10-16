@@ -134,8 +134,11 @@ export default function Page() {
       <div className="mt-4">
         <Block title="Objection handling" section="Objection handling" icon={<MessagesSquare className="size-5 text-accent" aria-hidden />}>
           <dl className="divide-y divide-line">
-            {battlecard.objections.map((o) => (
-              <div key={o.objection} className="grid gap-2 py-4 first:pt-0 last:pb-0 md:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] md:gap-6">
+            {battlecard.objections.map((o, i) => (
+              <div
+                key={o.objection}
+                id={`objection-${i}`}
+                className="grid scroll-mt-32 gap-2 py-4 target:rounded-lg target:bg-accent-soft target:px-3 first:pt-0 last:pb-0 md:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] md:gap-6">
                 <dt className="font-medium text-pretty">{o.objection}</dt>
                 <dd className="border-l-2 border-accent pl-3 text-sm text-pretty">{o.response}</dd>
               </div>

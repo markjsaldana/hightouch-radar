@@ -1,0 +1,130 @@
+[
+  {
+    "id": "fernhill-self-serve",
+    "customerId": "fernhill",
+    "title": "Fernhill's CRM team stopped filing data tickets for every campaign",
+    "visibility": "Public",
+    "useCases": ["Audience activation", "Lifecycle marketing"],
+    "challenge": "Every new audience needed a ticket to the data team and about two weeks of waiting. The profile store in Segment had drifted from the loyalty data in Snowflake.",
+    "solution": "Moved audience building onto the Snowflake models the data team already owned. The data team modeled loyalty and basket data once, and CRM builds on it without SQL.",
+    "results": [
+      { "value": "2 weeks → 1 day", "label": "Time to launch a new audience" },
+      { "value": "−70%", "label": "Audience tickets to the data team" },
+      { "value": "+11%", "label": "Loyalty email revenue per send" }
+    ],
+    "quote": { "text": "Our data team built the models once. Now my team ships audiences the same afternoon we think of them.", "role": "Director of CRM" }
+  },
+  {
+    "id": "vasa-alongside",
+    "customerId": "vasa",
+    "title": "Vasa kept Segment for tracking and activated its EU warehouse with Hightouch",
+    "visibility": "Public",
+    "useCases": ["Audience activation", "Paid media", "Data governance"],
+    "challenge": "Vasa needed paid-media audiences built on order and returns data, but legal didn't want customer data copied out of their EU Snowflake region.",
+    "solution": "Kept Segment for event collection. Hightouch reads from the EU warehouse and syncs only the fields each destination needs, so no second profile store holds customer data.",
+    "results": [
+      { "value": "0", "label": "Customer data copies outside the EU warehouse" },
+      { "value": "−23%", "label": "Paid social cost per acquisition" },
+      { "value": "6 weeks", "label": "From signature to first live sync" }
+    ],
+    "quote": { "text": "We didn't rip anything out. We stopped copying data around, and that's what got legal to sign off.", "role": "Head of Data" }
+  },
+  {
+    "id": "northpass-decisioning",
+    "customerId": "northpass",
+    "title": "Northpass chose AI Decisioning on Databricks over a suite it already paid for",
+    "visibility": "Internal only",
+    "useCases": ["AI Decisioning", "Data governance"],
+    "challenge": "The Salesforce bundle was cheaper on paper, but it meant moving regulated account data into another platform.",
+    "solution": "Ran AI Decisioning directly on governed Databricks tables. Risk and compliance reviewed one data flow instead of two.",
+    "results": [
+      { "value": "+18%", "label": "Card activation within 30 days" },
+      { "value": "1", "label": "Data platform for compliance to review" }
+    ],
+    "quote": { "text": "Compliance approved it because the data never left the platform they'd already reviewed.", "role": "VP Marketing Technology" }
+  },
+  {
+    "id": "tidewater-personalization",
+    "customerId": "tidewater",
+    "title": "Tidewater launched personalized trip offers in a quarter, not a year",
+    "visibility": "Public",
+    "useCases": ["Personalization", "AI Decisioning"],
+    "challenge": "The suite rollout they'd scoped had a 12-month implementation plan before the first campaign.",
+    "solution": "Used existing booking and loyalty models in Snowflake. AI Decisioning picks the offer and send time for each traveler.",
+    "results": [
+      { "value": "11 weeks", "label": "To first personalized campaign" },
+      { "value": "+9%", "label": "Repeat bookings" }
+    ],
+    "quote": { "text": "We were live before the other vendor would have finished discovery.", "role": "VP Growth" }
+  },
+  {
+    "id": "halden-governance",
+    "customerId": "halden",
+    "title": "Halden Care passed its security review with the warehouse as the system of record",
+    "visibility": "Internal only",
+    "useCases": ["Data governance", "Lifecycle marketing"],
+    "challenge": "Patient-adjacent data couldn't sit in a second vendor-hosted profile store.",
+    "solution": "Kept all modeling and identity in Snowflake, with column-level controls on what each sync can send.",
+    "results": [
+      { "value": "5 weeks", "label": "Security review, start to approval" },
+      { "value": "+14%", "label": "Appointment reminder completion" }
+    ],
+    "quote": { "text": "The security team had one question: where does the data live? The answer was 'where it already lives.'", "role": "Director of Data Platform" }
+  },
+  {
+    "id": "copperleaf-audiences",
+    "customerId": "copperleaf",
+    "title": "Copperleaf grew subscriber revenue with first-party audiences on BigQuery",
+    "visibility": "Public",
+    "useCases": ["Audience activation", "Paid media"],
+    "challenge": "Third-party cookie loss cut ad revenue, and the suite option needed a separate data copy and a long integration.",
+    "solution": "Built reader-interest audiences from BigQuery and synced them to ad platforms and the paywall tool.",
+    "results": [
+      { "value": "+21%", "label": "Subscription conversion from paid media" },
+      { "value": "40+", "label": "Audiences built by the marketing team" }
+    ],
+    "quote": { "text": "Our editors' data was already in BigQuery. We just needed to use it.", "role": "Chief Digital Officer" }
+  },
+  {
+    "id": "pinegrove-identity",
+    "customerId": "pinegrove",
+    "title": "Pinegrove unified policyholder identity without a new database",
+    "visibility": "Public",
+    "useCases": ["Identity resolution", "AI Decisioning"],
+    "challenge": "Policyholders showed up as separate people across auto, home, and life systems.",
+    "solution": "Ran identity resolution in Snowflake and used the unified profile for cross-sell decisioning.",
+    "results": [
+      { "value": "−31%", "label": "Duplicate customer records" },
+      { "value": "+12%", "label": "Multi-policy households" }
+    ],
+    "quote": { "text": "One customer, one record, in the warehouse we already trusted.", "role": "Head of Customer Analytics" }
+  },
+  {
+    "id": "sundial-retention",
+    "customerId": "sundial",
+    "title": "Sundial cut first-month churn with usage-based lifecycle journeys",
+    "visibility": "Public",
+    "useCases": ["Lifecycle marketing", "Personalization"],
+    "challenge": "Class bookings and app usage lived in BigQuery, but the messaging tool only saw sign-up data.",
+    "solution": "Synced weekly usage scores to the messaging tool and in-app personalization.",
+    "results": [
+      { "value": "−17%", "label": "First-month cancellations" },
+      { "value": "3 days", "label": "Setup for the first journey" }
+    ],
+    "quote": { "text": "The moment marketing could see who stopped booking classes, retention became their project too.", "role": "Head of Lifecycle" }
+  },
+  {
+    "id": "emberline-migration",
+    "customerId": "emberline",
+    "title": "Emberline replaced Segment's profile layer and kept its tracking plan",
+    "visibility": "Internal only",
+    "useCases": ["Audience activation", "Paid media"],
+    "challenge": "Two teams maintained overlapping profiles in Segment and Databricks, and audiences disagreed on counts.",
+    "solution": "Moved audiences to Databricks models, kept the existing tracking plan, and retired the duplicate profiles in phases.",
+    "results": [
+      { "value": "1", "label": "Source of truth for audience counts" },
+      { "value": "−35%", "label": "Pipeline maintenance hours per month" }
+    ],
+    "quote": { "text": "The counts finally match, because there's only one place to count.", "role": "Director of Data Engineering" }
+  }
+]

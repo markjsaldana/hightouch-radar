@@ -1,0 +1,209 @@
+[
+  {
+    "id": "fernhill",
+    "name": "Fernhill Grocers",
+    "industry": "Grocery & retail",
+    "size": "Enterprise",
+    "region": "EMEA",
+    "hq": "Manchester, UK",
+    "warehouse": "Snowflake",
+    "useCases": ["Audience activation", "Lifecycle marketing", "Identity resolution"],
+    "competitor": { "id": "segment", "outcome": "Replaced" },
+    "reference": {
+      "status": "Available",
+      "contactRole": "Director of CRM",
+      "personas": ["Marketing"],
+      "formats": ["Reference call", "Peer email"],
+      "lastUsed": "2026-08-21",
+      "goodFor": "Marketers who worry the data team will slow them down. Built their first audiences without SQL in week two."
+    }
+  },
+  {
+    "id": "vasa",
+    "name": "Vasa Outdoor",
+    "industry": "Retail & ecommerce",
+    "size": "Mid-market",
+    "region": "EMEA",
+    "hq": "Stockholm, Sweden",
+    "warehouse": "Snowflake (EU region)",
+    "useCases": ["Audience activation", "Paid media", "Data governance"],
+    "competitor": { "id": "segment", "outcome": "Runs alongside" },
+    "reference": {
+      "status": "Available",
+      "contactRole": "Head of Data",
+      "personas": ["Data"],
+      "formats": ["Reference call", "Site visit"],
+      "lastUsed": "2026-09-30",
+      "goodFor": "Kept Segment for collection and added Hightouch for activation. Speaks well to GDPR and keeping data in an EU warehouse region."
+    }
+  },
+  {
+    "id": "northpass",
+    "name": "Northpass Financial",
+    "industry": "Financial services",
+    "size": "Enterprise",
+    "region": "North America",
+    "hq": "Toronto, Canada",
+    "warehouse": "Databricks",
+    "useCases": ["AI Decisioning", "Lifecycle marketing", "Data governance"],
+    "competitor": { "id": "salesforce", "outcome": "Chose over" },
+    "reference": {
+      "status": "Limited",
+      "contactRole": "VP Marketing Technology",
+      "personas": ["Exec", "Data"],
+      "formats": ["Reference call"],
+      "lastUsed": "2026-07-14",
+      "goodFor": "Regulated buyers comparing against a suite they already pay for. Needs their legal team's approval for each call."
+    }
+  },
+  {
+    "id": "tidewater",
+    "name": "Tidewater Travel",
+    "industry": "Travel & hospitality",
+    "size": "Enterprise",
+    "region": "North America",
+    "hq": "Miami, US",
+    "warehouse": "Snowflake",
+    "useCases": ["Personalization", "AI Decisioning"],
+    "competitor": { "id": "adobe", "outcome": "Chose over" },
+    "reference": {
+      "status": "Available",
+      "contactRole": "VP Growth",
+      "personas": ["Marketing", "Exec"],
+      "formats": ["Reference call", "Webinar", "Peer email"],
+      "lastUsed": "2026-09-02",
+      "goodFor": "Execs weighing a suite against composable. Will talk about time to first campaign and total cost."
+    }
+  },
+  {
+    "id": "kestrel",
+    "name": "Kestrel Games",
+    "industry": "Gaming",
+    "size": "Mid-market",
+    "region": "APAC",
+    "hq": "Singapore",
+    "warehouse": "BigQuery",
+    "useCases": ["Paid media", "Audience activation"],
+    "competitor": { "id": "mparticle", "outcome": "Chose over" },
+    "reference": {
+      "status": "Available",
+      "contactRole": "Director of User Acquisition",
+      "personas": ["Marketing"],
+      "formats": ["Reference call", "Peer email"],
+      "lastUsed": "2026-06-11",
+      "goodFor": "APAC deals and paid-media buyers. Syncs player LTV audiences to ad platforms daily."
+    }
+  },
+  {
+    "id": "halden",
+    "name": "Halden Care",
+    "industry": "Healthcare",
+    "size": "Enterprise",
+    "region": "North America",
+    "hq": "Boston, US",
+    "warehouse": "Snowflake",
+    "useCases": ["Data governance", "Lifecycle marketing"],
+    "competitor": { "id": "salesforce", "outcome": "Chose over" },
+    "reference": {
+      "status": "Resting",
+      "contactRole": "Director of Data Platform",
+      "personas": ["Data"],
+      "formats": ["Reference call"],
+      "lastUsed": "2026-10-08",
+      "goodFor": "Security and compliance reviews. At the three-calls-a-quarter limit until January."
+    }
+  },
+  {
+    "id": "marisol",
+    "name": "Marisol Beauty",
+    "industry": "Retail & ecommerce",
+    "size": "Mid-market",
+    "region": "LATAM",
+    "hq": "Mexico City, Mexico",
+    "warehouse": "BigQuery",
+    "useCases": ["Lifecycle marketing", "AI Decisioning"],
+    "competitor": { "id": "braze", "outcome": "Runs alongside" },
+    "reference": {
+      "status": "Available",
+      "contactRole": "Head of CRM",
+      "personas": ["Marketing"],
+      "formats": ["Reference call", "Peer email"],
+      "lastUsed": "2026-05-19",
+      "goodFor": "LATAM deals, Spanish-language calls, and teams keeping Braze as their messaging tool."
+    }
+  },
+  {
+    "id": "quayline",
+    "name": "Quayline",
+    "industry": "B2B software",
+    "size": "Commercial",
+    "region": "EMEA",
+    "hq": "Berlin, Germany",
+    "warehouse": "Databricks",
+    "useCases": ["Sales & CRM sync", "Identity resolution"],
+    "competitor": { "id": "segment", "outcome": "Replaced" },
+    "reference": {
+      "status": "Available",
+      "contactRole": "RevOps Lead",
+      "personas": ["Data", "Product"],
+      "formats": ["Peer email"],
+      "lastUsed": "2026-08-04",
+      "goodFor": "B2B and product-led buyers syncing product usage into the CRM."
+    }
+  },
+  {
+    "id": "copperleaf",
+    "name": "Copperleaf Media",
+    "industry": "Media & publishing",
+    "size": "Enterprise",
+    "region": "EMEA",
+    "hq": "Amsterdam, Netherlands",
+    "warehouse": "BigQuery",
+    "useCases": ["Audience activation", "Paid media", "Personalization"],
+    "competitor": { "id": "adobe", "outcome": "Chose over" },
+    "reference": {
+      "status": "Limited",
+      "contactRole": "Chief Digital Officer",
+      "personas": ["Exec"],
+      "formats": ["Reference call"],
+      "lastUsed": "2026-09-17",
+      "goodFor": "Exec-to-exec calls only. Ask the account's CSM two weeks ahead."
+    }
+  },
+  {
+    "id": "pinegrove",
+    "name": "Pinegrove Insurance",
+    "industry": "Financial services",
+    "size": "Enterprise",
+    "region": "North America",
+    "hq": "Hartford, US",
+    "warehouse": "Snowflake",
+    "useCases": ["AI Decisioning", "Identity resolution"],
+    "competitor": { "id": "salesforce", "outcome": "Chose over" },
+    "reference": null
+  },
+  {
+    "id": "sundial",
+    "name": "Sundial Fitness",
+    "industry": "Consumer subscription",
+    "size": "Mid-market",
+    "region": "APAC",
+    "hq": "Sydney, Australia",
+    "warehouse": "BigQuery",
+    "useCases": ["Lifecycle marketing", "Personalization"],
+    "competitor": { "id": "rudderstack", "outcome": "Chose over" },
+    "reference": null
+  },
+  {
+    "id": "emberline",
+    "name": "Emberline Marketplace",
+    "industry": "Marketplace",
+    "size": "Enterprise",
+    "region": "North America",
+    "hq": "Austin, US",
+    "warehouse": "Databricks",
+    "useCases": ["Audience activation", "Paid media", "AI Decisioning"],
+    "competitor": { "id": "segment", "outcome": "Replaced" },
+    "reference": null
+  }
+]

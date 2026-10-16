@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import { AssistantMockup } from "@/components/assistant-mockup";
+import { DealAssistant } from "@/components/deal-assistant";
 import { PageHeader } from "@/components/page-header";
-import { battlecard, competitorName } from "@/lib/data";
 import { personName } from "@/lib/site";
 
 export const metadata: Metadata = { title: "First 90 days" };
@@ -52,54 +51,32 @@ const stages = [
 
 const buildSteps = [
   {
+    title: "Start from the call",
+    body: "The rep uploads the call transcript, or fills in a six-field form when there's no recording. The transcript is the recommended path: concerns come ranked by what the buyer actually said, with the quotes to prove it.",
+  },
+  {
     title: "Ground it in the Radar",
-    body: "It answers only from the battlecards, signals, matrix, and win-loss notes, and every line cites the signal or card section it came from. When the data has no answer, it says so.",
+    body: "It answers only from the battlecards, signals, matrix, win-loss notes, and the reference and case study library, and every line cites where it came from. When the data has no answer, it says so.",
   },
   {
-    title: "Ask before answering",
-    body: "Three questions first: who the customer is (buyer persona, company size, industry), which competitor is in the deal, and where the deal is in the sales process.",
-  },
-  {
-    title: "Shape the answer to the stage",
-    body: "The same competitor needs landmine questions in discovery and cost responses in negotiation. Claude drafts the answer in the format that stage needs.",
+    title: "Match proof to the deal",
+    body: "Resources are ranked by how many of the buyer's concerns they answer and how closely the customer matches on use case, region, industry, and competitor.",
   },
   {
     title: "Put it where reps work",
-    body: "Slack and the CRM opportunity page, so a rep can ask between calls without opening another tool.",
+    body: "Slack and the CRM opportunity page, with call recordings pulled from Gong automatically, so a rep can ask between calls without opening another tool.",
   },
   {
     title: "Turn gaps into intel requests",
-    body: "Questions it can't answer come to me. They become new sources to track or new win-loss interview questions.",
+    body: "Concerns it can't answer come to me, and missing reference matches go to CS. They become new sources to track, new win-loss questions, or reference recruiting.",
   },
 ];
 
 export default function Page() {
-  const persona = battlecard.byPersona.find((p) => p.persona === "Marketing")!;
-  const objection = battlecard.objections[0];
-  const competitor = competitorName(battlecard.competitorId);
-  const conversation = [
-    { from: "bot" as const, text: "Who's the customer? Give me the buyer and the company." },
-    { from: "rep" as const, text: "Marketing buyer at a mid-market retailer." },
-    { from: "bot" as const, text: "Which competitor is in the deal?" },
-    { from: "rep" as const, text: competitor },
-    { from: "bot" as const, text: "Where are you in the sales process?" },
-    { from: "rep" as const, text: "Evaluation. Demo is Thursday." },
-    {
-      from: "bot" as const,
-      lines: [
-        { label: "Lead with:", text: persona.lead },
-        { label: "Expect this objection:", text: objection.objection },
-        { text: objection.response, reply: true },
-        { label: "Avoid:", text: persona.avoid },
-      ],
-      source: `Sources: ${competitor} battlecard (Marketing tab, objections) · Signal #14`,
-    },
-  ];
-
   return (
     <>
       <PageHeader
-        eyebrow="08 · First 90 days"
+        eyebrow="09 · First 90 days"
         title="My first 90 days building this at Hightouch"
         lede="Listen first, then build the system, then prove it changes win rates."
       />
@@ -132,8 +109,8 @@ export default function Page() {
         <h2 className="mt-1 text-2xl font-semibold tracking-tight">A positioning assistant for reps</h2>
         <p className="mt-3 max-w-3xl text-pretty text-muted">
           At Gymdesk I built an AI sales tool that closed 300+ deals in its first 90 days. Once the Radar has a quarter
-          of data behind it, I&apos;d build the Hightouch version: a rep says who the customer is, which competitor is
-          in the deal, and where the deal stands, and gets back what to say next.
+          of data behind it, I&apos;d build the Hightouch version: a rep uploads the call transcript (or fills in a short
+          form) and gets back the buyer&apos;s top concerns and the resources most likely to close the deal.
         </p>
 
         <div className="mt-6 grid gap-4 lg:grid-cols-2">
@@ -167,10 +144,11 @@ export default function Page() {
 
         <figure className="mt-4 rounded-xl border border-dashed border-line bg-surface-2 p-5">
           <figcaption className="text-xs text-muted">
-            Mockup of one exchange, built from the sample battlecard. Not a working tool.
+            Mockup of one exchange, built from a sample call transcript, the battlecard, and the references library.
+            Not a working tool. Links open the real pages in this site.
           </figcaption>
           <div className="mt-4">
-            <AssistantMockup steps={conversation} />
+            <DealAssistant />
           </div>
         </figure>
 

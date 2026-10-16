@@ -26,8 +26,11 @@ Everything the UI shows comes from JSON in `/data`, so swapping sample data for 
 | `battlecard_segment.json` | Sample battlecard |
 | `matrix.json` | Capability matrix and positioning map |
 | `routing_log.json` | Where intel went, plus the KPI scorecard |
+| `customers.json` | Customers, with reference details (contact role, status, formats) for those who take calls |
+| `case_studies.json` | Case studies for reference customers and others, public or internal only |
+| `transcript_demo.json` | What the deal assistant demo extracts from the sample call transcript |
 
-`samples/snapshots/` holds before/after source snapshots that power the diff demo.
+`samples/snapshots/` holds before/after source snapshots that power the diff demo. `samples/transcripts/` holds the sample call transcript behind the deal assistant demo; `check:data` confirms every quoted line appears in it.
 
 Run `npm run check:data` after editing data. It validates enum fields and every cross-file reference.
 

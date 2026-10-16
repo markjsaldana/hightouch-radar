@@ -1,0 +1,28 @@
+Larkspur Home <> Hightouch | Evaluation call | 2026-10-13 | 38 min
+Exported from Gong. Sample transcript, invented for illustration.
+
+Speakers:
+  Priya Nair, Head of CRM, Larkspur Home
+  Tom Ellery, Data Engineering Lead, Larkspur Home
+  Dana Ruiz, Account Executive, Hightouch
+  Sam Cho, Solutions Engineer, Hightouch
+
+[00:01:12] Dana Ruiz: Thanks for making time. Last call you mentioned the winter campaign. Where does that stand?
+[00:01:30] Priya Nair: Behind. Every audience is a ticket to Tom's team. My team can't wait two weeks for every audience, not in peak season.
+[00:02:05] Tom Ellery: And to be fair to my team, we have eight people supporting the whole business. CRM tickets sit in the same queue as finance reporting.
+[00:04:40] Sam Cho: So today audiences come from Segment, and the order data lives in Snowflake?
+[00:04:52] Tom Ellery: Right. We've had Segment for four years. It does tracking well. I don't want to rip it out.
+[00:05:20] Priya Nair: My worry is we already have Segment, so why are we adding another tool? I have to explain that to our CFO.
+[00:09:03] Sam Cho: Hightouch would sit on Snowflake, so audiences use the order and loyalty models Tom already maintains.
+[00:09:31] Tom Ellery: That's the part I'm not sure about. Does that just mean my team becomes the bottleneck in a different tool?
+[00:12:47] Priya Nair: Segment told us their new audience builder fixes the ticket problem.
+[00:13:10] Dana Ruiz: Worth testing side by side. Ask them what those audiences are built on.
+[00:18:22] Tom Ellery: The other thing. We're EU-hosted. Legal will ask whether customer data leaves our EU Snowflake region.
+[00:18:58] Sam Cho: It doesn't need to. Syncs send only the fields each destination needs, straight from the warehouse.
+[00:19:30] Tom Ellery: I'd want to hear that from someone who's been through a GDPR review with you.
+[00:24:15] Priya Nair: If I can't show my team building audiences without waiting on data, it's a no.
+[00:27:40] Priya Nair: Switching feels risky right before peak. We already have Segment running and people know it.
+[00:31:05] Tom Ellery: If the data team becomes the bottleneck again, we've just moved the problem.
+[00:33:50] Tom Ellery: Data residency is a hard requirement for us, not a nice-to-have.
+[00:35:12] Dana Ruiz: Understood. Next step is the demo Thursday. Sam will build an audience live on your loyalty model.
+[00:36:30] Priya Nair: Good. Bring a customer like us if you can. UK, retail, also on Segment.
