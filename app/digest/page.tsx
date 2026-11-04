@@ -2,10 +2,12 @@ import type { Metadata } from "next";
 import { MessageSquareQuote, TrendingUp } from "lucide-react";
 import { Chip, ConfidenceBadge, ImpactBadge } from "@/components/badges";
 import { DigestCharts } from "@/components/digest-charts";
+import { More } from "@/components/more";
 import { PageHeader } from "@/components/page-header";
 import { SignalsTable } from "@/components/signals-table";
 import { competitorName, digest, signalById, signals } from "@/lib/data";
 import { formatLongDate } from "@/lib/format";
+import { eyebrowFor } from "@/lib/nav";
 
 export const metadata: Metadata = { title: "Weekly digest" };
 
@@ -17,9 +19,9 @@ export default function Page() {
   return (
     <>
       <PageHeader
-        eyebrow="04 · Weekly digest"
+        eyebrow={eyebrowFor("/digest")}
         title="What sales gets every Monday"
-        lede="One email and one Slack post. Reps read the top 3 in two minutes. Everything else is there if they need it."
+        lede="One email and one Slack post every Monday. Reps read the top 3 in two minutes."
         sample
       />
 
@@ -77,6 +79,7 @@ export default function Page() {
         </div>
       </section>
 
+      <More label="Every signal, trends, and win-loss questions" hint="The full list for anyone who wants it">
       <section className="mt-12">
         <h2 className="text-xl font-semibold tracking-tight">All signals</h2>
         <p className="mt-1 text-sm text-muted">Filter by competitor, type, persona, or impact.</p>
@@ -125,6 +128,7 @@ export default function Page() {
           ))}
         </ol>
       </section>
+      </More>
     </>
   );
 }

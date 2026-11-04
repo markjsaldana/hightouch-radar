@@ -7,6 +7,7 @@ import { PageHeader } from "@/components/page-header";
 import { competitorName, signalById, signals, soWhat } from "@/lib/data";
 import { formatLongDate } from "@/lib/format";
 import type { SoWhatItem } from "@/lib/types";
+import { eyebrowFor } from "@/lib/nav";
 
 export const metadata: Metadata = { title: "So what" };
 
@@ -61,7 +62,7 @@ export default function Page() {
   return (
     <>
       <PageHeader
-        eyebrow="05 · So what"
+        eyebrow={eyebrowFor("/so-what")}
         title="So what, this week"
         lede="The digest says what changed. This page says what it means for leadership, for SDRs, and for the rest of the team, in about two minutes each."
         sample
@@ -135,7 +136,7 @@ export default function Page() {
         <div className="min-w-0 flex-1">
           <h2 className="font-semibold">How this page gets made</h2>
           <p className="mt-1 max-w-3xl text-sm text-pretty text-muted">
-            Monday&apos;s run drafts it from the week&apos;s signals. The CI owner rewrites every line before it goes out
+            Monday&apos;s run drafts it from the week&apos;s signals. I rewrite every line before it goes out
             at 9 a.m.: leadership gets it by email, SDRs see their angles in the call guide, and the team gets the Slack
             post. Nothing here is published without a person reading it first.
           </p>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { Bomb, CircleAlert, CircleCheck, MessagesSquare, Radar, Zap } from "lucide-react";
 import { BattlecardScorecard } from "@/components/battlecard-scorecard";
+import { More } from "@/components/more";
 import { PageHeader } from "@/components/page-header";
 import { PersonaTabs } from "@/components/persona-tabs";
 import { HashTabs } from "@/components/hash-tabs";
@@ -9,6 +10,7 @@ import { battlecards, competitorName, signalById } from "@/lib/data";
 import { formatLongDate } from "@/lib/format";
 import { company } from "@/lib/site";
 import type { Battlecard } from "@/lib/types";
+import { eyebrowFor } from "@/lib/nav";
 
 export const metadata: Metadata = { title: "Battlecards" };
 
@@ -84,6 +86,23 @@ function BattlecardView({ card }: { card: Battlecard }) {
       </section>
 
       <div className="mt-6">
+        <Block card={card} title="Objection handling" section="Objection handling" icon={<MessagesSquare className="size-5 text-accent" aria-hidden />}>
+          <dl className="divide-y divide-line">
+            {card.objections.map((o, i) => (
+              <div
+                key={o.objection}
+                id={`${card.competitorId}-objection-${i}`}
+                className="grid scroll-mt-32 gap-2 py-4 target:rounded-lg target:bg-accent-soft target:px-3 first:pt-0 last:pb-0 md:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] md:gap-6">
+                <dt className="font-medium text-pretty">{o.objection}</dt>
+                <dd className="border-l-2 border-accent pl-3 text-sm text-pretty">{o.response}</dd>
+              </div>
+            ))}
+          </dl>
+        </Block>
+      </div>
+
+      <More label="The full card" hint="Scorecard, landmine questions, and how to talk to each buyer">
+      <div className="mt-6">
         <BattlecardScorecard competitorId={card.competitorId} />
       </div>
 
@@ -144,21 +163,6 @@ function BattlecardView({ card }: { card: Battlecard }) {
         </Block>
       </div>
 
-      <div className="mt-4">
-        <Block card={card} title="Objection handling" section="Objection handling" icon={<MessagesSquare className="size-5 text-accent" aria-hidden />}>
-          <dl className="divide-y divide-line">
-            {card.objections.map((o, i) => (
-              <div
-                key={o.objection}
-                id={`${card.competitorId}-objection-${i}`}
-                className="grid scroll-mt-32 gap-2 py-4 target:rounded-lg target:bg-accent-soft target:px-3 first:pt-0 last:pb-0 md:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] md:gap-6">
-                <dt className="font-medium text-pretty">{o.objection}</dt>
-                <dd className="border-l-2 border-accent pl-3 text-sm text-pretty">{o.response}</dd>
-              </div>
-            ))}
-          </dl>
-        </Block>
-      </div>
 
       <section className="mt-8">
         <h2 className="text-xl font-semibold tracking-tight">By persona</h2>
@@ -167,6 +171,7 @@ function BattlecardView({ card }: { card: Battlecard }) {
           <PersonaTabs personas={card.byPersona} />
         </div>
       </section>
+      </More>
     </>
   );
 }
@@ -175,7 +180,7 @@ export default function Page() {
   return (
     <>
       <PageHeader
-        eyebrow="06 · Battlecards"
+        eyebrow={eyebrowFor("/battlecard")}
         title={`${company} vs. Jobber and ServiceTitan`}
         lede="One card per competitor, short enough to use mid-call. Dispatch updates them every week, so reps can trust what's on them."
         sample

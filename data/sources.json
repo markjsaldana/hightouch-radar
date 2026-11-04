@@ -177,7 +177,7 @@
     "id": "mystery-shop",
     "competitorId": "category",
     "type": "mystery-shop calls",
-    "url": "Sales calls the CI owner books with Jobber and ServiceTitan as a prospect",
+    "url": "Sales calls I book with Jobber and ServiceTitan as a prospect",
     "internal": true,
     "frequency": "Monthly",
     "lookFor": "How their reps pitch, what they say about Housecall Pro, and how they handle price"

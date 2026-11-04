@@ -13,10 +13,12 @@ import {
   Inbox,
 } from "lucide-react";
 import { ImpactGauge } from "@/components/impact-gauge";
+import { More } from "@/components/more";
 import { PageHeader } from "@/components/page-header";
 import { PipelineTrack } from "@/components/pipeline-track";
 import { WeeklyRun } from "@/components/weekly-run";
 import { competitorName, signalById, signalTypeLabel, sources } from "@/lib/data";
+import { eyebrowFor } from "@/lib/nav";
 
 export const metadata: Metadata = { title: "How it works" };
 
@@ -29,7 +31,7 @@ const automated = [
 const handsOn = [
   {
     title: "Mystery-shop calls",
-    body: "The CI owner books sales calls with competitors as a prospect to hear how their reps pitch, which objections they plant about us, and how they handle pricing questions. No changelog shows that.",
+    body: "I book sales calls with Jobber and ServiceTitan as a prospect to hear how their reps pitch, which objections they plant about us, and how they handle pricing questions. No changelog shows that.",
   },
   {
     title: "Win-loss interviews",
@@ -41,7 +43,7 @@ const handsOn = [
   },
   {
     title: "Reviewing every AI draft",
-    body: "The CI owner owns the point of view and anything a rep will say to a customer. Anything rated Rumor stays out of talk tracks.",
+    body: "I own the point of view and every line a rep will say to a customer. Anything rated Rumor stays out of talk tracks.",
   },
 ];
 
@@ -75,7 +77,7 @@ export default function Page() {
     {
       icon: Tags,
       title: "Classify & score",
-      body: "AI does the first pass, then the CI owner reviews it. Each change gets a type, the personas it affects, and scores for deal impact, urgency, and confidence.",
+      body: "AI does the first pass, then I review it. Each change gets a type, the personas it affects, and scores for deal impact, urgency, and confidence.",
       trace: `${signalTypeLabel(signal.type)} · Impact ${signal.impact}/5 · ${signal.personas.join(", ")} · ${signal.confidence}.`,
     },
     {
@@ -95,12 +97,15 @@ export default function Page() {
   return (
     <>
       <PageHeader
-        eyebrow="02 · How it works"
+        eyebrow={eyebrowFor("/how-it-works")}
         title="From competitor change to sales-ready intel"
         lede="This is the engine behind the assistant. Every Monday it scrapes Jobber and ServiceTitan pages and blogs, finds what changed, and drafts what it means. A person reviews every change before it reaches a rep."
         sample
       />
 
+      <WeeklyRun />
+
+      <More label="Follow one change through every step" hint="Jobber's pricing change, from scrape to sales alert">
       {/* Flow strip: the whole pipeline at a glance, following the reader down the page. */}
       <PipelineTrack titles={steps.map((s) => s.title)} signalId={signal.id} />
 
@@ -142,17 +147,16 @@ export default function Page() {
           </li>
         ))}
       </ol>
+      </More>
 
-      <WeeklyRun />
-
-      <section className="mt-12 rounded-xl border border-accent/30 bg-accent-soft p-6">
+      <More label="The work scraping can't do" hint="Mystery-shop calls, win-loss interviews, and call listening">
+      <section className="rounded-xl border border-accent/30 bg-accent-soft p-6">
         <h2 className="flex items-center gap-2 font-semibold">
           <UserCheck className="size-5 text-accent" aria-hidden />
           Automation plus hands-on work
         </h2>
         <p className="mt-1 max-w-3xl text-pretty">
-          Automation covers the public record. The intel reps trust most comes from talking to people, so a big part of
-          the job happens away from the automation.
+          Scraping covers the public record. The intel reps trust most comes from talking to people.
         </p>
         <div className="mt-5 grid gap-4 md:grid-cols-[minmax(0,2fr)_minmax(0,3fr)]">
           <div className="rounded-lg bg-surface p-4">
@@ -171,7 +175,7 @@ export default function Page() {
           <div className="rounded-lg bg-surface p-4">
             <h3 className="flex items-center gap-2 text-sm font-semibold">
               <Hand className="size-4 text-accent" aria-hidden />
-              Hands-on, by the CI owner
+              Hands-on, by me
             </h3>
             <ul className="mt-3 space-y-3 text-sm">
               {handsOn.map((item) => (
@@ -181,12 +185,13 @@ export default function Page() {
               ))}
             </ul>
             <p className="mt-4 border-t border-line pt-3 text-xs text-pretty text-muted">
-              Mystery-shop calls run within legal&apos;s guidelines. The CI owner never asks for confidential information, and
+              Mystery-shop calls run within legal&apos;s guidelines. I never ask for confidential information, and
               notes are shared as themes, not recordings.
             </p>
           </div>
         </div>
       </section>
+      </More>
 
       <div className="mt-10">
         <Link

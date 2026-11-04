@@ -4,8 +4,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { CalendarClock, FileAudio, Hash, Lock, Mail, Sunrise, Users } from "lucide-react";
 import { DealAssistant } from "@/components/deal-assistant";
+import { More } from "@/components/more";
 import { PageHeader } from "@/components/page-header";
 import { transcriptDemo } from "@/lib/data";
+import { eyebrowFor } from "@/lib/nav";
 
 export const metadata: Metadata = { title: "Deal assistant" };
 
@@ -70,7 +72,7 @@ const buildSteps = [
   },
   {
     title: "Turn gaps into intel requests",
-    body: "Concerns it can't answer go to the CI owner, and missing reference matches go to CS. They become new sources to track, new win-loss questions, or reference recruiting.",
+    body: "Concerns it can't answer come to me, and missing reference matches go to CS. They become new sources to track, new win-loss questions, or reference recruiting.",
   },
 ];
 
@@ -87,9 +89,9 @@ export default function Page() {
   return (
     <>
       <PageHeader
-        eyebrow="11 · Deal assistant"
+        eyebrow={eyebrowFor("/assistant")}
         title="The assistant reps use every day, on every deal"
-        lede="SDRs and AEs open it before and after every call. Upload the transcript and get the buyer's concerns, the proof that answers them, and the follow-up email, each with its source."
+        lede="Reps open it before and after every call. Drop in the transcript and get the buyer's concerns, the proof that answers them, and a follow-up email."
         sample
       />
 
@@ -176,8 +178,7 @@ export default function Page() {
         </figure>
       </section>
 
-      <section className="mt-12">
-        <h2 className="text-xl font-semibold tracking-tight">How it works</h2>
+      <More label="How it works, and how I'll measure it" hint="What it reads from, how it ranks proof, and when it ships">
         <div className="mt-4 grid gap-4 lg:grid-cols-2">
           <div className="rounded-xl border border-line bg-surface p-5">
             <h3 className="font-semibold">What goes into it</h3>
@@ -220,7 +221,7 @@ export default function Page() {
             See the 90-day plan
           </Link>
         </p>
-      </section>
+      </More>
     </>
   );
 }

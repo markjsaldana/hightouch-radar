@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { More } from "@/components/more";
 import { PageHeader } from "@/components/page-header";
 import { personName } from "@/lib/site";
+import { eyebrowFor } from "@/lib/nav";
 
 export const metadata: Metadata = { title: "90-day plan" };
 
@@ -71,9 +73,9 @@ export default function Page() {
   return (
     <>
       <PageHeader
-        eyebrow="10 · 90-day plan"
+        eyebrow={eyebrowFor("/plan")}
         title="How I'll build and ship Dispatch in my first 90 days"
-        lede="Listen first, then make it weekly, then prove it changes win rates. By day 90 Dispatch goes out every Monday, and the deal assistant is live with a pilot group of reps."
+        lede="Listen first, make it weekly, then prove it moves win rates. By day 90, Dispatch goes out every Monday and a group of reps is piloting the deal assistant."
       />
 
       {/* 90 days as one strip, with each milestone placed by its day. */}
@@ -120,15 +122,7 @@ export default function Page() {
               {String(i + 1).padStart(2, "0")} · {p.days}
             </p>
             <h2 className="mt-1 text-lg font-semibold">{p.name}</h2>
-            <ul className="mt-4 space-y-2.5 text-sm">
-              {p.items.map((item) => (
-                <li key={item} className="flex gap-2.5">
-                  <span className="mt-2 size-1.5 shrink-0 rounded-full bg-accent" aria-hidden />
-                  <span className="text-pretty">{item}</span>
-                </li>
-              ))}
-            </ul>
-            <div className="mt-auto space-y-3 border-t border-line pt-4 text-sm [&:not(:first-child)]:mt-5">
+            <div className="mt-4 space-y-3 text-sm">
               <p>
                 <span className="text-xs font-medium tracking-wide text-muted uppercase">What ships</span>
                 <span className="mt-1 block text-pretty">{p.ships}</span>
@@ -142,12 +136,26 @@ export default function Page() {
         ))}
       </ol>
 
-      <section className="mt-14">
-        <h2 className="text-xl font-semibold tracking-tight">Who I&apos;ll work with</h2>
-        <p className="mt-1 max-w-2xl text-sm text-pretty text-muted">
-          Dispatch is a PMM program, and it works when these teams use it and feed it.
-        </p>
-        <dl className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      <More label="What I'll do in each phase" hint="Step by step, month by month">
+        <div className="grid gap-4 lg:grid-cols-3">
+          {phases.map((p) => (
+            <div key={p.days} className="rounded-xl border border-line bg-surface p-5">
+              <p className="font-mono text-xs text-accent">{p.days}</p>
+              <ul className="mt-3 space-y-2.5 text-sm">
+                {p.items.map((item) => (
+                  <li key={item} className="flex gap-2.5">
+                    <span className="mt-2 size-1.5 shrink-0 rounded-full bg-accent" aria-hidden />
+                    <span className="text-pretty">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </More>
+
+      <More label="Who I'll work with" hint="Six teams, and what I need from each">
+        <dl className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {partners.map((p) => (
             <div key={p.team} className="rounded-xl border border-line bg-surface p-4">
               <dt className="font-medium">{p.team}</dt>
@@ -161,7 +169,7 @@ export default function Page() {
           </Link>{" "}
           <span className="text-muted">· the KPI scorecard on the Routing log page.</span>
         </p>
-      </section>
+      </More>
 
       <section className="mt-14 rounded-xl border border-accent/30 bg-accent-soft p-6">
         <p className="font-mono text-xs text-accent">Next · After day 90</p>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { MatrixTable } from "@/components/matrix-table";
 import { PageHeader } from "@/components/page-header";
 import { PositioningMap } from "@/components/positioning-map";
+import { eyebrowFor } from "@/lib/nav";
 
 export const metadata: Metadata = { title: "Matrix & map" };
 
@@ -9,7 +10,7 @@ export default function Page() {
   return (
     <>
       <PageHeader
-        eyebrow="07 · Matrix & map"
+        eyebrow={eyebrowFor("/matrix")}
         title="Comparison matrix and positioning map"
         lede="The matrix answers 'can they do X?' for each buyer. The map shows where each player is headed."
         sample

@@ -38,7 +38,7 @@ const steps: Step[] = [
     icon: UserCheck,
     title: "Review",
     who: "human",
-    body: "The CI owner checks each draft against the page it came from, fixes scores, deletes noise, and rewrites anything a rep will say out loud. About an hour on a normal week.",
+    body: "I check each draft against the page it came from, fixes scores, deletes noise, and rewrites anything a rep will say out loud. About an hour on a normal week.",
   },
   {
     time: "Mon 9:00",
@@ -71,7 +71,7 @@ const alwaysHuman = [
 ];
 
 const needs = [
-  "A CI owner with about half a day each Monday",
+  "About half a day of my time each Monday",
   "A GitHub repo with a scheduled job",
   "An Anthropic API key, stored as a repo secret",
   "Read-only exports from the call recorder and the CRM",
@@ -79,11 +79,10 @@ const needs = [
 
 export function WeeklyRun() {
   return (
-    <section id="weekly-run" className="mt-12 scroll-mt-32">
+    <section id="weekly-run" className="scroll-mt-32">
       <h2 className="text-xl font-semibold tracking-tight">The weekly run: what&apos;s automated, and where a person steps in</h2>
       <p className="mt-1 max-w-3xl text-sm text-pretty text-muted">
-        In production, Dispatch refreshes every Monday by scraping Jobber and ServiceTitan pages and blogs. This sample
-        site doesn&apos;t scrape; its data shows what one run would produce. Here&apos;s how the run would work.
+        Every Monday morning, step by step. This sample site doesn&apos;t scrape; its data shows what one run would produce.
       </p>
 
       <div className="mt-3 flex flex-wrap gap-2 text-xs" aria-label="Legend">

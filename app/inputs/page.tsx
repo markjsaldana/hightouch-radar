@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { Chip } from "@/components/badges";
 import { CoverageHeatmap } from "@/components/coverage-heatmap";
+import { More } from "@/components/more";
 import { PageHeader } from "@/components/page-header";
 import { SourceExplorer } from "@/components/source-explorer";
 import { competitors, rules, signalTypes, sources } from "@/lib/data";
 import { loadSnapshotDiff } from "@/lib/diff";
 import type { Tier } from "@/lib/types";
+import { eyebrowFor } from "@/lib/nav";
 
 export const metadata: Metadata = { title: "Inputs" };
 
@@ -47,9 +49,9 @@ export default function Page() {
   return (
     <>
       <PageHeader
-        eyebrow="03 · Inputs"
+        eyebrow={eyebrowFor("/inputs")}
         title="What Dispatch watches, and the rules it follows"
-        lede="Who we track, where we look, what counts as a change, and how each change is scored and routed."
+        lede="Who Dispatch watches, which pages it scrapes, and how it scores what changed."
         sample
       />
 
@@ -126,6 +128,7 @@ export default function Page() {
         </div>
       </Section>
 
+      <More label="How changes are typed, scored, and routed" hint="The nine change types and the rules behind every alert">
       <Section
         index={2}
         lede="Every change gets exactly one type. The type decides the default route and which battlecard section it can update."
@@ -143,7 +146,7 @@ export default function Page() {
 
       <Section
         index={3}
-        lede="The scores decide who hears about a change and how fast. The AI proposes them, and the CI owner confirms or changes them."
+        lede="The scores decide who hears about a change and how fast. The AI proposes them, and I confirm or change them."
       >
         <div className="grid gap-4 lg:grid-cols-2">
           <div className="rounded-xl border border-line bg-surface p-5">
@@ -229,6 +232,7 @@ export default function Page() {
           </table>
         </div>
       </Section>
+      </More>
     </>
   );
 }

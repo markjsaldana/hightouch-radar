@@ -5,6 +5,7 @@ import { SalesCycleTrack, type Stage } from "@/components/sales-cycle-track";
 import { competitors, digest, signals, sources } from "@/lib/data";
 import { formatShortDate } from "@/lib/format";
 import { lastRun } from "@/lib/site";
+import { eyebrowFor } from "@/lib/nav";
 
 const pillars = [
   {
@@ -20,7 +21,7 @@ const pillars = [
   {
     icon: MessageSquareText,
     title: "Answer",
-    body: "Reps ask in Slack or the CRM and get what to say next for the deal in front of them, with the source for every line.",
+    body: "Reps ask in Slack or the CRM and get what to say next for the deal in front of them.",
   },
 ];
 
@@ -87,7 +88,7 @@ const whyItMatters = [
   },
   {
     title: "Reps only use what they trust.",
-    body: "Every answer cites the signal, battlecard section, or customer story it came from. When the assistant doesn't know, it says so, and the question goes to the CI owner.",
+    body: "Every answer cites the signal, battlecard section, or customer story it came from. When the assistant doesn't know, it says so, and the question comes to me.",
   },
 ];
 
@@ -103,7 +104,7 @@ export default function Page() {
   return (
     <>
       <PageHeader
-        eyebrow="01 · Overview"
+        eyebrow={eyebrowFor("/")}
         title="A sales assistant for every stage of the deal"
         lede="Housecall Pro SDRs and AEs ask it what to say next, from the first cold email to the renewal call. It answers from this week's intel on Jobber and ServiceTitan and from customer proof, and it cites the source for every line."
       />
@@ -129,8 +130,7 @@ export default function Page() {
         ))}
       </dl>
       <p className="mt-2 text-xs text-pretty text-muted">
-        Counts come from the sample {formatShortDate(lastRun)} run. In production Dispatch refreshes every Monday by
-        scraping Jobber and ServiceTitan pages and blogs, and a person reviews it before anything goes out.{" "}
+        Counts come from the sample {formatShortDate(lastRun)} run.{" "}
         <Link href="/how-it-works#weekly-run" className="font-medium text-accent hover:underline">
           How the weekly run works
         </Link>
