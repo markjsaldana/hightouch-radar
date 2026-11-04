@@ -25,12 +25,14 @@ const phases = [
     name: "Listen and ship the first cards",
     items: [
       "Sit in on 20 SDR and AE calls, and join a few CS renewal calls.",
+      "Learn the product inside and out: run a test shop from first booking to getting paid, and sit in on onboarding and support calls.",
+      "Call customers in our key segments: current customers, churned customers, and people who signed up but never converted.",
       "Interview sales leaders, SDRs, AEs, CS, and Product about where Jobber and ServiceTitan show up and what reps need in the moment.",
       "Audit the competitive content that exists today and retire anything out of date.",
       "Pull win-loss and call data to see where we lose to each competitor, by trade and shop size.",
       "Agree with sales leadership on who else to watch beyond Jobber and ServiceTitan.",
     ],
-    ships: "v1 battlecards for Jobber and ServiceTitan, and the source list Dispatch will track.",
+    ships: "v1 battlecards for Jobber and ServiceTitan, a write-up of what customers told me, and the source list Dispatch will track.",
     done: "Reps are using both battlecards on live calls.",
   },
   {
