@@ -4,7 +4,7 @@ import { Fragment, useState } from "react";
 import { Check, Minus, X } from "lucide-react";
 import { matrix } from "@/lib/data";
 import type { MatrixMark, Persona } from "@/lib/types";
-import { companyId, personaLabel } from "@/lib/site";
+import { companyId, personaHeading } from "@/lib/site";
 
 const markStyle: Record<MatrixMark, { icon: typeof Check; label: string; tone: string }> = {
   yes: { icon: Check, label: "Yes", tone: "bg-good-soft text-good" },
@@ -66,17 +66,17 @@ export function MatrixTable() {
 
       {/* relative: keeps the sr-only labels' absolute boxes inside the scroller. */}
       <div className="relative mt-4 overflow-x-auto rounded-xl border border-line bg-surface">
-        <table className="w-full min-w-[46rem] border-collapse text-left text-sm">
+        <table className="w-full min-w-[20rem] border-collapse text-left text-sm">
           <thead>
             <tr className="border-b border-line text-xs">
-              <th scope="col" className="sticky left-0 z-10 bg-surface px-4 py-3 font-medium text-muted">
+              <th scope="col" className="sticky left-0 z-10 bg-surface px-3 py-3 font-medium text-muted sm:px-4">
                 Capability
               </th>
               {matrix.players.map((p) => (
                 <th
                   key={p.id}
                   scope="col"
-                  className={`px-3 py-3 text-center font-semibold ${p.id === companyId ? "bg-accent-soft text-accent" : ""}`}
+                  className={`w-[4.75rem] px-1.5 py-3 text-center font-semibold sm:w-36 sm:px-3 ${p.id === companyId ? "bg-accent-soft text-accent" : ""}`}
                 >
                   {p.name}
                 </th>
@@ -92,12 +92,12 @@ export function MatrixTable() {
                     colSpan={matrix.players.length + 1}
                     className="px-4 py-2 text-xs font-semibold tracking-wide text-muted uppercase"
                   >
-                    What {personaLabel[g.persona] ?? g.persona} cares about
+                    {personaHeading[g.persona] ?? g.persona}
                   </th>
                 </tr>
                 {g.capabilities.map((c) => (
                   <tr key={c.name} className="border-b border-line last:border-0">
-                    <th scope="row" className="sticky left-0 z-10 bg-surface px-4 py-3 font-medium text-pretty">
+                    <th scope="row" className="sticky left-0 z-10 bg-surface px-3 py-3 font-medium text-pretty sm:px-4">
                       {c.name}
                     </th>
                     {matrix.players.map((p) => {
@@ -106,7 +106,7 @@ export function MatrixTable() {
                         <td
                           key={p.id}
                           title={cell.note}
-                          className={`px-3 py-3 text-center align-top ${p.id === companyId ? "bg-accent-soft/50" : ""}`}
+                          className={`px-1.5 py-3 text-center align-top sm:px-3 ${p.id === companyId ? "bg-accent-soft/50" : ""}`}
                         >
                           <Mark mark={cell.mark} />
                           {showNotes ? (

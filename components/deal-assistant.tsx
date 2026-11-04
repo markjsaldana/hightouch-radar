@@ -152,7 +152,7 @@ function ConcernRow({ rank, fromForm }: { rank: number; fromForm?: boolean }) {
           </p>
         )}
         {c.objection !== undefined ? (
-          <a href={`/battlecard#${card.competitorId}-objection-${c.objection}`} className="inline-flex items-center gap-0.5 text-xs font-medium text-accent hover:underline">
+          <a href={`/battlecard#${card.competitorId}-objection-${c.objection}`} className="-mb-1 inline-flex items-center gap-0.5 py-1 text-xs font-medium text-accent hover:underline">
             Talk track <ArrowUpRight className="size-3" aria-hidden />
           </a>
         ) : null}

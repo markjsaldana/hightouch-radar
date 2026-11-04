@@ -43,7 +43,7 @@ function CaseStudyCard({ cs }: { cs: CaseStudy }) {
           {customer.reference ? (
             <a
               href={`#ref-${customer.id}`}
-              className="rounded-md bg-good-soft px-1.5 py-0.5 font-medium text-good hover:underline"
+              className="rounded-md bg-good-soft px-1.5 py-1 font-medium text-good hover:underline"
             >
               Reference available
             </a>

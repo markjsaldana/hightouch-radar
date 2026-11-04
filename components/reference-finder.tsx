@@ -154,7 +154,7 @@ export function ReferenceFinder() {
                       <a
                         key={cs.id}
                         href={`#cs-${cs.id}`}
-                        className="inline-flex items-center gap-1.5 font-medium text-accent hover:underline"
+                        className="-my-1 inline-flex items-center gap-1.5 py-1 font-medium text-accent hover:underline"
                       >
                         <BookOpen className="size-3.5" aria-hidden />
                         Case study

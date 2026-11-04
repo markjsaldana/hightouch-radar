@@ -28,7 +28,7 @@ function SignalChips({ ids }: { ids: number[] }) {
             key={id}
             href="/digest"
             title={s.change}
-            className="rounded-md border border-line px-1.5 py-0.5 font-mono text-[11px] text-muted transition-colors hover:border-accent hover:text-accent"
+            className="rounded-md border border-line px-2 py-1 font-mono text-[11px] text-muted transition-colors hover:border-accent hover:text-accent"
           >
             #{id} {competitorName(s.competitorId)}
           </Link>

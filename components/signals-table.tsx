@@ -35,7 +35,7 @@ function SortHeader({
         type="button"
         // First click sorts competitors A to Z, and impact and date highest first.
         onClick={() => onSort({ key: k, desc: active ? !sort.desc : k !== "competitor" })}
-        className={`inline-flex items-center gap-1 hover:text-fg ${active ? "text-fg" : ""}`}
+        className={`-my-1.5 inline-flex items-center gap-1 py-1.5 hover:text-fg ${active ? "text-fg" : ""}`}
       >
         {children}
         {active ? <Icon className="size-3" aria-hidden /> : null}

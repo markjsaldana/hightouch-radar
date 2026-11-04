@@ -17,10 +17,10 @@ export const personName = "Mark Saldaña";
 
 export const sampleDisclaimer = "Sample data for illustration. Not real competitive claims.";
 
-// How each persona id reads in a sentence.
-export const personaLabel: Record<string, string> = {
-  Owner: "the owner",
-  Office: "the office manager",
-  Tech: "techs",
-  Ops: "the ops leader",
+// Matrix group headings, one per persona id.
+export const personaHeading: Record<string, string> = {
+  Owner: "What the owner cares about",
+  Office: "What the office manager cares about",
+  Tech: "What techs care about",
+  Ops: "What the ops leader cares about",
 };
