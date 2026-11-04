@@ -129,7 +129,7 @@ export default function Page() {
         ))}
       </dl>
       <p className="mt-2 text-xs text-pretty text-muted">
-        Counts come from the sample {formatShortDate(lastRun)} run. In production the Radar refreshes every Monday by
+        Counts come from the sample {formatShortDate(lastRun)} run. In production Dispatch refreshes every Monday by
         scraping Jobber and ServiceTitan pages and blogs, and a person reviews it before anything goes out.{" "}
         <Link href="/how-it-works#weekly-run" className="font-medium text-accent hover:underline">
           How the weekly run works
@@ -162,12 +162,12 @@ export default function Page() {
       </section>
 
       <section className="mt-12 rounded-xl border border-line bg-surface-2 p-6">
-        <p className="font-mono text-xs tracking-wide text-muted uppercase">Built to run in-house</p>
+        <p className="font-mono text-xs tracking-wide text-muted uppercase">How I&apos;ll roll it out</p>
         <p className="mt-3 max-w-3xl text-pretty">
-          The assistant and every page here read from a few JSON files and one pipeline script. Your team can fork it and run it,
-          or bring me in to set it up.{" "}
+          In my first 90 days as PMM: battlecards for Jobber and ServiceTitan by day 30, Dispatch every Monday by day
+          35, and a deal assistant pilot with SDRs and AEs by day 75.{" "}
           <Link href="/plan" className="font-medium text-accent hover:underline">
-            See how to build it
+            See the 90-day plan
           </Link>
           .
         </p>

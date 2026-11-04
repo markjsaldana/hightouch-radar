@@ -48,7 +48,7 @@ export default function Page() {
     <>
       <PageHeader
         eyebrow="03 · Inputs"
-        title="What the Radar watches, and the rules it follows"
+        title="What Dispatch watches, and the rules it follows"
         lede="Who we track, where we look, what counts as a change, and how each change is scored and routed."
         sample
       />
@@ -118,7 +118,7 @@ export default function Page() {
 
       <Section
         index={1}
-        lede={`${sources.length} sources: competitor pages and blogs scraped weekly (pricing pages daily), plus internal notes from sales and CS. Pick one to see what the Radar checks. Three have saved before-and-after versions, so you can see exactly what changed and the signal it produced.`}
+        lede={`${sources.length} sources: competitor pages and blogs scraped weekly (pricing pages daily), plus internal notes from sales and CS. Pick one to see what Dispatch checks. Three have saved before-and-after versions, so you can see exactly what changed and the signal it produced.`}
       >
         <CoverageHeatmap />
         <div className="mt-6">

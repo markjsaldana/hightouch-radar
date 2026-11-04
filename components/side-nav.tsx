@@ -8,7 +8,7 @@ export function SideNav() {
   const pathname = usePathname();
 
   return (
-    <nav aria-label="Radar pages" className="sticky top-14 hidden h-[calc(100vh-3.5rem)] w-52 shrink-0 py-10 lg:block">
+    <nav aria-label="Site pages" className="sticky top-14 hidden h-[calc(100vh-3.5rem)] w-52 shrink-0 py-10 lg:block">
       <ol className="space-y-0.5">
         {navItems.map((item) => {
           const active = pathname === item.href;

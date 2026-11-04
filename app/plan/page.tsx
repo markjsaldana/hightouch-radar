@@ -4,107 +4,116 @@ import { ArrowRight } from "lucide-react";
 import { PageHeader } from "@/components/page-header";
 import { personName } from "@/lib/site";
 
-export const metadata: Metadata = { title: "Build it" };
+export const metadata: Metadata = { title: "90-day plan" };
 
-const paths = [
-  {
-    name: "On your own",
-    summary: "This repo is the starting point. Everything on the site comes from it.",
-    items: [
-      "Fork the repo. The JSON files in /data define every schema, and npm run check:data keeps them consistent.",
-      "Replace the sample data with real Jobber and ServiceTitan source URLs, reference customers, and case studies.",
-      "Schedule scripts/radar.py every Monday with a Claude API key. It scrapes, compares, and drafts; a person approves each signal.",
-      "Follow the 90-day rollout below.",
-    ],
-    needsLabel: "You'll need",
-    needs: "One CI owner (usually in PMM), sales ops for call recording and CRM access, and an engineer for the pipeline setup.",
-  },
-  {
-    name: "With me",
-    summary: "I set it up with your team, run the first 90 days, and hand it over.",
-    items: [
-      "Run the 90-day rollout below alongside your PMM team.",
-      "Connect the pipeline to your real sources, call recordings, and CRM.",
-      "Build the deal assistant once the Radar has about 3 months of content.",
-      "Train the person who keeps it running after handover.",
-    ],
-    needsLabel: "You get",
-    needs: "A Radar running on your real sources, an owner trained to run it, and written notes on every source and rule.",
-  },
+// Dated milestones for the timeline strip. `day` places each marker.
+const milestones = [
+  { day: 10, label: "Sat in on 20 sales calls" },
+  { day: 30, label: "Jobber and ServiceTitan battlecards live" },
+  { day: 35, label: "First Monday Dispatch" },
+  { day: 45, label: "First So what to leadership" },
+  { day: 60, label: "Comparison pages updated" },
+  { day: 75, label: "Deal assistant pilot starts" },
+  { day: 90, label: "Win rates to leadership" },
 ];
 
 const phases = [
   {
     days: "Days 1–30",
-    name: "Listen & baseline",
+    name: "Listen and ship the first cards",
     items: [
-      "Interview reps, SEs, PMs, and CS about where competitors show up and what they need in the moment.",
-      "Audit existing competitive content and retire anything out of date.",
-      "Pull win-loss and call data to see which competitors you lose to most.",
-      "Confirm Jobber and ServiceTitan as the primary competitors, and decide who else to watch.",
-      "Ship v1 battlecards for both.",
+      "Sit in on 20 SDR and AE calls, and join a few CS renewal calls.",
+      "Interview sales leaders, SDRs, AEs, CS, and Product about where Jobber and ServiceTitan show up and what reps need in the moment.",
+      "Audit the competitive content that exists today and retire anything out of date.",
+      "Pull win-loss and call data to see where we lose to each competitor, by trade and shop size.",
+      "Agree with sales leadership on who else to watch beyond Jobber and ServiceTitan.",
     ],
-    done: "Reps have current Jobber and ServiceTitan battlecards.",
+    ships: "v1 battlecards for Jobber and ServiceTitan, and the source list Dispatch will track.",
+    done: "Reps are using both battlecards on live calls.",
   },
   {
     days: "Days 31–60",
-    name: "Systematize",
+    name: "Make it weekly",
     items: [
-      "Turn on the Monday scrape, and launch the weekly digest, the So what, and a sales alert channel.",
-      "Start a monthly win-loss interview cadence.",
-      "Start monthly mystery-shop calls, alternating Jobber and ServiceTitan.",
-      "Build the comparison matrix and the first comparison pages.",
+      "Turn on the Monday scrape with RevOps and a few days of an engineer's time.",
+      "Send the first weekly digest and the first So what for leadership, SDRs, and the team.",
+      "Open a sales alert channel for same-day changes.",
+      "Start monthly win-loss interviews and mystery-shop calls, alternating Jobber and ServiceTitan.",
+      "Refresh our Jobber and ServiceTitan comparison pages with the web team.",
     ],
-    done: "The Radar runs every week without anyone having to chase it.",
+    ships: "Dispatch every Monday, the So what, the alert channel, and updated comparison pages.",
+    done: "Dispatch goes out every Monday without me chasing anyone for it.",
   },
   {
     days: "Days 61–90",
-    name: "Prove impact",
+    name: "Prove it and start the assistant",
     items: [
       "Set the KPI baseline and report win rate against Jobber and ServiceTitan.",
-      "Feed a quarterly competitive review into roadmap planning.",
+      "Pilot the deal assistant with 5 AEs and 3 SDRs on live deals.",
       "Run a field enablement session on the top competitive plays.",
+      "Bring a quarterly competitive review into roadmap planning with Product.",
     ],
-    done: "Leadership sees win rate by competitor, and Product plans with CI in the room.",
+    ships: "A win-rate baseline, the first quarterly competitive review, and the assistant pilot.",
+    done: "Leadership sees win rate by competitor, and pilot reps use the assistant in live deals.",
   },
+];
+
+const partners = [
+  { team: "Sales leadership", why: "What reps need, and which decisions go in the leadership So what" },
+  { team: "SDR and AE managers", why: "Openers, talk tracks, and who joins the assistant pilot" },
+  { team: "RevOps", why: "Call recordings, CRM fields for competitor tags, and the Monday job" },
+  { team: "Product", why: "Roadmap gaps from signals, and the quarterly competitive review" },
+  { team: "CS", why: "Switch risk at renewal, and reference customers" },
+  { team: "Web and Legal", why: "Comparison pages and any claim about a competitor" },
 ];
 
 export default function Page() {
   return (
     <>
       <PageHeader
-        eyebrow="10 · Build it"
-        title="How Housecall Pro could build this internally"
-        lede="Everything on this site runs from one repo: the data, the pipeline, and the assistant reps use. A team could stand it up in 90 days, on its own or with me."
+        eyebrow="10 · 90-day plan"
+        title="How I'll build and ship Dispatch in my first 90 days"
+        lede="Listen first, then make it weekly, then prove it changes win rates. By day 90 Dispatch goes out every Monday, and the deal assistant is live with a pilot group of reps."
       />
 
-      <div className="grid gap-4 lg:grid-cols-2">
-        {paths.map((path) => (
-          <section key={path.name} className="flex flex-col rounded-xl border border-line bg-surface p-5">
-            <h2 className="text-lg font-semibold">{path.name}</h2>
-            <p className="mt-1 text-sm text-pretty text-muted">{path.summary}</p>
-            <ul className="mt-4 space-y-2.5 text-sm">
-              {path.items.map((item) => (
-                <li key={item} className="flex gap-2.5">
-                  <span className="mt-2 size-1.5 shrink-0 rounded-full bg-accent" aria-hidden />
-                  <span className="text-pretty">{item}</span>
-                </li>
-              ))}
-            </ul>
-            <p className="mt-auto border-t border-line pt-4 text-sm text-pretty [&:not(:first-child)]:mt-5">
-              <span className="text-xs font-medium tracking-wide text-muted uppercase">{path.needsLabel}</span>
-              <span className="mt-1 block">{path.needs}</span>
-            </p>
-          </section>
-        ))}
-      </div>
+      {/* 90 days as one strip, with each milestone placed by its day. */}
+      <section aria-label="Milestones" className="rounded-xl border border-line bg-surface p-5">
+        <div className="relative my-2 hidden h-36 md:block">
+          <div className="absolute top-12 right-0 left-0 flex h-2 gap-0.5 overflow-hidden rounded-full" aria-hidden>
+            <span className="animate-grow-x flex-1 bg-seq-2" />
+            <span className="animate-grow-x flex-1 bg-seq-3 [animation-delay:200ms]" />
+            <span className="animate-grow-x flex-1 bg-seq-4 [animation-delay:400ms]" />
+          </div>
+          {milestones.map((m, i) => {
+            const above = i % 2 === 0;
+            const last = m.day === 90;
+            return (
+              <div
+                key={m.day}
+                className={`absolute w-32 ${last ? "-translate-x-full text-right" : "-translate-x-1/2 text-center"}`}
+                style={{ left: `${(m.day / 90) * 100}%`, top: above ? 0 : "3.75rem" }}
+              >
+                <div className="animate-rise" style={{ animationDelay: `${300 + i * 120}ms` }}>
+                  {above ? null : <span className={`mb-1 block h-3 w-px bg-line ${last ? "ml-auto" : "mx-auto"}`} aria-hidden />}
+                  <p className="font-mono text-[11px] text-accent">Day {m.day}</p>
+                  <p className="text-xs leading-tight text-pretty">{m.label}</p>
+                  {above ? <span className={`mt-1 block h-3 w-px bg-line ${last ? "ml-auto" : "mx-auto"}`} aria-hidden /> : null}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+        <ol className="space-y-2 md:hidden">
+          {milestones.map((m) => (
+            <li key={m.day} className="flex gap-3 text-sm">
+              <span className="w-14 shrink-0 font-mono text-xs leading-5 text-accent">Day {m.day}</span>
+              <span>{m.label}</span>
+            </li>
+          ))}
+        </ol>
+      </section>
 
-      <h2 className="mt-14 text-xl font-semibold tracking-tight">The 90-day rollout</h2>
-      <p className="mt-1 mb-4 max-w-2xl text-sm text-pretty text-muted">
-        Listen first, then build the system, then prove it changes win rates. The same plan works either way.
-      </p>
-
-      <ol className="grid gap-4 lg:grid-cols-3">
+      <ol className="mt-6 grid gap-4 lg:grid-cols-3">
         {phases.map((p, i) => (
           <li key={p.days} className="flex flex-col rounded-xl border border-line bg-surface p-5">
             <p className="font-mono text-xs text-accent">
@@ -119,20 +128,47 @@ export default function Page() {
                 </li>
               ))}
             </ul>
-            <p className="mt-auto border-t border-line pt-4 text-sm [&:not(:first-child)]:mt-5">
-              <span className="text-xs font-medium tracking-wide text-muted uppercase">Done when</span>
-              <span className="mt-1 block text-pretty">{p.done}</span>
-            </p>
+            <div className="mt-auto space-y-3 border-t border-line pt-4 text-sm [&:not(:first-child)]:mt-5">
+              <p>
+                <span className="text-xs font-medium tracking-wide text-muted uppercase">What ships</span>
+                <span className="mt-1 block text-pretty">{p.ships}</span>
+              </p>
+              <p>
+                <span className="text-xs font-medium tracking-wide text-muted uppercase">Done when</span>
+                <span className="mt-1 block text-pretty">{p.done}</span>
+              </p>
+            </div>
           </li>
         ))}
       </ol>
 
+      <section className="mt-14">
+        <h2 className="text-xl font-semibold tracking-tight">Who I&apos;ll work with</h2>
+        <p className="mt-1 max-w-2xl text-sm text-pretty text-muted">
+          Dispatch is a PMM program, and it works when these teams use it and feed it.
+        </p>
+        <dl className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {partners.map((p) => (
+            <div key={p.team} className="rounded-xl border border-line bg-surface p-4">
+              <dt className="font-medium">{p.team}</dt>
+              <dd className="mt-1 text-sm text-pretty text-muted">{p.why}</dd>
+            </div>
+          ))}
+        </dl>
+        <p className="mt-4 text-sm">
+          <Link href="/routing" className="font-medium text-accent hover:underline">
+            How I&apos;ll measure it
+          </Link>{" "}
+          <span className="text-muted">· the KPI scorecard on the Routing log page.</span>
+        </p>
+      </section>
+
       <section className="mt-14 rounded-xl border border-accent/30 bg-accent-soft p-6">
         <p className="font-mono text-xs text-accent">Next · After day 90</p>
-        <h2 className="mt-1 text-xl font-semibold tracking-tight">Phase 2: the deal assistant</h2>
+        <h2 className="mt-1 text-xl font-semibold tracking-tight">Roll the deal assistant out to every rep</h2>
         <p className="mt-2 max-w-3xl text-pretty">
-          Once the Radar has about 3 months of content, the same data powers the assistant reps use on every deal. A rep
-          uploads the call transcript and gets back what the buyer cares about, with proof and a follow-up email.
+          The pilot shows what reps use and what they skip. After day 90 I&apos;ll open the assistant to every SDR and
+          AE: upload the call transcript and get back what the buyer cares about, with proof and a follow-up email.
         </p>
         <Link
           href="/assistant"
@@ -144,7 +180,8 @@ export default function Page() {
 
       <blockquote className="mt-12 rounded-xl bg-fg p-8 text-bg">
         <p className="text-xl leading-relaxed font-medium text-balance">
-          Take this repo and build it on your own, or bring me in to set it up with your team and hand it over.
+          Competitive intel pays off when it changes what a rep says on the next call. That&apos;s the bar I&apos;ll
+          hold Dispatch to.
         </p>
         <footer className="mt-4 text-sm opacity-70">{personName}</footer>
       </blockquote>

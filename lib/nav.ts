@@ -14,6 +14,6 @@ export const navItems: NavItem[] = [
   { href: "/matrix", label: "Matrix & map", step: "07" },
   { href: "/references", label: "References", step: "08" },
   { href: "/routing", label: "Routing log", step: "09" },
-  { href: "/plan", label: "Build it", step: "10" },
+  { href: "/plan", label: "90-day plan", step: "10" },
   { href: "/assistant", label: "Deal assistant", step: "11" },
 ];

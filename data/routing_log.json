@@ -80,7 +80,7 @@
     },
     {
       "name": "Time from competitor change to sales alert",
-      "why": "Proves the Radar is fast enough to matter in live deals",
+      "why": "Proves Dispatch is fast enough to matter in live deals",
       "measure": "Change scraped → alert posted, for impact 4–5 signals",
       "target": "Under 24 hours"
     },

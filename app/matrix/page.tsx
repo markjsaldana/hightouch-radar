@@ -18,7 +18,7 @@ export default function Page() {
       <section>
         <h2 className="text-xl font-semibold tracking-tight">Capability matrix</h2>
         <p className="mt-1 max-w-2xl text-sm text-pretty text-muted">
-          Grouped by what each persona cares about. Each cell has a source note. Signals from the Radar change cells
+          Grouped by what each persona cares about. Each cell has a source note. Signals from Dispatch change cells
           when a competitor ships something (look for the signal numbers in the notes).
         </p>
         <div className="mt-4">

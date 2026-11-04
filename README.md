@@ -1,10 +1,10 @@
-# Deal Radar
+# Dispatch
 
-A proposal for Housecall Pro: a sales enablement assistant that SDRs and AEs can rely on at every stage of the deal, from prospecting to renewal. It answers from weekly competitive intel on Jobber and ServiceTitan, battlecards, and customer references, and cites a source for every line. Each week a "So what" turns the changes into actions for leadership, SDRs, and the rest of the team. The site shows the system behind it, what reps receive, and how Housecall Pro could build it internally, on its own or with me.
+Dispatch is the sales enablement assistant I'd build as a product marketing manager at Housecall Pro, and this site is how I'd build and ship it in my first 90 days. SDRs and AEs rely on it at every stage of the deal, from prospecting to renewal. It answers from weekly competitive intel on Jobber and ServiceTitan, battlecards, and customer references, and cites a source for every line. Each week a "So what" turns the changes into actions for leadership, SDRs, and the rest of the team.
 
 **Sample data for illustration. Not real competitive claims.** Company names are real. The facts in `data/competitors.json` are public and sourced. Every event, rating, customer, and talk track is invented.
 
-In production the Radar refreshes every Monday by scraping Jobber and ServiceTitan pages and blogs. This repo does not scrape live sites: the source URLs are placeholders, and the How it works page explains the weekly run and where a person reviews it.
+In production Dispatch refreshes every Monday by scraping Jobber and ServiceTitan pages and blogs. This repo does not scrape live sites: the source URLs are placeholders, and the How it works page explains the weekly run and where a person reviews it.
 
 ## Run locally
 
@@ -21,7 +21,7 @@ Everything the UI shows comes from JSON in `/data`, so swapping sample data for 
 | --- | --- |
 | `competitors.json` | Competitors, tiers, personas, "why they win" hypotheses, sourced facts |
 | `sources.json` | What gets monitored, how often, and what we look for |
-| `signal_types.json` | The nine kinds of change the Radar classifies |
+| `signal_types.json` | The nine kinds of change Dispatch classifies |
 | `rules.json` | Deal-impact scoring, urgency, confidence, routing table |
 | `signals.json` | Scored signals across three weeks |
 | `digest.json` | This week's top-3, trends, and win-loss questions |
@@ -43,7 +43,7 @@ Import the repo in Vercel (framework preset: Next.js). The site is `noindex` and
 
 ## The pipeline (`scripts/radar.py`)
 
-The site shows the Radar's output. `scripts/radar.py` shows how the output gets made:
+The site shows Dispatch's output. `scripts/radar.py` shows how the output gets made:
 
 1. **Fetch** each public source in `data/sources.json` (`--live`; sources with placeholder URLs are skipped).
 2. **Snapshot** it to a dated file.
@@ -78,7 +78,7 @@ jobs:
       # Open a PR with the drafts. Approving and merging it is the human review step.
       - uses: peter-evans/create-pull-request@v6
         with:
-          title: "Radar drafts for review"
+          title: "Dispatch drafts for review"
           add-paths: samples/output/
 ```
 

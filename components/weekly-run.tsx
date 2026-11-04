@@ -82,7 +82,7 @@ export function WeeklyRun() {
     <section id="weekly-run" className="mt-12 scroll-mt-32">
       <h2 className="text-xl font-semibold tracking-tight">The weekly run: what&apos;s automated, and where a person steps in</h2>
       <p className="mt-1 max-w-3xl text-sm text-pretty text-muted">
-        In production, the Radar refreshes every Monday by scraping Jobber and ServiceTitan pages and blogs. This sample
+        In production, Dispatch refreshes every Monday by scraping Jobber and ServiceTitan pages and blogs. This sample
         site doesn&apos;t scrape; its data shows what one run would produce. Here&apos;s how the run would work.
       </p>
 

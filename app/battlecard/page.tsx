@@ -60,7 +60,7 @@ function BattlecardView({ card }: { card: Battlecard }) {
       <aside className="rounded-xl border border-accent/30 bg-accent-soft p-4">
         <p className="flex flex-wrap items-center gap-2 text-sm font-semibold text-accent">
           <Radar className="size-4" aria-hidden />
-          Last updated by Radar · {formatLongDate(card.updatedOn)}
+          Last updated by Dispatch · {formatLongDate(card.updatedOn)}
         </p>
         <ul className="mt-3 space-y-2 text-sm">
           {card.updatedBySignals.map((u) => (
@@ -177,7 +177,7 @@ export default function Page() {
       <PageHeader
         eyebrow="06 · Battlecards"
         title={`${company} vs. Jobber and ServiceTitan`}
-        lede="One card per competitor, short enough to use mid-call. The Radar updates them every week, so reps can trust what's on them."
+        lede="One card per competitor, short enough to use mid-call. Dispatch updates them every week, so reps can trust what's on them."
         sample
       />
       <HashTabs

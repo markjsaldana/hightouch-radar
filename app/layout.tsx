@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { siteDescription, siteName } from "@/lib/site";
+import { siteDescription, siteName, siteTagline } from "@/lib/site";
 import { SiteHeader } from "@/components/site-header";
 import { SideNav } from "@/components/side-nav";
 import { SiteFooter } from "@/components/site-footer";
@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"]
 
 export const metadata: Metadata = {
   title: {
-    default: `${siteName} · Sales enablement assistant proposal`,
+    default: `${siteName} · ${siteTagline}`,
     template: `%s · ${siteName}`,
   },
   description: siteDescription,

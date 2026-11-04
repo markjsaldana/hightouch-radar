@@ -57,7 +57,7 @@ const buildSteps = [
     body: "The rep uploads the call transcript, or fills in a six-field form when there's no recording. The transcript is the recommended path: concerns come ranked by what the buyer said, with the quotes to prove it.",
   },
   {
-    title: "Ground it in the Radar",
+    title: "Ground it in Dispatch",
     body: "It answers only from the battlecards, signals, matrix, win-loss notes, and the reference and case study library, and every line cites where it came from. When the data has no answer, it says so.",
   },
   {
@@ -153,7 +153,7 @@ export default function Page() {
                 <p className="mt-4 px-2 text-xs font-medium text-muted">Apps</p>
                 <p className="mt-1 flex items-center gap-1.5 px-2 py-1 text-muted">
                   <span className="size-2 rounded-full bg-good" />
-                  Deal Radar
+                  Dispatch
                 </p>
               </aside>
               <div className="min-w-0">
@@ -180,7 +180,7 @@ export default function Page() {
         <h2 className="text-xl font-semibold tracking-tight">How it works</h2>
         <div className="mt-4 grid gap-4 lg:grid-cols-2">
           <div className="rounded-xl border border-line bg-surface p-5">
-            <h3 className="font-semibold">How to build it</h3>
+            <h3 className="font-semibold">What goes into it</h3>
             <ol className="mt-4 space-y-4 text-sm">
               {buildSteps.map((step, i) => (
                 <li key={step.title} className="flex gap-3">
@@ -213,10 +213,11 @@ export default function Page() {
           with the rest, and how many questions it couldn&apos;t answer.
         </p>
         <p className="mt-4 max-w-3xl text-sm text-pretty text-muted">
-          <span className="font-medium text-fg">When it gets built: </span>
-          in phase 2, once the Radar has about 3 months of signals, battlecards, and references for it to answer from.{" "}
+          <span className="font-medium text-fg">When it ships: </span>
+          a pilot with 5 AEs and 3 SDRs starts around day 75, once Dispatch has a couple of months of signals and
+          references for it to answer from. Every rep gets it after day 90.{" "}
           <Link href="/plan" className="font-medium text-accent hover:underline">
-            See the rollout plan
+            See the 90-day plan
           </Link>
         </p>
       </section>

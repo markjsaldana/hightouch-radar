@@ -12,7 +12,7 @@ export function SampleBanner() {
       <p>
         <strong className="font-semibold">{sampleDisclaimer}</strong>{" "}
         <span className="opacity-90">
-          Company names are real; events, ratings, and talk tracks are invented. In production the Radar refreshes every
+          Company names are real; events, ratings, and talk tracks are invented. In production Dispatch refreshes every
           Monday by scraping Jobber and ServiceTitan pages and blogs (this sample: {formatShortDate(lastRun)} run).
         </span>
       </p>

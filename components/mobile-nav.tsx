@@ -14,7 +14,7 @@ export function MobileNav() {
   }, [pathname]);
 
   return (
-    <nav aria-label="Radar pages" className="border-t border-line lg:hidden">
+    <nav aria-label="Site pages" className="border-t border-line lg:hidden">
       <ol className="flex gap-1 overflow-x-auto px-4 py-2 [scrollbar-width:none] sm:px-6">
         {navItems.map((item) => {
           const active = pathname === item.href;
