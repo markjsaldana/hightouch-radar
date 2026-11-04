@@ -1,0 +1,124 @@
+{
+  "weekOf": "2026-11-02",
+  "headline": "Jobber is making it cheaper to leave us, and ServiceTitan is making it easier to start with them. Both are aiming at our 5 to 20 tech shops.",
+  "audiences": [
+    {
+      "id": "leadership",
+      "label": "Leadership",
+      "who": "Sales, marketing, and product leaders",
+      "summary": "Two decisions this week, and one roadmap question.",
+      "items": [
+        {
+          "title": "Decide how we answer Jobber on price",
+          "detail": "Jobber's entry plan now includes online booking, and their comparison page claims a lower total cost. Reps can hold the line with cost math, but the entry-plan gap is gone.",
+          "action": "Decision: hold pricing and lead with year-one cost at the next team size, or add a booking-led offer to our entry plan for Q1.",
+          "signals": [
+            9,
+            10
+          ]
+        },
+        {
+          "title": "Protect the 5 to 20 tech segment from ServiceTitan",
+          "detail": "Hiring, blog content, earnings commentary, and now a 30-day onboarding package all point the same way. This is our core segment.",
+          "action": "Ask: fund a 'live in two weeks' switch guarantee, and give CS a renewal play for accounts in that range.",
+          "signals": [
+            1,
+            6,
+            11,
+            12
+          ]
+        },
+        {
+          "title": "Get a date for AI call answering",
+          "detail": "Jobber's AI receptionist is live, and prospects raise missed calls on first calls. So far reps only have a holding answer.",
+          "action": "Ask Product for a date reps can share, or a firm 'not this year' so we position around it.",
+          "signals": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sdrs",
+      "label": "SDRs",
+      "who": "Outbound and inbound SDRs",
+      "summary": "Three reasons to reach out this week, with the opener for each.",
+      "items": [
+        {
+          "title": "Jobber customers on the entry plan",
+          "detail": "Jobber just changed its plans. Owners are already looking at what they pay and what they get.",
+          "action": "Opener: \"Jobber just changed its plans. Worth a 15-minute look at what you'd pay with two more techs, on both?\"",
+          "signals": [
+            9,
+            10
+          ]
+        },
+        {
+          "title": "5 to 20 tech HVAC and plumbing shops looking at ServiceTitan",
+          "detail": "ServiceTitan is pitching faster setup to shops this size. Lead with setup time and contract length.",
+          "action": "Opener: \"How long did they quote for setup, and who runs your office while it happens? Northline went live with us in 11 days.\"",
+          "signals": [
+            6,
+            11,
+            3
+          ]
+        },
+        {
+          "title": "Lawn care and cleaning companies",
+          "detail": "Jobber mentions are up three weeks running in these trades. Missed calls are the pain to lead with.",
+          "action": "Opener: \"What does a missed call cost you in spring? Greenleaf books evenings and weekends online now.\"",
+          "signals": [
+            7,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "team",
+      "label": "Team",
+      "who": "AEs, CS, marketing, and enablement",
+      "summary": "What changes in your work this week.",
+      "items": [
+        {
+          "title": "AEs: use the updated Jobber card",
+          "detail": "New response to 'Jobber is cheaper all-in' and a landmine about the AI receptionist.",
+          "action": "Use the cost worksheet in every Jobber deal past discovery.",
+          "signals": [
+            9,
+            10,
+            5
+          ]
+        },
+        {
+          "title": "CS: flag 5 to 20 tech accounts renewing in Q1",
+          "detail": "ServiceTitan is aiming at exactly these accounts, and Jobber published a guide to switching away from us.",
+          "action": "Add a competitor check to Q1 renewal calls and log any mention.",
+          "signals": [
+            2,
+            11,
+            12
+          ]
+        },
+        {
+          "title": "Marketing: answer Jobber's comparison page",
+          "detail": "Their page changed Monday and prospects will quote it.",
+          "action": "Update our Jobber comparison page by Friday with a same-features, next-team-size cost table.",
+          "signals": [
+            10,
+            2
+          ]
+        },
+        {
+          "title": "Enablement: 15 minutes on missed calls",
+          "detail": "After-hours calls came up in most Jobber deals this month.",
+          "action": "Add the missed-call talk track to Friday's sales huddle.",
+          "signals": [
+            5,
+            7
+          ]
+        }
+      ]
+    }
+  ]
+}

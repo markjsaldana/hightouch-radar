@@ -1,11 +1,13 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useId, useRef, useState } from "react";
 import type { Battlecard } from "@/lib/types";
 
 type PersonaCard = Battlecard["byPersona"][number];
 
 export function PersonaTabs({ personas }: { personas: PersonaCard[] }) {
+  // Unique per instance: the battlecard page renders one of these per competitor.
+  const uid = useId();
   const [active, setActive] = useState(0);
   const tabs = useRef<(HTMLButtonElement | null)[]>([]);
   const p = personas[active];
@@ -30,9 +32,9 @@ export function PersonaTabs({ personas }: { personas: PersonaCard[] }) {
             }}
             type="button"
             role="tab"
-            id={`tab-${persona.persona}`}
+            id={`${uid}-tab-${persona.persona}`}
             aria-selected={i === active}
-            aria-controls="persona-panel"
+            aria-controls={`${uid}-panel`}
             tabIndex={i === active ? 0 : -1}
             onClick={() => setActive(i)}
             className={`-mb-px rounded-t-lg border-b-2 px-4 py-2 text-sm font-medium transition-colors ${
@@ -43,7 +45,7 @@ export function PersonaTabs({ personas }: { personas: PersonaCard[] }) {
           </button>
         ))}
       </div>
-      <div role="tabpanel" id="persona-panel" aria-labelledby={`tab-${p.persona}`} className="p-5">
+      <div role="tabpanel" id={`${uid}-panel`} aria-labelledby={`${uid}-tab-${p.persona}`} className="p-5">
         <dl className="grid gap-5 text-sm sm:grid-cols-2">
           <div>
             <dt className="text-xs font-medium tracking-wide text-muted uppercase">They care about</dt>

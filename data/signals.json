@@ -1,223 +1,300 @@
 [
   {
-    "id": 6,
-    "weekOf": "2026-09-21",
-    "date": "2026-09-22",
-    "competitorId": "rudderstack",
-    "sourceId": "rudderstack-blog",
-    "type": "positioning",
-    "change": "RudderStack blog and homepage now lead with 'customer context for AI' aimed at data teams.",
-    "whyItMatters": "Pulls the warehouse-native conversation toward AI infrastructure. Data buyers may start comparing us on AI readiness instead of activation.",
-    "whatToSay": "\"Great, your context is in the warehouse. Who acts on it? Let's look at how your marketers get from that context to a live campaign.\"",
-    "personas": ["Data"],
+    "id": 1,
+    "weekOf": "2026-10-19",
+    "date": "2026-10-20",
+    "competitorId": "servicetitan",
+    "sourceId": "servicetitan-careers",
+    "type": "hiring",
+    "change": "ServiceTitan posted 12 Account Executive roles aimed at residential contractors with under 20 techs.",
+    "whyItMatters": "Points to a push into our core segment over the next two quarters. Expect them in more 5 to 20 tech deals.",
+    "whatToSay": "No talk track yet. FYI for sales leadership and territory planning.",
+    "personas": [
+      "Owner"
+    ],
     "impact": 2,
-    "confidence": "Confirmed",
+    "confidence": "Likely",
     "urgency": "Monthly review",
-    "owners": ["PMM"],
+    "owners": [
+      "Sales leadership",
+      "PMM"
+    ],
     "status": "Logged"
   },
   {
-    "id": 7,
-    "weekOf": "2026-09-21",
-    "date": "2026-09-24",
-    "competitorId": "salesforce",
-    "sourceId": "internal-win-loss",
-    "type": "winloss",
-    "change": "Two closed-lost notes this month cite Data 360 being bundled into an existing Salesforce renewal.",
-    "whyItMatters": "We're losing these deals at procurement. Reps need to find out about the bundle earlier and build the cost-of-ownership case before the renewal date.",
-    "whatToSay": "\"When is your Salesforce renewal? Let's list what a bundled CDP still needs from your data team before that date, so you can decide on capability with time to spare.\"",
-    "personas": ["Exec"],
+    "id": 2,
+    "weekOf": "2026-10-19",
+    "date": "2026-10-21",
+    "competitorId": "jobber",
+    "sourceId": "jobber-blog",
+    "type": "positioning",
+    "change": "Jobber published a 'switching from Housecall Pro' guide with a migration checklist.",
+    "whyItMatters": "Jobber is going after our customers directly. CS will hear about it first, at renewal.",
+    "whatToSay": "\"Switching is always possible. Before you weigh it, let's look at what you'd give up, like marketing and financing in one place.\"",
+    "personas": [
+      "Owner",
+      "Office"
+    ],
+    "impact": 3,
+    "confidence": "Confirmed",
+    "urgency": "This week's digest",
+    "owners": [
+      "PMM",
+      "CS",
+      "Website"
+    ],
+    "status": "Page updated"
+  },
+  {
+    "id": 3,
+    "weekOf": "2026-10-19",
+    "date": "2026-10-22",
+    "competitorId": "category",
+    "sourceId": "reviews",
+    "type": "review",
+    "change": "Long onboarding and contract terms are a recurring theme in public reviews of ServiceTitan this quarter (summarized theme, not a single review).",
+    "whyItMatters": "Speed to go live is our clearest proof point against ServiceTitan. Back it with our own onboarding data.",
+    "whatToSay": "\"How long did they quote you for setup, and who on your team runs it while you're still booking jobs?\"",
+    "personas": [
+      "Owner",
+      "Ops"
+    ],
     "impact": 3,
     "confidence": "Likely",
     "urgency": "This week's digest",
-    "owners": ["Sales leadership", "PMM"],
-    "status": "In review"
+    "owners": [
+      "PMM",
+      "Sales"
+    ],
+    "status": "Talk track shipped"
+  },
+  {
+    "id": 4,
+    "weekOf": "2026-10-19",
+    "date": "2026-10-23",
+    "competitorId": "category",
+    "sourceId": "winloss",
+    "type": "winloss",
+    "change": "Two closed-lost notes this month say the owner chose ServiceTitan because 'we'll grow into it.'",
+    "whyItMatters": "Owners may be picking ServiceTitan for how big it looks. Reps need to test the growth plan early.",
+    "whatToSay": "\"What does your team look like in 18 months? Let's price both options for that team.\"",
+    "personas": [
+      "Owner"
+    ],
+    "impact": 3,
+    "confidence": "Likely",
+    "urgency": "This week's digest",
+    "owners": [
+      "Sales leadership",
+      "PMM"
+    ],
+    "status": "Gap logged"
+  },
+  {
+    "id": 5,
+    "weekOf": "2026-10-26",
+    "date": "2026-10-27",
+    "competitorId": "jobber",
+    "sourceId": "jobber-updates",
+    "type": "ai",
+    "change": "Jobber launched an AI receptionist that answers calls and books jobs straight into the schedule.",
+    "whyItMatters": "After-hours calls are a top pain for the office. Prospects will ask whether we do the same, often on the first call.",
+    "whatToSay": "\"Ask what happens when it can't fit a job, and who sees that call. Then let's look at how missed calls reach your office today.\"",
+    "personas": [
+      "Owner",
+      "Office"
+    ],
+    "impact": 4,
+    "confidence": "Confirmed",
+    "urgency": "Alert now",
+    "owners": [
+      "Sales",
+      "SDRs",
+      "PMM",
+      "Product"
+    ],
+    "status": "Alert sent"
+  },
+  {
+    "id": 6,
+    "weekOf": "2026-10-26",
+    "date": "2026-10-27",
+    "competitorId": "servicetitan",
+    "sourceId": "servicetitan-blog",
+    "type": "positioning",
+    "change": "ServiceTitan's blog now features posts aimed at owners with 5 to 20 techs, including one on getting running in 30 days.",
+    "whyItMatters": "ServiceTitan is speaking to our core buyer and taking aim at its own weak spot, the long setup.",
+    "whatToSay": "\"Thirty days is their goal for a fast start. Ask what that month looks like for your office while you're still running jobs.\"",
+    "personas": [
+      "Owner",
+      "Ops"
+    ],
+    "impact": 3,
+    "confidence": "Confirmed",
+    "urgency": "This week's digest",
+    "owners": [
+      "PMM",
+      "Sales"
+    ],
+    "status": "Talk track shipped"
+  },
+  {
+    "id": 7,
+    "weekOf": "2026-10-26",
+    "date": "2026-10-29",
+    "competitorId": "category",
+    "sourceId": "calls",
+    "type": "winloss",
+    "change": "Jobber mentions on SDR calls with lawn care and cleaning companies rose for the third straight week.",
+    "whyItMatters": "Jobber shows up earliest in these trades. SDRs need a quick, fair answer ready on the first call.",
+    "whatToSay": "\"Lots of shops start on Jobber. What would you need to add if you hired two more people this spring?\"",
+    "personas": [
+      "Owner"
+    ],
+    "impact": 3,
+    "confidence": "Likely",
+    "urgency": "This week's digest",
+    "owners": [
+      "SDRs",
+      "Enablement"
+    ],
+    "status": "Talk track shipped"
   },
   {
     "id": 8,
-    "weekOf": "2026-09-21",
-    "date": "2026-09-25",
-    "competitorId": "mparticle",
-    "sourceId": "mparticle-partners",
+    "weekOf": "2026-10-26",
+    "date": "2026-10-30",
+    "competitorId": "jobber",
+    "sourceId": "jobber-marketplace",
     "type": "partnership",
-    "change": "mParticle added three commerce media integrations that connect into the Rokt network.",
-    "whyItMatters": "Points to a bigger push into ecommerce and retail media. Relevant for retail prospects only, for now.",
-    "whatToSay": "No talk track yet. Watch for it in retail deals.",
-    "personas": ["Marketing"],
+    "change": "Jobber added a consumer financing partner to its app marketplace.",
+    "whyItMatters": "Narrows one of our differentiators. Financing is still a separate app for them, but the gap is smaller.",
+    "whatToSay": "\"Ask whether financing lives in the same quote the tech shows the customer, or in another app.\"",
+    "personas": [
+      "Owner",
+      "Tech"
+    ],
     "impact": 2,
     "confidence": "Confirmed",
     "urgency": "Monthly review",
-    "owners": ["PMM"],
+    "owners": [
+      "PMM",
+      "Product"
+    ],
     "status": "Logged"
   },
   {
     "id": 9,
-    "weekOf": "2026-09-28",
-    "date": "2026-09-29",
-    "competitorId": "mparticle",
-    "sourceId": "mparticle-changelog",
-    "type": "feature",
-    "change": "mParticle launched on-device audience evaluation for mobile apps.",
-    "whyItMatters": "App-first prospects will ask whether audiences can update in-session. Product should confirm our answer and whether it's a gap.",
-    "whatToSay": "\"Which in-app moments actually need sub-second audiences, and which run fine on warehouse freshness? Let's size that before it drives the decision.\"",
-    "personas": ["Product"],
-    "impact": 3,
-    "confidence": "Confirmed",
-    "urgency": "This week's digest",
-    "owners": ["Product"],
-    "status": "Gap logged"
-  },
-  {
-    "id": 10,
-    "weekOf": "2026-09-28",
-    "date": "2026-09-30",
-    "competitorId": "segment",
-    "sourceId": "segment-blog",
-    "type": "positioning",
-    "change": "Segment homepage headline shifted from 'customer data platform' language to 'customer AI' language.",
-    "whyItMatters": "Packaged CDPs are reframing around AI. Our comparison pages still argue the old CDP category, so we risk sounding a step behind.",
-    "whatToSay": "\"AI can only use the data it can see. Where does your full customer model live today, and does the AI get all of it or a copy?\"",
-    "personas": ["Marketing", "Exec"],
-    "impact": 2,
-    "confidence": "Confirmed",
-    "urgency": "Monthly review",
-    "owners": ["PMM", "Website"],
-    "status": "In review"
-  },
-  {
-    "id": 11,
-    "weekOf": "2026-09-28",
-    "date": "2026-10-01",
-    "competitorId": "adobe",
-    "sourceId": "adobe-blog",
-    "type": "positioning",
-    "change": "Adobe published comparison content aimed at composable CDP buyers that describes warehouse-native as a DIY project.",
-    "whyItMatters": "Directly targets our category with a 'build vs. buy' frame. Enterprise execs will repeat it in deals, so we need a crisp counter on our own comparison page.",
-    "whatToSay": "\"Composable means you use your data where it already lives, with no copy into another platform. Which of your teams owns the model your campaigns run on?\"",
-    "personas": ["Exec", "Data"],
-    "impact": 4,
-    "confidence": "Confirmed",
-    "urgency": "Alert now",
-    "owners": ["Sales", "PMM", "Website"],
-    "status": "Page updated"
-  },
-  {
-    "id": 12,
-    "weekOf": "2026-09-28",
-    "date": "2026-10-02",
-    "competitorId": "category",
-    "sourceId": "category-review-themes",
-    "type": "review",
-    "change": "Long implementation timelines are a recurring theme across public reviews of packaged CDPs this quarter (summarized theme, not a single review).",
-    "whyItMatters": "Time to value is a proof point we should lead with, backed by our own implementation data. CS can also use it at renewals.",
-    "whatToSay": "\"What's your target date for the first live audience? Let's work back from that and compare what each option needs before day one.\"",
-    "personas": ["Exec", "Marketing"],
-    "impact": 3,
-    "confidence": "Likely",
-    "urgency": "This week's digest",
-    "owners": ["PMM", "CS"],
-    "status": "In review"
-  },
-  {
-    "id": 13,
-    "weekOf": "2026-09-28",
-    "date": "2026-10-02",
-    "competitorId": "segment",
-    "sourceId": "internal-calls",
-    "type": "winloss",
-    "change": "Segment mentions in mid-market discovery calls rose for the third straight week (Gong tracker).",
-    "whyItMatters": "Segment is showing up earlier in mid-market cycles, usually because it's already installed. Reps need the 'keep Segment, add Hightouch' play ready.",
-    "whatToSay": "\"Keep Segment for collection if it's working. Where do your audiences get built today, and who owns them?\"",
-    "personas": ["Data", "Marketing"],
-    "impact": 3,
-    "confidence": "Likely",
-    "urgency": "This week's digest",
-    "owners": ["Enablement", "PMM"],
-    "status": "Talk track shipped"
-  },
-  {
-    "id": 14,
-    "weekOf": "2026-10-05",
-    "date": "2026-10-05",
-    "competitorId": "segment",
-    "sourceId": "segment-changelog",
-    "type": "feature",
-    "change": "Segment launched a no-code audience builder aimed at marketers, working on warehouse-linked data.",
-    "whyItMatters": "Weakens our 'marketers can self-serve on warehouse data' differentiator in mid-market deals where Segment is already installed.",
-    "whatToSay": "\"Ask how audiences stay in sync with the warehouse when the data team changes the model. Who gets paged when a column is renamed?\"",
-    "personas": ["Marketing", "Data"],
-    "impact": 4,
-    "confidence": "Confirmed",
-    "urgency": "Alert now",
-    "owners": ["Sales", "PMM", "Product"],
-    "status": "Talk track shipped"
-  },
-  {
-    "id": 15,
-    "weekOf": "2026-10-05",
-    "date": "2026-10-06",
-    "competitorId": "salesforce",
-    "sourceId": "salesforce-pricing",
+    "weekOf": "2026-11-02",
+    "date": "2026-11-02",
+    "competitorId": "jobber",
+    "sourceId": "jobber-pricing",
     "type": "pricing",
-    "change": "Salesforce moved identity resolution from an add-on into the base Data 360 edition.",
-    "whyItMatters": "Removes a line item we used in cost conversations. Execs will hear 'it's included now' and treat Data 360 as the default for Salesforce shops.",
-    "whatToSay": "\"Included is good. Ask which data it resolves: only what's been copied into Data 360, or everything in your warehouse?\"",
-    "personas": ["Exec", "Data"],
+    "change": "Jobber moved online booking from its Connect plan down to its entry Core plan.",
+    "whyItMatters": "Removes a gap we used in price conversations. Owners comparing entry plans will now see booking on both sides.",
+    "whatToSay": "\"Good, booking matters. Compare the plan you'll need with two more techs, marketing and financing included.\"",
+    "personas": [
+      "Owner",
+      "Office"
+    ],
     "impact": 5,
     "confidence": "Confirmed",
     "urgency": "Alert now",
-    "owners": ["Sales", "PMM"],
+    "owners": [
+      "Sales",
+      "SDRs",
+      "PMM"
+    ],
     "status": "Alert sent"
   },
   {
-    "id": 16,
-    "weekOf": "2026-10-05",
-    "date": "2026-10-07",
-    "competitorId": "rudderstack",
-    "sourceId": "rudderstack-careers",
-    "type": "hiring",
-    "change": "RudderStack posted 8 new Account Executive roles focused on EMEA enterprise.",
-    "whyItMatters": "Suggests an EMEA enterprise push in the next two quarters. Useful for EMEA territory planning. Reps don't need it yet.",
-    "whatToSay": "No talk track. FYI for EMEA sales leadership.",
-    "personas": ["Exec"],
-    "impact": 2,
-    "confidence": "Likely",
-    "urgency": "Monthly review",
-    "owners": ["Sales leadership"],
+    "id": 10,
+    "weekOf": "2026-11-02",
+    "date": "2026-11-02",
+    "competitorId": "jobber",
+    "sourceId": "jobber-compare",
+    "type": "positioning",
+    "change": "Jobber's 'vs. Housecall Pro' page now claims a lower total monthly cost for a 10-person team and no add-on fees for online booking.",
+    "whyItMatters": "Prospects will quote this page in price conversations. Our own comparison page needs an answer this week.",
+    "whatToSay": "\"Their math counts today's plan. Let's put both side by side for the same features, at the team size you're hiring toward.\"",
+    "personas": [
+      "Owner"
+    ],
+    "impact": 4,
+    "confidence": "Confirmed",
+    "urgency": "Alert now",
+    "owners": [
+      "Sales",
+      "Website",
+      "PMM"
+    ],
+    "status": "Talk track shipped"
+  },
+  {
+    "id": 11,
+    "weekOf": "2026-11-02",
+    "date": "2026-11-03",
+    "competitorId": "servicetitan",
+    "sourceId": "servicetitan-updates",
+    "type": "feature",
+    "change": "ServiceTitan's release notes announce a guided 30-day onboarding package for shops under 20 techs.",
+    "whyItMatters": "Takes aim at our best proof point against them, speed to go live. Expect it in deals with growing HVAC and plumbing shops.",
+    "whatToSay": "\"Thirty days is a real improvement. Ask what the office does during that month, and what the contract term is after it.\"",
+    "personas": [
+      "Owner",
+      "Ops"
+    ],
+    "impact": 4,
+    "confidence": "Confirmed",
+    "urgency": "Alert now",
+    "owners": [
+      "Sales",
+      "PMM",
+      "Product"
+    ],
+    "status": "In review"
+  },
+  {
+    "id": 12,
+    "weekOf": "2026-11-02",
+    "date": "2026-11-04",
+    "competitorId": "servicetitan",
+    "sourceId": "servicetitan-investors",
+    "type": "mna",
+    "change": "ServiceTitan's earnings commentary called out growth with smaller residential contractors as a priority.",
+    "whyItMatters": "Confirms the hiring and blog signals. This looks like a lasting strategy shift.",
+    "whatToSay": "No rep talk track. Goes to leadership in this week's So what.",
+    "personas": [
+      "Owner"
+    ],
+    "impact": 3,
+    "confidence": "Confirmed",
+    "urgency": "This week's digest",
+    "owners": [
+      "Sales leadership",
+      "PMM"
+    ],
     "status": "Logged"
   },
   {
-    "id": 17,
-    "weekOf": "2026-10-05",
-    "date": "2026-10-07",
-    "competitorId": "braze",
-    "sourceId": "braze-changelog",
-    "type": "ai",
-    "change": "Braze AI Decisioning Studio added goal-based agent setup for lifecycle marketers.",
-    "whyItMatters": "Overlaps with our AI Decisioning pitch for Braze customers. Braze is also a partner, so the line should be 'better together.'",
-    "whatToSay": "\"Braze is great at delivering the message. Our agents decide using everything in your warehouse, then hand off to Braze to send.\"",
-    "personas": ["Marketing"],
-    "impact": 3,
-    "confidence": "Confirmed",
-    "urgency": "This week's digest",
-    "owners": ["PMM", "Product"],
-    "status": "In review"
-  },
-  {
-    "id": 18,
-    "weekOf": "2026-10-05",
-    "date": "2026-10-08",
-    "competitorId": "adobe",
-    "sourceId": "adobe-partners",
-    "type": "partnership",
-    "change": "Adobe announced an expanded zero-copy connector with a major cloud data warehouse.",
-    "whyItMatters": "Adobe can now claim 'warehouse access' in enterprise deals. We need the difference between querying the warehouse and running on it to be clear.",
-    "whatToSay": "\"Ask which features work on warehouse data directly and which still need the data loaded into Adobe first.\"",
-    "personas": ["Data"],
-    "impact": 3,
-    "confidence": "Confirmed",
-    "urgency": "This week's digest",
-    "owners": ["PMM"],
-    "status": "In review"
+    "id": 13,
+    "weekOf": "2026-11-02",
+    "date": "2026-11-04",
+    "competitorId": "jobber",
+    "sourceId": "jobber-careers",
+    "type": "hiring",
+    "change": "Jobber posted several payments and lending roles.",
+    "whyItMatters": "Hints at deeper payments and financing work over the next year.",
+    "whatToSay": "No talk track. FYI for Product.",
+    "personas": [
+      "Owner"
+    ],
+    "impact": 2,
+    "confidence": "Likely",
+    "urgency": "Monthly review",
+    "owners": [
+      "Product"
+    ],
+    "status": "Logged"
   }
 ]

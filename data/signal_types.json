@@ -1,11 +1,56 @@
 [
-  { "id": "feature", "label": "Feature launch", "description": "A new or expanded capability that overlaps with ours.", "example": "Added a no-code audience builder for marketers." },
-  { "id": "pricing", "label": "Pricing / packaging change", "description": "What's included where, new tiers, bundles, or add-ons. We record what changed and never invent price figures.", "example": "Moved identity resolution from an add-on into the base edition." },
-  { "id": "positioning", "label": "Positioning / messaging shift", "description": "New category language, headlines, or comparison content aimed at our buyers.", "example": "Homepage shifted from 'CDP' to 'customer AI' language." },
-  { "id": "partnership", "label": "New integration or partnership", "description": "Connectors, co-sell deals, or marketplace listings that change who they can reach.", "example": "Announced a zero-copy connector with a cloud data warehouse." },
-  { "id": "ai", "label": "AI capability", "description": "Agents, decisioning, or generative features, especially ones aimed at marketers.", "example": "Goal-based agent setup for lifecycle campaigns." },
-  { "id": "review", "label": "Review theme", "description": "A recurring theme in public reviews, summarized across many reviews. Never a single quote.", "example": "Long implementation timelines come up repeatedly for packaged CDPs." },
-  { "id": "hiring", "label": "Hiring signal", "description": "Job posts that hint at where a competitor is investing.", "example": "Hiring 8 AEs for EMEA enterprise." },
-  { "id": "mna", "label": "M&A or funding", "description": "Acquisitions, mergers, or funding that change a competitor's capacity or focus.", "example": "Acquired an AI decisioning company." },
-  { "id": "winloss", "label": "Customer win/loss mention", "description": "A competitor named in a closed deal, call, or renewal conversation.", "example": "Two closed-lost notes cite bundling with an existing contract." }
+  {
+    "id": "feature",
+    "label": "Feature launch",
+    "description": "A new or expanded capability that overlaps with ours.",
+    "example": "Added an AI receptionist that books jobs."
+  },
+  {
+    "id": "pricing",
+    "label": "Pricing / packaging change",
+    "description": "What's included where, new plans, or add-on fees. We record what changed and never invent price figures.",
+    "example": "Moved online booking onto the entry plan."
+  },
+  {
+    "id": "positioning",
+    "label": "Positioning / messaging",
+    "description": "New target customers, headlines, or comparison content aimed at our buyers.",
+    "example": "New blog series aimed at shops with 5 to 20 techs."
+  },
+  {
+    "id": "partnership",
+    "label": "New integration or partnership",
+    "description": "Integrations or partners that close a gap or reach new customers.",
+    "example": "Added a consumer financing partner."
+  },
+  {
+    "id": "ai",
+    "label": "AI capability",
+    "description": "Call answering, booking, writing, or other AI features aimed at the office or the owner.",
+    "example": "AI that answers after-hours calls."
+  },
+  {
+    "id": "review",
+    "label": "Review theme",
+    "description": "A recurring theme in public reviews, summarized across many reviews. Never a single quote.",
+    "example": "Long onboarding comes up again and again."
+  },
+  {
+    "id": "hiring",
+    "label": "Hiring signal",
+    "description": "Job posts that hint at where a competitor is investing.",
+    "example": "12 new sales roles for small contractors."
+  },
+  {
+    "id": "mna",
+    "label": "M&A / funding / earnings",
+    "description": "Acquisitions, funding, or earnings commentary that changes a competitor's focus.",
+    "example": "Earnings call stresses growth with smaller shops."
+  },
+  {
+    "id": "winloss",
+    "label": "Win-loss / call mention",
+    "description": "A competitor named in a closed deal, a sales call, or a renewal.",
+    "example": "Two losses cite 'we'll grow into it.'"
+  }
 ]

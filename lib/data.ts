@@ -4,12 +4,13 @@ import signalTypesJson from "@/data/signal_types.json";
 import rulesJson from "@/data/rules.json";
 import signalsJson from "@/data/signals.json";
 import digestJson from "@/data/digest.json";
-import battlecardJson from "@/data/battlecard_segment.json";
+import battlecardsJson from "@/data/battlecards.json";
 import matrixJson from "@/data/matrix.json";
 import routingLogJson from "@/data/routing_log.json";
 import customersJson from "@/data/customers.json";
 import caseStudiesJson from "@/data/case_studies.json";
 import transcriptDemoJson from "@/data/transcript_demo.json";
+import soWhatJson from "@/data/so_what.json";
 import type {
   Battlecard,
   CaseStudy,
@@ -21,6 +22,7 @@ import type {
   Rules,
   Signal,
   SignalType,
+  SoWhat,
   Source,
   TranscriptDemo,
 } from "@/lib/types";
@@ -34,12 +36,13 @@ export const signalTypes = signalTypesJson as SignalType[];
 export const rules = rulesJson as Rules;
 export const signals = signalsJson as Signal[];
 export const digest = digestJson as Digest;
-export const battlecard = battlecardJson as Battlecard;
+export const battlecards = battlecardsJson as Battlecard[];
 export const matrix = matrixJson as Matrix;
 export const routingLog = routingLogJson as RoutingLog;
 export const customers = customersJson as Customer[];
 export const caseStudies = caseStudiesJson as CaseStudy[];
 export const transcriptDemo = transcriptDemoJson as TranscriptDemo;
+export const soWhat = soWhatJson as SoWhat;
 
 const categoryLabel = "Category-wide";
 
@@ -62,4 +65,8 @@ export function customerById(id: string) {
 
 export function caseStudyById(id: string) {
   return caseStudies.find((c) => c.id === id);
+}
+
+export function battlecardFor(competitorId: string) {
+  return battlecards.find((b) => b.competitorId === competitorId)!;
 }

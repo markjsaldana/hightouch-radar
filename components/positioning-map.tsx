@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { matrix } from "@/lib/data";
+import { companyId } from "@/lib/site";
 
 const { xAxis, yAxis, points } = matrix.positioning;
 
@@ -29,7 +30,7 @@ export function PositioningMap() {
           {/* Plot area, inset so dots and labels stay off the axis labels */}
           <div className="absolute inset-8">
             {points.map((p) => {
-              const ours = p.id === "hightouch";
+              const ours = p.id === companyId;
               const side = p.label ?? (p.x > 65 ? "left" : "right");
               const isActive = active === p.id;
               return (
@@ -85,7 +86,7 @@ export function PositioningMap() {
               className={`flex gap-3 px-4 py-3 transition-colors ${active === p.id ? "bg-accent-soft" : ""}`}
             >
               <span
-                className={`mt-1.5 size-2.5 shrink-0 rounded-full ${p.id === "hightouch" ? "bg-accent" : "bg-muted"}`}
+                className={`mt-1.5 size-2.5 shrink-0 rounded-full ${p.id === companyId ? "bg-accent" : "bg-muted"}`}
                 aria-hidden
               />
               <span>

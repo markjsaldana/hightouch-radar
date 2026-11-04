@@ -1,19 +1,106 @@
 {
   "entries": [
-    { "date": "2026-10-06", "signal": 15, "kind": "Sales alert", "destination": "#comp-alerts Slack channel", "action": "Sales alert sent same day with a two-line talk track", "outcome": "Battlecard cost section updated. 2 AEs flagged active Salesforce-shop deals for follow-up." },
-    { "date": "2026-10-05", "signal": 14, "kind": "Sales alert", "destination": "#comp-alerts Slack channel", "action": "Sales alert sent, Segment battlecard objection added", "outcome": "3 reps used the talk track in active deals within the week." },
-    { "date": "2026-10-03", "signal": 13, "kind": "PMM", "destination": "Enablement", "action": "'Keep Segment, add Hightouch' play added to mid-market discovery guide", "outcome": "Covered in Friday sales huddle." },
-    { "date": "2026-10-02", "signal": 11, "kind": "Website", "destination": "Web team", "action": "Comparison page updated with a 'what composable means' section", "outcome": "New page live. Conversion tracked against the prior 4-week baseline." },
-    { "date": "2026-10-02", "signal": 12, "kind": "CS", "destination": "CS leadership", "action": "Time-to-value proof points shared for renewal conversations", "outcome": "Added to the QBR deck template." },
-    { "date": "2026-09-30", "signal": 9, "kind": "Product", "destination": "Product roadmap review", "action": "On-device audience evaluation reviewed with the owning PM", "outcome": "Gap logged. Interim talk track starts by asking how fast audiences need to update." },
-    { "date": "2026-09-26", "signal": 7, "kind": "Win-loss", "destination": "Win-loss program", "action": "Bundling question added to this month's win-loss interview guide", "outcome": "2 interviews scheduled with recent closed-lost accounts." },
-    { "date": "2026-09-23", "signal": 6, "kind": "PMM", "destination": "Monthly competitive review", "action": "Positioning shift logged for the monthly review", "outcome": "No change to talk tracks. Watching for it in data-team evaluations." }
+    {
+      "date": "2026-11-02",
+      "signal": 9,
+      "kind": "Sales alert",
+      "destination": "#comp-alerts Slack channel",
+      "action": "Sales alert sent same day with a two-line talk track",
+      "outcome": "Battlecard price section updated. SDRs added a 'Jobber changed plans' angle to 40 accounts."
+    },
+    {
+      "date": "2026-11-02",
+      "signal": 10,
+      "kind": "Website",
+      "destination": "Web team",
+      "action": "Comparison page review requested",
+      "outcome": "Updated 'Housecall Pro vs. Jobber' page in review, due Friday."
+    },
+    {
+      "date": "2026-10-27",
+      "signal": 5,
+      "kind": "Sales alert",
+      "destination": "#comp-alerts Slack channel",
+      "action": "Sales alert sent, Jobber battlecard landmine added",
+      "outcome": "4 reps used the talk track within the week."
+    },
+    {
+      "date": "2026-10-28",
+      "signal": 5,
+      "kind": "Product",
+      "destination": "Product roadmap review",
+      "action": "AI call answering reviewed with the owning PM",
+      "outcome": "Gap logged. Interim talk track asks how missed calls reach the office today."
+    },
+    {
+      "date": "2026-10-29",
+      "signal": 7,
+      "kind": "PMM",
+      "destination": "Enablement",
+      "action": "Lawn care and cleaning opener added to the SDR call guide",
+      "outcome": "Covered in Friday's SDR huddle."
+    },
+    {
+      "date": "2026-10-22",
+      "signal": 2,
+      "kind": "CS",
+      "destination": "CS leadership",
+      "action": "Switch-risk talking points shared for renewals",
+      "outcome": "Added to the renewal call template."
+    },
+    {
+      "date": "2026-10-23",
+      "signal": 4,
+      "kind": "Win-loss",
+      "destination": "Win-loss program",
+      "action": "'Grow into it' question added to this month's interview guide",
+      "outcome": "3 interviews scheduled with recent closed-lost accounts."
+    },
+    {
+      "date": "2026-10-20",
+      "signal": 1,
+      "kind": "PMM",
+      "destination": "Monthly competitive review",
+      "action": "Hiring signal logged for the monthly review",
+      "outcome": "No change to talk tracks. Watching for ServiceTitan in 5 to 20 tech deals."
+    }
   ],
   "kpis": [
-    { "name": "Battlecard usage", "why": "Shows reps trust and use the content", "measure": "Weekly views and opens from CRM and Slack, per rep", "target": "Majority of active AEs open a card each month" },
-    { "name": "Win rate vs. each primary competitor", "why": "The outcome that matters most", "measure": "Closed-won ÷ closed (won + lost) where the competitor is tagged in CRM", "target": "Baseline in days 61–90, then improve quarter over quarter" },
-    { "name": "Time from competitor change to sales alert", "why": "Proves the Radar is fast enough to matter in live deals", "measure": "Source change detected → alert posted, for impact 4–5 signals", "target": "Under 24 hours" },
-    { "name": "Deals with CI support", "why": "Coverage: how many competitive deals the program actually touches", "measure": "% of competitive opportunities with a battlecard view, alert, or SE consult", "target": "Track monthly; grow coverage each quarter" },
-    { "name": "Comparison page conversion rate", "why": "Turns CI into pipeline from buyers already comparing", "measure": "Demo requests ÷ sessions on comparison pages", "target": "Baseline, then A/B test page changes driven by signals" }
+    {
+      "name": "Battlecard usage",
+      "why": "Shows reps trust and use the content",
+      "measure": "Weekly views and opens from the CRM and Slack, per rep",
+      "target": "Most active AEs open a card each month"
+    },
+    {
+      "name": "Win rate vs. Jobber and ServiceTitan",
+      "why": "The outcome that matters most",
+      "measure": "Closed-won ÷ closed (won + lost) where the competitor is tagged in the CRM",
+      "target": "Baseline in days 61–90, then improve quarter over quarter"
+    },
+    {
+      "name": "Time from competitor change to sales alert",
+      "why": "Proves Dispatch is fast enough to matter in live deals",
+      "measure": "Change scraped → alert posted, for impact 4–5 signals",
+      "target": "Under 24 hours"
+    },
+    {
+      "name": "SDR replies on signal-based outreach",
+      "why": "Shows the So what gives SDRs a reason to reach out",
+      "measure": "Reply rate on sequences that use a weekly angle vs. the standard sequence",
+      "target": "Baseline, then beat the standard sequence"
+    },
+    {
+      "name": "Switch-risk saves",
+      "why": "Jobber is targeting our customers directly",
+      "measure": "Renewals with a competitor mention that renew anyway",
+      "target": "Track monthly; improve each quarter"
+    },
+    {
+      "name": "Comparison page conversion",
+      "why": "Turns CI into pipeline from buyers already comparing",
+      "measure": "Demo requests ÷ sessions on comparison pages",
+      "target": "Baseline, then test page changes driven by signals"
+    }
   ]
 }

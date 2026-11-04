@@ -3,10 +3,10 @@
 import { useState } from "react";
 import type { Customer, Region } from "@/lib/types";
 import { useInView } from "@/lib/use-in-view";
-import { worldDots } from "@/lib/world-dots";
+import { mapDots } from "@/lib/map-dots";
 
 const GRID = 6;
-const { step, lat0, lon0, rows } = worldDots;
+const { step, lat0, lon0, rows } = mapDots;
 const width = rows[0].length * GRID;
 const height = rows.length * GRID;
 const project = ([lon, lat]: [number, number]) => [((lon - lon0) / step) * GRID + GRID / 2, ((lat0 - lat) / step) * GRID + GRID / 2];
@@ -16,7 +16,7 @@ const land = rows.flatMap((row, r) =>
   [...row].flatMap((c, i) => (c === "1" ? [[i * GRID + GRID / 2, r * GRID + GRID / 2]] : [])),
 );
 
-const regions: Region[] = ["North America", "EMEA", "APAC", "LATAM"];
+const regions: Region[] = ["West", "Southwest", "Midwest", "Southeast", "Northeast", "Canada"];
 
 export function ReferenceMap({
   customers,
@@ -38,7 +38,7 @@ export function ReferenceMap({
         <svg viewBox={`0 0 ${width} ${height}`} className="w-full" role="img" aria-label="Map of reference customers">
           <g className="fill-muted" opacity={0.28}>
             {land.map(([x, y]) => (
-              <circle key={`${x}-${y}`} cx={x} cy={y} r={1.5} />
+              <circle key={`${x}-${y}`} cx={x} cy={y} r={1.8} />
             ))}
           </g>
           {customers.map((c, i) => {

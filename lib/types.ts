@@ -1,8 +1,9 @@
 export type Tier = "Primary" | "Secondary" | "Watch";
-export type Persona = "Marketing" | "Data" | "Product" | "Exec";
+// Owner: the shop owner. Office: office manager, CSR, dispatcher. Tech: field technician. Ops: GM or ops lead at larger shops.
+export type Persona = "Owner" | "Office" | "Tech" | "Ops";
 export type Confidence = "Confirmed" | "Likely" | "Rumor";
 export type Urgency = "Alert now" | "This week's digest" | "Monthly review";
-export type Owner = "Sales" | "Sales leadership" | "PMM" | "Product" | "Website" | "CS" | "Enablement";
+export type Owner = "Sales" | "SDRs" | "Sales leadership" | "PMM" | "Product" | "Website" | "CS" | "Enablement";
 export type SignalStatus = "Alert sent" | "Talk track shipped" | "In review" | "Gap logged" | "Page updated" | "Logged";
 
 export type Competitor = {
@@ -17,17 +18,20 @@ export type Competitor = {
 };
 
 export type SourceType =
-  | "changelog"
   | "pricing page"
-  | "docs"
+  | "product updates"
   | "blog"
+  | "comparison page"
+  | "help center"
   | "careers"
-  | "review themes"
-  | "partner directory"
+  | "app marketplace"
+  | "investor news"
   | "webinar/events"
+  | "review themes"
   | "win-loss notes"
   | "call mentions"
-  | "mystery-shop calls";
+  | "mystery-shop calls"
+  | "CS notes";
 
 export type Source = {
   id: string;
@@ -80,7 +84,7 @@ export type Digest = {
   winLossQuestions: { question: string; gap: string }[];
 };
 
-export type ProofType = "Customer story" | "Demo moment" | "Architecture";
+export type ProofType = "Customer story" | "Demo moment" | "Cost math";
 
 export type Battlecard = {
   competitorId: string;
@@ -134,17 +138,18 @@ export type RoutingLog = {
   kpis: Kpi[];
 };
 
-export type Region = "North America" | "EMEA" | "APAC" | "LATAM";
-export type CompanySize = "Commercial" | "Mid-market" | "Enterprise";
+export type Region = "West" | "Southwest" | "Midwest" | "Southeast" | "Northeast" | "Canada";
+// Small: 1 to 5 techs. Mid-size: 6 to 20. Large: 21 or more.
+export type CompanySize = "Small" | "Mid-size" | "Large";
 export type UseCase =
-  | "Audience activation"
-  | "Lifecycle marketing"
-  | "Paid media"
-  | "AI Decisioning"
-  | "Personalization"
-  | "Identity resolution"
-  | "Data governance"
-  | "Sales & CRM sync";
+  | "Scheduling & dispatch"
+  | "Online booking"
+  | "Estimates & price book"
+  | "Invoicing & payments"
+  | "Consumer financing"
+  | "Service plans"
+  | "Marketing & reviews"
+  | "Reporting";
 export type ReferenceStatus = "Available" | "Limited" | "Resting";
 export type ReferenceFormat = "Reference call" | "Peer email" | "Site visit" | "Webinar";
 
@@ -157,9 +162,10 @@ export type Customer = {
   hq: string;
   // [longitude, latitude] of the HQ city, for the references map.
   coords: [number, number];
-  warehouse: string;
+  // Team size as the customer describes it, e.g. "14 techs, 3 office".
+  team: string;
   useCases: UseCase[];
-  competitor: { id: string; outcome: "Replaced" | "Runs alongside" | "Chose over" } | null;
+  competitor: { id: string; outcome: "Switched from" | "Chose over" } | null;
   // null: a customer with a case study who hasn't agreed to take reference calls.
   reference: {
     status: ReferenceStatus;
@@ -185,7 +191,8 @@ export type CaseStudy = {
 
 // What the deal assistant demo pulls out of one sample call transcript.
 // Concern and resource numbers in `addresses` and `form` are 1-based ranks;
-// `objection` and an objection resource's `ref` index battlecard.objections.
+// `objection` and an objection resource's `ref` index the objections on the
+// battlecard for the prospect's competitor.
 export type DealResource = {
   kind: "caseStudy" | "reference" | "objection";
   ref: string;
@@ -224,4 +231,13 @@ export type TranscriptDemo = {
     missed: string;
     email: DemoEmail;
   };
+};
+
+// The weekly "so what": what this week's signals mean for each audience.
+export type SoWhatItem = { title: string; detail: string; action: string; signals: number[] };
+
+export type SoWhat = {
+  weekOf: string;
+  headline: string;
+  audiences: { id: string; label: string; who: string; summary: string; items: SoWhatItem[] }[];
 };

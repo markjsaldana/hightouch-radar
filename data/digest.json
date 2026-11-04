@@ -1,35 +1,53 @@
 {
-  "weekOf": "2026-10-05",
-  "topForSales": [15, 14, 17],
+  "weekOf": "2026-11-02",
+  "topForSales": [
+    9,
+    10,
+    11
+  ],
   "trends": [
     {
-      "title": "Packaged CDPs are leaning into AI agents for marketers",
-      "detail": "Three of six tracked competitors shipped or repositioned around AI for marketers in three weeks. Expect 'AI-ready' to replace 'unified profile' as the headline claim in Q4 evaluations.",
-      "signals": [10, 14, 17]
+      "title": "Both competitors are heading for the 5 to 20 tech shop",
+      "detail": "ServiceTitan is hiring sales reps for it and fixing its onboarding for it. Jobber is adding features that shops of that size ask for. This is our core segment.",
+      "signals": [
+        1,
+        6,
+        11,
+        12
+      ]
     },
     {
-      "title": "Suites now claim they work on the warehouse",
-      "detail": "Zero-copy connectors and warehouse-linked audiences let suites say 'we work with your warehouse.' Expect buyers to ask which features run on the warehouse directly.",
-      "signals": [11, 18]
+      "title": "Jobber is targeting Housecall Pro customers directly",
+      "detail": "A switching guide, a new comparison page, and a cheaper entry plan in three weeks. Expect more switch conversations at renewal.",
+      "signals": [
+        2,
+        7,
+        9,
+        10
+      ]
     },
     {
-      "title": "Bundling is costing us enterprise deals",
-      "detail": "Losses to suite vendors cluster around renewals and features moving into base editions. Reps need to find renewal dates in discovery and start the cost conversation before them.",
-      "signals": [7, 15]
+      "title": "'We'll grow into it' is ServiceTitan's best argument",
+      "detail": "Owners who plan to grow pick the bigger platform. Reps need to test the growth plan early and price for it.",
+      "signals": [
+        3,
+        4,
+        11
+      ]
     }
   ],
   "winLossQuestions": [
     {
-      "question": "When the existing Salesforce or Adobe contract came up, at what stage did it enter the conversation, and who raised it?",
-      "gap": "We don't know whether we lose bundled deals early (never really in) or late (lost at procurement)."
+      "question": "When ServiceTitan came up, did the owner say they'd grow into it? What size were they planning to reach, and by when?",
+      "gap": "We don't know if we lose growing shops on features or on perception."
     },
     {
-      "question": "Did your marketers try building audiences in Segment's new builder during the evaluation? What did they hit?",
-      "gap": "No hands-on evidence yet on how Signal #14 performs in real evaluations."
+      "question": "Did you compare total monthly cost with Jobber, including add-ons? Whose numbers did you use?",
+      "gap": "Jobber's new comparison page (Signal #10) claims a lower total cost. We need the buyer's side."
     },
     {
-      "question": "How much did 'AI decisioning' weigh in the final decision compared with activation and data governance?",
-      "gap": "We can't yet tell if AI is a deciding factor or a tie-breaker."
+      "question": "Did anyone try Jobber's AI receptionist during the evaluation? Did it change the decision?",
+      "gap": "No first-hand evidence yet on how Signal #5 plays in real deals."
     }
   ]
 }

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
-import { navItems } from "@/lib/nav";
+import { deepItems, navItems } from "@/lib/nav";
 
 export function MobileNav() {
   const pathname = usePathname();
@@ -14,9 +14,17 @@ export function MobileNav() {
   }, [pathname]);
 
   return (
-    <nav aria-label="Radar pages" className="border-t border-line lg:hidden">
+    <nav aria-label="Site pages" className="border-t border-line lg:hidden">
       <ol className="flex gap-1 overflow-x-auto px-4 py-2 [scrollbar-width:none] sm:px-6">
-        {navItems.map((item) => {
+        {/* Main pages first, then a divider, then the detail pages. */}
+        {[...navItems, null, ...deepItems].map((item) => {
+          if (!item) {
+            return (
+              <li key="divider" className="flex shrink-0 items-center px-1 text-xs text-muted" aria-hidden>
+                <span className="h-4 w-px bg-line" />
+              </li>
+            );
+          }
           const active = pathname === item.href;
           return (
             <li key={item.href} className="shrink-0">

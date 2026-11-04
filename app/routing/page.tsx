@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import { ArrowRight, Bell, Globe, HeartHandshake, Lightbulb, Megaphone, MessageCircleQuestion } from "lucide-react";
+import { More } from "@/components/more";
 import { PageHeader } from "@/components/page-header";
 import { RoutingFlow } from "@/components/routing-flow";
 import { competitorName, routingLog, signalById } from "@/lib/data";
 import { formatShortDate } from "@/lib/format";
 import type { RoutingEntry } from "@/lib/types";
+import { eyebrowFor } from "@/lib/nav";
 
 export const metadata: Metadata = { title: "Routing log" };
 
@@ -26,9 +28,9 @@ export default function Page() {
   return (
     <>
       <PageHeader
-        eyebrow="08 · Routing log"
+        eyebrow={eyebrowFor("/routing")}
         title="Where intel went and what it changed"
-        lede="The program is judged by what changes after a signal goes out. This log tracks those changes in deals, the roadmap, and the website."
+        lede="Dispatch is judged by what changes after a signal goes out: in deals, on the roadmap, and on the website."
         sample
       />
 
@@ -48,8 +50,8 @@ export default function Page() {
         <RoutingFlow />
       </div>
 
-      <h2 className="mt-12 text-xl font-semibold tracking-tight">The log</h2>
-      <ol className="relative mt-6 space-y-6 border-l border-line pl-6 sm:ml-2">
+      <More label="The log: every handoff and what it changed" hint="Eight entries from the last three weeks">
+      <ol className="relative space-y-6 border-l border-line pl-6 sm:ml-2">
         {entries.map((e) => {
           const { icon: Icon, tone } = kinds[e.kind];
           const signal = signalById(e.signal);
@@ -80,6 +82,7 @@ export default function Page() {
           );
         })}
       </ol>
+      </More>
 
       <section className="mt-14">
         <h2 className="text-xl font-semibold tracking-tight">KPIs to track</h2>

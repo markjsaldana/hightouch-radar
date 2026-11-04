@@ -3,12 +3,15 @@ import { ArrowRight, Binoculars, Gauge, MessageSquareText } from "lucide-react";
 import { PageHeader } from "@/components/page-header";
 import { SalesCycleTrack, type Stage } from "@/components/sales-cycle-track";
 import { competitors, digest, signals, sources } from "@/lib/data";
+import { formatShortDate } from "@/lib/format";
+import { lastRun } from "@/lib/site";
+import { eyebrowFor } from "@/lib/nav";
 
 const pillars = [
   {
     icon: Binoculars,
     title: "Watch",
-    body: "Competitor launches, pricing, messaging, reviews, and hiring, plus how their reps pitch on real sales calls. Customer references and case studies sit alongside.",
+    body: "Every Monday it scrapes Jobber and ServiceTitan pricing pages, product updates, comparison pages, and blogs. Win-loss notes, call mentions, and customer references sit alongside.",
   },
   {
     icon: Gauge,
@@ -18,7 +21,7 @@ const pillars = [
   {
     icon: MessageSquareText,
     title: "Answer",
-    body: "Reps ask in Slack or the CRM and get what to say next for the deal in front of them, with the source for every line.",
+    body: "Reps ask in Slack or the CRM and get what to say next for the deal in front of them.",
   },
 ];
 
@@ -28,17 +31,17 @@ const stages: Stage[] = [
     name: "Prospecting",
     who: "SDR",
     asks: "Which of my accounts just felt a competitor change?",
-    gets: "A reason to reach out this week, such as a competitor's price change or renewal timing, with a two-line opener.",
-    href: "/digest",
-    source: "Weekly digest",
+    gets: "A reason to reach out this week, like Jobber changing its plans, with a two-line opener ready to send.",
+    href: "/so-what#sdrs",
+    source: "So what for SDRs",
   },
   {
     name: "Discovery",
     who: "SDR → AE",
-    asks: "They use Segment. What should I ask?",
+    asks: "They're on Jobber. What should I ask?",
     gets: "Landmine questions to plant before the evaluation, and the one-line answer if the competitor comes up.",
-    href: "/battlecard",
-    source: "Battlecard",
+    href: "/battlecard#jobber",
+    source: "Jobber battlecard",
   },
   {
     name: "Demo & evaluation",
@@ -49,10 +52,10 @@ const stages: Stage[] = [
     source: "Deal assistant",
   },
   {
-    name: "Technical validation",
+    name: "Proving it",
     who: "AE + SE",
-    asks: "Can they actually do this on the warehouse?",
-    gets: "A capability-by-capability answer with a source note on every cell, and what to test in the POC.",
+    asks: "Can ServiceTitan really get them live in 30 days?",
+    gets: "A capability-by-capability answer with a source note on every cell, and what to ask so the buyer can check it.",
     href: "/matrix",
     source: "Matrix",
   },
@@ -60,7 +63,7 @@ const stages: Stage[] = [
     name: "Proposal & negotiation",
     who: "AE",
     asks: "They want to talk to a customer like them.",
-    gets: "Reference customers matched on use case, region, industry, and competitor, with who to ask and when they were last used.",
+    gets: "Reference customers matched on trade, size, region, and competitor, with who to ask and when they were last used.",
     href: "/references",
     source: "References",
   },
@@ -74,18 +77,18 @@ const stages: Stage[] = [
   },
 ];
 
-const whyHightouch = [
+const whyItMatters = [
   {
-    title: "Every deal has a competitor in it.",
-    body: "Composable vs. packaged CDP comes up in almost every deal, and AI decisioning now puts engagement platforms and suites in the same evaluations.",
+    title: "Jobber and ServiceTitan show up from both sides.",
+    body: "Jobber is in most deals with smaller shops and in every switch conversation. ServiceTitan is moving down toward the 5 to 20 tech shops that are Housecall Pro's core.",
   },
   {
     title: "Each buyer needs different proof.",
-    body: "Marketing wants speed, data teams want governance and one source of truth, and product wants real-time experimentation. One battlecard can't serve all three.",
+    body: "The owner wants more booked jobs, the office manager wants fewer missed calls, and techs want an app that's quick in the field. One battlecard can't serve all three.",
   },
   {
     title: "Reps only use what they trust.",
-    body: "Every answer cites the signal, battlecard section, or customer story it came from. When the assistant doesn't know, it says so, and the question goes to the CI owner.",
+    body: "Every answer cites the signal, battlecard section, or customer story it came from. When the assistant doesn't know, it says so, and the question comes to me.",
   },
 ];
 
@@ -101,9 +104,9 @@ export default function Page() {
   return (
     <>
       <PageHeader
-        eyebrow="01 · Overview"
+        eyebrow={eyebrowFor("/")}
         title="A sales assistant for every stage of the deal"
-        lede="SDRs and AEs ask it what to say next, from the first cold email to the renewal call. It answers from current competitive intel, battlecards, and customer proof, and cites the source for every line."
+        lede="Housecall Pro SDRs and AEs ask it what to say next, from the first cold email to the renewal call. It answers from this week's intel on Jobber and ServiceTitan and from customer proof, and it cites the source for every line."
       />
 
       <section aria-label="How the assistant works" className="grid gap-4 sm:grid-cols-3">
@@ -126,7 +129,12 @@ export default function Page() {
           </div>
         ))}
       </dl>
-      <p className="mt-2 text-xs text-muted">Counts come from the sample data on the pages that follow.</p>
+      <p className="mt-2 text-xs text-pretty text-muted">
+        Counts come from the sample {formatShortDate(lastRun)} run.{" "}
+        <Link href="/how-it-works#weekly-run" className="font-medium text-accent hover:underline">
+          How the weekly run works
+        </Link>
+      </p>
 
       <section className="mt-12">
         <h2 className="text-xl font-semibold tracking-tight">Through the whole sales cycle</h2>
@@ -139,9 +147,9 @@ export default function Page() {
       </section>
 
       <section className="mt-12">
-        <h2 className="text-xl font-semibold tracking-tight">Why this matters for Hightouch</h2>
+        <h2 className="text-xl font-semibold tracking-tight">Why this matters for Housecall Pro</h2>
         <ul className="mt-5 space-y-4">
-          {whyHightouch.map((item, i) => (
+          {whyItMatters.map((item, i) => (
             <li key={item.title} className="flex gap-4">
               <span className="mt-0.5 font-mono text-sm text-accent">{String(i + 1).padStart(2, "0")}</span>
               <p className="max-w-2xl text-pretty">
@@ -154,12 +162,12 @@ export default function Page() {
       </section>
 
       <section className="mt-12 rounded-xl border border-line bg-surface-2 p-6">
-        <p className="font-mono text-xs tracking-wide text-muted uppercase">Built to run in-house</p>
+        <p className="font-mono text-xs tracking-wide text-muted uppercase">How I&apos;ll roll it out</p>
         <p className="mt-3 max-w-3xl text-pretty">
-          The assistant and every page here read from a few JSON files and one pipeline script. Your team can fork it and run it,
-          or bring me in to set it up.{" "}
+          In my first 90 days as PMM: battlecards for Jobber and ServiceTitan by day 30, Dispatch every Monday by day
+          35, and a deal assistant pilot with SDRs and AEs by day 75.{" "}
           <Link href="/plan" className="font-medium text-accent hover:underline">
-            See how to build it
+            See the 90-day plan
           </Link>
           .
         </p>
@@ -177,6 +185,12 @@ export default function Page() {
           className="inline-flex items-center gap-2 rounded-lg border border-line bg-surface px-4 py-2.5 text-sm font-medium transition-colors hover:bg-surface-2"
         >
           See how it works
+        </Link>
+        <Link
+          href="/so-what"
+          className="inline-flex items-center gap-2 rounded-lg border border-line bg-surface px-4 py-2.5 text-sm font-medium transition-colors hover:bg-surface-2"
+        >
+          Read this week&apos;s So what
         </Link>
       </div>
     </>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { MatrixTable } from "@/components/matrix-table";
 import { PageHeader } from "@/components/page-header";
 import { PositioningMap } from "@/components/positioning-map";
+import { eyebrowFor } from "@/lib/nav";
 
 export const metadata: Metadata = { title: "Matrix & map" };
 
@@ -9,7 +10,7 @@ export default function Page() {
   return (
     <>
       <PageHeader
-        eyebrow="06 · Matrix & map"
+        eyebrow={eyebrowFor("/matrix")}
         title="Comparison matrix and positioning map"
         lede="The matrix answers 'can they do X?' for each buyer. The map shows where each player is headed."
         sample
@@ -18,7 +19,7 @@ export default function Page() {
       <section>
         <h2 className="text-xl font-semibold tracking-tight">Capability matrix</h2>
         <p className="mt-1 max-w-2xl text-sm text-pretty text-muted">
-          Grouped by what each persona cares about. Each cell has a source note. Signals from the Radar change cells
+          Grouped by what each persona cares about. Each cell has a source note. Signals from Dispatch change cells
           when a competitor ships something (look for the signal numbers in the notes).
         </p>
         <div className="mt-4">
@@ -29,8 +30,8 @@ export default function Page() {
       <section className="mt-14">
         <h2 className="text-xl font-semibold tracking-tight">Positioning map</h2>
         <p className="mt-1 max-w-2xl text-sm text-pretty text-muted">
-          Packaged vs. composable on one axis, and who drives the purchase on the other. It&apos;s a point of view, so it&apos;s
-          labeled that way.
+          Quick to start vs. deep platform on one axis, and running jobs vs. growing the business on the other. It&apos;s a
+          point of view, so it&apos;s labeled that way.
         </p>
         <div className="mt-4">
           <PositioningMap />

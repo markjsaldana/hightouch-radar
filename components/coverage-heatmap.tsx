@@ -109,7 +109,7 @@ export function CoverageHeatmap() {
             {hovered.map((s) => `${s.frequency.toLowerCase()}, looking for ${s.lookFor.toLowerCase()}`).join("; ")}.
           </>
         ) : (
-          "Hover a square to see what the Radar looks for there."
+          "Hover a square to see what Dispatch looks for there."
         )}
       </p>
     </div>

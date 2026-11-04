@@ -2,16 +2,18 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { Chip } from "@/components/badges";
 import { CoverageHeatmap } from "@/components/coverage-heatmap";
+import { More } from "@/components/more";
 import { PageHeader } from "@/components/page-header";
 import { SourceExplorer } from "@/components/source-explorer";
 import { competitors, rules, signalTypes, sources } from "@/lib/data";
 import { loadSnapshotDiff } from "@/lib/diff";
 import type { Tier } from "@/lib/types";
+import { eyebrowFor } from "@/lib/nav";
 
 export const metadata: Metadata = { title: "Inputs" };
 
 const tiers: { id: Tier; note: string }[] = [
-  { id: "Primary", note: "In most competitive deals. Full battlecards, weekly tracking." },
+  { id: "Primary", note: "In most competitive deals. Full battlecards, weekly scraping." },
   { id: "Secondary", note: "In specific segments. Battlecards on demand." },
   { id: "Watch", note: "Not head-to-head yet, but moving toward our buyers." },
 ];
@@ -47,9 +49,9 @@ export default function Page() {
   return (
     <>
       <PageHeader
-        eyebrow="03 · Inputs"
-        title="What the Radar watches, and the rules it follows"
-        lede="Who we track, where we look, what counts as a change, and how each change is scored and routed."
+        eyebrow={eyebrowFor("/inputs")}
+        title="What Dispatch watches, and the rules it follows"
+        lede="Who Dispatch watches, which pages it scrapes, and how it scores what changed."
         sample
       />
 
@@ -71,7 +73,8 @@ export default function Page() {
         lede="Who we track, how closely, and a starting hypothesis for why each one wins. Win-loss interviews test the hypotheses in the first 60 days."
       >
         <div className="space-y-6">
-          {tiers.map((tier) => (
+          {/* Only tiers that have competitors in them. */}
+          {tiers.filter((tier) => competitors.some((c) => c.tier === tier.id)).map((tier) => (
             <div key={tier.id}>
               <p className="text-sm">
                 <span className="font-semibold">{tier.id}</span>{" "}
@@ -117,14 +120,15 @@ export default function Page() {
 
       <Section
         index={1}
-        lede={`${sources.length} sources, public and internal. Pick one to see what the Radar checks. Three have saved before-and-after versions, so you can see exactly what changed and the signal it produced.`}
+        lede={`${sources.length} sources: competitor pages and blogs scraped weekly (pricing pages daily), plus internal notes from sales and CS. Pick one to see what Dispatch checks. Three have saved before-and-after versions, so you can see exactly what changed and the signal it produced.`}
       >
         <CoverageHeatmap />
         <div className="mt-6">
-          <SourceExplorer diffs={diffs} initialSource="salesforce-pricing" />
+          <SourceExplorer diffs={diffs} initialSource="jobber-pricing" />
         </div>
       </Section>
 
+      <More label="How changes are typed, scored, and routed" hint="The nine change types and the rules behind every alert">
       <Section
         index={2}
         lede="Every change gets exactly one type. The type decides the default route and which battlecard section it can update."
@@ -142,7 +146,7 @@ export default function Page() {
 
       <Section
         index={3}
-        lede="The scores decide who hears about a change and how fast. The AI proposes them, and the CI owner confirms or changes them."
+        lede="The scores decide who hears about a change and how fast. The AI proposes them, and I confirm or change them."
       >
         <div className="grid gap-4 lg:grid-cols-2">
           <div className="rounded-xl border border-line bg-surface p-5">
@@ -228,6 +232,7 @@ export default function Page() {
           </table>
         </div>
       </Section>
+      </More>
     </>
   );
 }
