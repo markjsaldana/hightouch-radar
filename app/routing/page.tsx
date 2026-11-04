@@ -26,7 +26,7 @@ export default function Page() {
   return (
     <>
       <PageHeader
-        eyebrow="08 · Routing log"
+        eyebrow="09 · Routing log"
         title="Where intel went and what it changed"
         lede="The program is judged by what changes after a signal goes out. This log tracks those changes in deals, the roadmap, and the website."
         sample

@@ -13,27 +13,28 @@ const errors = [];
 
 const enums = {
   tier: ["Primary", "Secondary", "Watch"],
-  persona: ["Marketing", "Data", "Product", "Exec"],
+  persona: ["Owner", "Office", "Tech", "Ops"],
   confidence: ["Confirmed", "Likely", "Rumor"],
   urgency: ["Alert now", "This week's digest", "Monthly review"],
-  owner: ["Sales", "Sales leadership", "PMM", "Product", "Website", "CS", "Enablement"],
+  owner: ["Sales", "SDRs", "Sales leadership", "PMM", "Product", "Website", "CS", "Enablement"],
   status: ["Alert sent", "Talk track shipped", "In review", "Gap logged", "Page updated", "Logged"],
-  region: ["North America", "EMEA", "APAC", "LATAM"],
-  size: ["Commercial", "Mid-market", "Enterprise"],
+  region: ["West", "Southwest", "Midwest", "Southeast", "Northeast", "Canada"],
+  size: ["Small", "Mid-size", "Large"],
   useCase: [
-    "Audience activation",
-    "Lifecycle marketing",
-    "Paid media",
-    "AI Decisioning",
-    "Personalization",
-    "Identity resolution",
-    "Data governance",
-    "Sales & CRM sync",
+    "Scheduling & dispatch",
+    "Online booking",
+    "Estimates & price book",
+    "Invoicing & payments",
+    "Consumer financing",
+    "Service plans",
+    "Marketing & reviews",
+    "Reporting",
   ],
-  outcome: ["Replaced", "Runs alongside", "Chose over"],
+  outcome: ["Switched from", "Chose over"],
   referenceStatus: ["Available", "Limited", "Resting"],
   format: ["Reference call", "Peer email", "Site visit", "Webinar"],
   visibility: ["Public", "Internal only"],
+  proofType: ["Customer story", "Demo moment", "Cost math"],
 };
 const checkEnum = (where, kind, value) => {
   if (!enums[kind].includes(value)) errors.push(`${where}: invalid ${kind} "${value}"`);
@@ -60,7 +61,8 @@ const digest = load("digest.json");
 const refs = [
   ...digest.topForSales,
   ...digest.trends.flatMap((t) => t.signals),
-  ...load("battlecard_segment.json").updatedBySignals.map((u) => u.signal),
+  ...load("battlecards.json").flatMap((b) => b.updatedBySignals.map((u) => u.signal)),
+  ...load("so_what.json").audiences.flatMap((a) => a.items.flatMap((i) => i.signals)),
   ...load("routing_log.json").entries.map((e) => e.signal),
 ];
 for (const id of refs) if (!signalIds.has(id)) errors.push(`reference to missing signal #${id}`);
@@ -94,7 +96,14 @@ for (const cs of caseStudies) {
 // and every resource must link to something that exists.
 const demo = load("transcript_demo.json");
 const transcript = readFileSync(new URL(`../${demo.file.path}`, import.meta.url), "utf8");
-const objections = load("battlecard_segment.json").objections;
+const battlecards = load("battlecards.json");
+for (const b of battlecards) {
+  if (!competitors.has(b.competitorId)) errors.push(`battlecard: unknown competitor ${b.competitorId}`);
+  b.byPersona.forEach((p) => checkEnum(`battlecard ${b.competitorId}`, "persona", p.persona));
+  b.whereWeWin.forEach((w) => checkEnum(`battlecard ${b.competitorId}`, "proofType", w.proofType));
+}
+// The demo's objection numbers point into the battlecard for the prospect's competitor.
+const objections = battlecards.find((b) => b.competitorId === demo.prospect.competitorId)?.objections ?? [];
 const rank = (where, n, list) => {
   if (!Number.isInteger(n) || n < 1 || n > list.length) errors.push(`${where}: no rank ${n}`);
 };

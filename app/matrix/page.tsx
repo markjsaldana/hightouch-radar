@@ -9,7 +9,7 @@ export default function Page() {
   return (
     <>
       <PageHeader
-        eyebrow="06 · Matrix & map"
+        eyebrow="07 · Matrix & map"
         title="Comparison matrix and positioning map"
         lede="The matrix answers 'can they do X?' for each buyer. The map shows where each player is headed."
         sample
@@ -29,8 +29,8 @@ export default function Page() {
       <section className="mt-14">
         <h2 className="text-xl font-semibold tracking-tight">Positioning map</h2>
         <p className="mt-1 max-w-2xl text-sm text-pretty text-muted">
-          Packaged vs. composable on one axis, and who drives the purchase on the other. It&apos;s a point of view, so it&apos;s
-          labeled that way.
+          Quick to start vs. deep platform on one axis, and running jobs vs. growing the business on the other. It&apos;s a
+          point of view, so it&apos;s labeled that way.
         </p>
         <div className="mt-4">
           <PositioningMap />

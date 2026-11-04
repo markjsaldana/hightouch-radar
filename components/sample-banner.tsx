@@ -1,5 +1,6 @@
 import { FlaskConical } from "lucide-react";
-import { sampleDisclaimer } from "@/lib/site";
+import { formatShortDate } from "@/lib/format";
+import { lastRun, sampleDisclaimer } from "@/lib/site";
 
 export function SampleBanner() {
   return (
@@ -11,7 +12,8 @@ export function SampleBanner() {
       <p>
         <strong className="font-semibold">{sampleDisclaimer}</strong>{" "}
         <span className="opacity-90">
-          Company names are used for category context; events, ratings, and talk tracks are invented.
+          Company names are real; events, ratings, and talk tracks are invented. In production the Radar refreshes every
+          Monday by scraping Jobber and ServiceTitan pages and blogs (this sample: {formatShortDate(lastRun)} run).
         </span>
       </p>
     </div>

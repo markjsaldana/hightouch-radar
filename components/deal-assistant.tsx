@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { ArrowUpRight, Bot, Check, CircleCheck, ClipboardList, Copy, FileText, Mail, RotateCcw, Sparkles, Upload } from "lucide-react";
 import { ConnectionMap, TranscriptScroller } from "@/components/deal-graphics";
-import { battlecard, caseStudyById, competitorName, customerById, transcriptDemo as demo } from "@/lib/data";
+import { battlecardFor, caseStudyById, competitorName, customerById, transcriptDemo as demo } from "@/lib/data";
 import type { DealResource, DemoEmail } from "@/lib/types";
 
 type Path = "transcript" | "form";
@@ -17,6 +17,8 @@ const BOT_DELAY = 1100;
 const ROW_DELAY = 550;
 
 const competitor = competitorName(demo.prospect.competitorId);
+// Objection numbers in the demo point at the battlecard for the prospect's competitor.
+const card = battlecardFor(demo.prospect.competitorId);
 
 function TypingDots() {
   return (
@@ -71,9 +73,9 @@ function resourceInfo(r: DealResource) {
   return {
     label: "Talk track",
     short: "Talk track · battlecard",
-    title: battlecard.objections[i].objection.replace(/^"|"$/g, ""),
+    title: card.objections[i].objection.replace(/^"|"$/g, ""),
     meta: `${competitor} battlecard`,
-    href: `/battlecard#objection-${i}`,
+    href: `/battlecard#${card.competitorId}-objection-${i}`,
   };
 }
 
@@ -150,7 +152,7 @@ function ConcernRow({ rank, fromForm }: { rank: number; fromForm?: boolean }) {
           </p>
         )}
         {c.objection !== undefined ? (
-          <a href={`/battlecard#objection-${c.objection}`} className="inline-flex items-center gap-0.5 text-xs font-medium text-accent hover:underline">
+          <a href={`/battlecard#${card.competitorId}-objection-${c.objection}`} className="inline-flex items-center gap-0.5 text-xs font-medium text-accent hover:underline">
             Talk track <ArrowUpRight className="size-3" aria-hidden />
           </a>
         ) : null}

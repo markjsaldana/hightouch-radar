@@ -39,22 +39,22 @@ const day = [
     icon: Users,
     time: "3:15",
     title: "Late stage",
-    body: "A reference customer who matches on region, use case, and competitor, plus who to ask.",
+    body: "A reference customer who matches on trade, size, and competitor, plus who to ask.",
   },
 ];
 
 const stages = [
+  { name: "Prospecting", gives: "This week's outreach angle from the So what, with an opener for the trade." },
   { name: "Discovery", gives: "Landmine questions to plant before the evaluation starts." },
   { name: "Evaluation & demo", gives: "The demo moments and proof points that land with this buyer." },
-  { name: "Technical validation", gives: "Architecture answers for the data team and what to test in the POC." },
-  { name: "Proposal & negotiation", gives: "Responses to bundling and cost objections, and when to bring in the AE's TCO worksheet." },
+  { name: "Proposal", gives: "Answers to price objections, and when to bring in the cost worksheet at next year's team size." },
   { name: "Renewal", gives: "Proof of value to date and what to say if a competitor shows up at renewal." },
 ];
 
 const buildSteps = [
   {
     title: "Start from the call",
-    body: "The rep uploads the call transcript, or fills in a six-field form when there's no recording. The transcript is the recommended path: concerns come ranked by what the buyer actually said, with the quotes to prove it.",
+    body: "The rep uploads the call transcript, or fills in a six-field form when there's no recording. The transcript is the recommended path: concerns come ranked by what the buyer said, with the quotes to prove it.",
   },
   {
     title: "Ground it in the Radar",
@@ -62,11 +62,11 @@ const buildSteps = [
   },
   {
     title: "Match proof to the deal",
-    body: "Resources are ranked by how many of the buyer's concerns they answer and how closely the customer matches on use case, region, industry, and competitor.",
+    body: "Resources are ranked by how many of the buyer's concerns they answer and how closely the customer matches on trade, size, region, and competitor.",
   },
   {
     title: "Put it where reps work",
-    body: "Slack and the CRM opportunity page, with call recordings pulled from Gong automatically, so a rep can ask between calls without opening another tool.",
+    body: "Team chat and the CRM opportunity page, with call recordings pulled in automatically, so a rep can ask from the truck between calls.",
   },
   {
     title: "Turn gaps into intel requests",
@@ -81,13 +81,13 @@ const transcript = readFileSync(
   "utf8",
 ).split("\n");
 
-const channels = ["deal-larkspur-home", "comp-alerts", "sales-emea", "segment-deals"];
+const channels = ["deal-mesa-valley", "comp-alerts", "sdr-team", "jobber-switches"];
 
 export default function Page() {
   return (
     <>
       <PageHeader
-        eyebrow="10 · Deal assistant"
+        eyebrow="11 · Deal assistant"
         title="The assistant reps use every day, on every deal"
         lede="SDRs and AEs open it before and after every call. Upload the transcript and get the buyer's concerns, the proof that answers them, and the follow-up email, each with its source."
         sample
@@ -119,7 +119,7 @@ export default function Page() {
       <section className="mt-12">
         <h2 className="text-xl font-semibold tracking-tight">Try it: one call, start to finish</h2>
         <p className="mt-1 max-w-2xl text-sm text-pretty text-muted">
-          An AE just finished an evaluation call with Larkspur Home, a UK retailer that already uses Segment.
+          An AE just finished an evaluation call with Mesa Valley Plumbing, an 11-tech shop in Arizona that runs on Jobber today.
         </p>
         <figure className="mt-4 rounded-xl border border-dashed border-line bg-surface-2 p-3 sm:p-5">
           <figcaption className="text-xs text-muted">
@@ -134,7 +134,7 @@ export default function Page() {
                 <span className="size-2.5 rounded-full bg-warn/60" />
                 <span className="size-2.5 rounded-full bg-good/60" />
               </span>
-              <span className="ml-2 text-xs text-muted">Slack · Hightouch sales</span>
+              <span className="ml-2 text-xs text-muted">Team chat · Housecall Pro sales</span>
             </div>
             <div className="grid md:grid-cols-[12rem_minmax(0,1fr)]">
               <aside className="hidden border-r border-line bg-surface-2/60 p-3 text-sm md:block" aria-hidden>
@@ -160,7 +160,7 @@ export default function Page() {
                 <div className="flex items-center justify-between gap-2 border-b border-line px-4 py-2.5">
                   <p className="flex items-center gap-1.5 text-sm font-semibold">
                     <Hash className="size-4 text-muted" aria-hidden />
-                    deal-larkspur-home
+                    deal-mesa-valley
                   </p>
                   <p className="flex items-center gap-1 text-xs text-muted">
                     <Lock className="size-3" aria-hidden />

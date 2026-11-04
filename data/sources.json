@@ -1,34 +1,194 @@
 [
-  { "id": "segment-changelog", "competitorId": "segment", "type": "changelog", "url": "<segment-changelog-url>", "internal": false, "frequency": "Weekly", "lookFor": "New audience, activation, or AI features that touch our marketer self-serve story", "snapshot": "segment-changelog" },
-  { "id": "segment-pricing", "competitorId": "segment", "type": "pricing page", "url": "<segment-pricing-url>", "internal": false, "frequency": "Daily", "lookFor": "Plan names, what moved between tiers, new add-ons" },
-  { "id": "segment-blog", "competitorId": "segment", "type": "blog", "url": "<segment-blog-url>", "internal": false, "frequency": "Weekly", "lookFor": "Category language, homepage and headline shifts, warehouse positioning" },
-  { "id": "segment-webinars", "competitorId": "segment", "type": "webinar/events", "url": "<twilio-events-url>", "internal": false, "frequency": "Monthly", "lookFor": "Launch themes and keynote claims ahead of announcements" },
-
-  { "id": "salesforce-pricing", "competitorId": "salesforce", "type": "pricing page", "url": "<data-360-pricing-url>", "internal": false, "frequency": "Daily", "lookFor": "Packaging changes, features moving into base editions, bundling with other clouds", "snapshot": "salesforce-pricing" },
-  { "id": "salesforce-release-notes", "competitorId": "salesforce", "type": "changelog", "url": "<salesforce-release-notes-url>", "internal": false, "frequency": "Weekly", "lookFor": "Data 360 and Agentforce features that overlap with activation or decisioning" },
-  { "id": "salesforce-docs", "competitorId": "salesforce", "type": "docs", "url": "<data-360-docs-url>", "internal": false, "frequency": "Weekly", "lookFor": "Zero-copy and warehouse connector depth, limits, and setup steps" },
-  { "id": "salesforce-partners", "competitorId": "salesforce", "type": "partner directory", "url": "<appexchange-url>", "internal": false, "frequency": "Monthly", "lookFor": "New warehouse and activation partners" },
-
-  { "id": "adobe-release-notes", "competitorId": "adobe", "type": "changelog", "url": "<aep-release-notes-url>", "internal": false, "frequency": "Weekly", "lookFor": "Real-Time CDP features, audiences built directly on warehouse data, warehouse connectors" },
-  { "id": "adobe-blog", "competitorId": "adobe", "type": "blog", "url": "<adobe-blog-url>", "internal": false, "frequency": "Weekly", "lookFor": "Comparison content aimed at composable CDP buyers" },
-  { "id": "adobe-partners", "competitorId": "adobe", "type": "partner directory", "url": "<adobe-exchange-url>", "internal": false, "frequency": "Monthly", "lookFor": "Cloud warehouse partnerships and co-sell announcements" },
-  { "id": "adobe-events", "competitorId": "adobe", "type": "webinar/events", "url": "<adobe-summit-url>", "internal": false, "frequency": "Monthly", "lookFor": "Roadmap reveals at Summit and regional events" },
-
-  { "id": "rudderstack-careers", "competitorId": "rudderstack", "type": "careers", "url": "<rudderstack-careers-url>", "internal": false, "frequency": "Weekly", "lookFor": "Sales hiring by region and segment, new product team roles", "snapshot": "rudderstack-careers" },
-  { "id": "rudderstack-changelog", "competitorId": "rudderstack", "type": "changelog", "url": "<rudderstack-changelog-url>", "internal": false, "frequency": "Weekly", "lookFor": "Reverse ETL and audience features moving toward marketers" },
-  { "id": "rudderstack-blog", "competitorId": "rudderstack", "type": "blog", "url": "<rudderstack-blog-url>", "internal": false, "frequency": "Weekly", "lookFor": "Positioning toward data teams and AI use cases" },
-
-  { "id": "mparticle-changelog", "competitorId": "mparticle", "type": "changelog", "url": "<mparticle-changelog-url>", "internal": false, "frequency": "Weekly", "lookFor": "Real-time and mobile audience features" },
-  { "id": "mparticle-partners", "competitorId": "mparticle", "type": "partner directory", "url": "<mparticle-integrations-url>", "internal": false, "frequency": "Monthly", "lookFor": "Commerce and Rokt network integrations" },
-  { "id": "mparticle-careers", "competitorId": "mparticle", "type": "careers", "url": "<rokt-careers-url>", "internal": false, "frequency": "Monthly", "lookFor": "CDP product and sales hiring after the Rokt acquisition" },
-
-  { "id": "braze-changelog", "competitorId": "braze", "type": "changelog", "url": "<braze-release-notes-url>", "internal": false, "frequency": "Weekly", "lookFor": "AI Decisioning Studio features and agent setup for marketers" },
-  { "id": "braze-events", "competitorId": "braze", "type": "webinar/events", "url": "<braze-forge-url>", "internal": false, "frequency": "Monthly", "lookFor": "Decisioning roadmap and partner positioning at Forge" },
-
-  { "id": "category-review-themes", "competitorId": "category", "type": "review themes", "url": "Public review sites, summarized by hand (no scraping)", "internal": false, "frequency": "Monthly", "lookFor": "Recurring praise and complaint themes across the category" },
-  { "id": "internal-win-loss", "competitorId": "category", "type": "win-loss notes", "url": "Internal: CRM closed-lost reasons + win-loss interviews", "internal": true, "frequency": "Continuous", "lookFor": "Which competitor, which persona, and the stated reason" },
-  { "id": "internal-calls", "competitorId": "category", "type": "call mentions", "url": "Internal: Gong trackers for competitor names and key phrases", "internal": true, "frequency": "Continuous", "lookFor": "Mention volume by competitor and the objections reps hear" },
-  { "id": "internal-se-notes", "competitorId": "category", "type": "win-loss notes", "url": "Internal: SE technical-evaluation notes", "internal": true, "frequency": "Weekly", "lookFor": "Bake-off results and features prospects tested" },
-  { "id": "mystery-shop-calls", "competitorId": "category", "type": "mystery-shop calls", "url": "Sales calls the CI owner books with primary competitors as a prospect, rotating one competitor per month", "internal": true, "frequency": "Monthly", "lookFor": "How their reps pitch, which objections they plant about Hightouch, and how they handle pricing and bundling questions" },
-  { "id": "internal-cs-escalations", "competitorId": "category", "type": "call mentions", "url": "Internal: CS renewal and churn-risk notes", "internal": true, "frequency": "Weekly", "lookFor": "Competitors showing up at renewal" }
+  {
+    "id": "jobber-pricing",
+    "competitorId": "jobber",
+    "type": "pricing page",
+    "url": "<jobber-pricing-url>",
+    "internal": false,
+    "frequency": "Daily",
+    "lookFor": "Plan names, what moved between plans, add-on fees, and trial terms",
+    "snapshot": "jobber-pricing"
+  },
+  {
+    "id": "jobber-updates",
+    "competitorId": "jobber",
+    "type": "product updates",
+    "url": "<jobber-updates-url>",
+    "internal": false,
+    "frequency": "Weekly",
+    "lookFor": "New features for booking, dispatch, payments, marketing, and AI"
+  },
+  {
+    "id": "jobber-blog",
+    "competitorId": "jobber",
+    "type": "blog",
+    "url": "<jobber-blog-url>",
+    "internal": false,
+    "frequency": "Weekly",
+    "lookFor": "Which trades they target, switching guides, and campaigns aimed at our customers"
+  },
+  {
+    "id": "jobber-compare",
+    "competitorId": "jobber",
+    "type": "comparison page",
+    "url": "<jobber-compare-url>",
+    "internal": false,
+    "frequency": "Weekly",
+    "lookFor": "Their 'vs. Housecall Pro' page: every claim about us, and when it changes",
+    "snapshot": "jobber-compare"
+  },
+  {
+    "id": "jobber-help",
+    "competitorId": "jobber",
+    "type": "help center",
+    "url": "<jobber-help-url>",
+    "internal": false,
+    "frequency": "Weekly",
+    "lookFor": "Setup steps and limits that show what a new feature does"
+  },
+  {
+    "id": "jobber-careers",
+    "competitorId": "jobber",
+    "type": "careers",
+    "url": "<jobber-careers-url>",
+    "internal": false,
+    "frequency": "Monthly",
+    "lookFor": "Sales hiring by region, and new product teams such as payments or AI"
+  },
+  {
+    "id": "jobber-marketplace",
+    "competitorId": "jobber",
+    "type": "app marketplace",
+    "url": "<jobber-marketplace-url>",
+    "internal": false,
+    "frequency": "Monthly",
+    "lookFor": "New integrations: accounting, financing, fleet, and marketing tools"
+  },
+  {
+    "id": "jobber-events",
+    "competitorId": "jobber",
+    "type": "webinar/events",
+    "url": "<jobber-events-url>",
+    "internal": false,
+    "frequency": "Monthly",
+    "lookFor": "Roadmap hints and the customer stories they put on stage"
+  },
+  {
+    "id": "servicetitan-pricing",
+    "competitorId": "servicetitan",
+    "type": "pricing page",
+    "url": "<servicetitan-pricing-url>",
+    "internal": false,
+    "frequency": "Weekly",
+    "lookFor": "Editions, packaging, and any move toward plans for smaller shops"
+  },
+  {
+    "id": "servicetitan-updates",
+    "competitorId": "servicetitan",
+    "type": "product updates",
+    "url": "<servicetitan-updates-url>",
+    "internal": false,
+    "frequency": "Weekly",
+    "lookFor": "Release notes, especially features and onboarding aimed at shops under 20 techs"
+  },
+  {
+    "id": "servicetitan-blog",
+    "competitorId": "servicetitan",
+    "type": "blog",
+    "url": "<servicetitan-blog-url>",
+    "internal": false,
+    "frequency": "Weekly",
+    "lookFor": "Messaging aimed at residential shops with 5 to 20 techs",
+    "snapshot": "servicetitan-blog"
+  },
+  {
+    "id": "servicetitan-compare",
+    "competitorId": "servicetitan",
+    "type": "comparison page",
+    "url": "<servicetitan-compare-url>",
+    "internal": false,
+    "frequency": "Weekly",
+    "lookFor": "Comparison pages that name Housecall Pro"
+  },
+  {
+    "id": "servicetitan-investors",
+    "competitorId": "servicetitan",
+    "type": "investor news",
+    "url": "<servicetitan-investors-url>",
+    "internal": false,
+    "frequency": "Monthly",
+    "lookFor": "Earnings commentary on smaller customers, pricing, and AI"
+  },
+  {
+    "id": "servicetitan-careers",
+    "competitorId": "servicetitan",
+    "type": "careers",
+    "url": "<servicetitan-careers-url>",
+    "internal": false,
+    "frequency": "Monthly",
+    "lookFor": "Sales roles aimed at small and mid-size contractors"
+  },
+  {
+    "id": "servicetitan-marketplace",
+    "competitorId": "servicetitan",
+    "type": "app marketplace",
+    "url": "<servicetitan-marketplace-url>",
+    "internal": false,
+    "frequency": "Monthly",
+    "lookFor": "Integrations that close gaps for smaller shops"
+  },
+  {
+    "id": "servicetitan-events",
+    "competitorId": "servicetitan",
+    "type": "webinar/events",
+    "url": "<servicetitan-events-url>",
+    "internal": false,
+    "frequency": "Monthly",
+    "lookFor": "Product launches and who they say the product is for"
+  },
+  {
+    "id": "reviews",
+    "competitorId": "category",
+    "type": "review themes",
+    "url": "Public review sites, summarized by hand (no scraping)",
+    "internal": false,
+    "frequency": "Monthly",
+    "lookFor": "Recurring praise and complaints about each product, summarized by hand"
+  },
+  {
+    "id": "winloss",
+    "competitorId": "category",
+    "type": "win-loss notes",
+    "url": "Internal: CRM closed-lost reasons + win-loss interviews",
+    "internal": true,
+    "frequency": "Continuous",
+    "lookFor": "Which competitor, which persona, and the stated reason"
+  },
+  {
+    "id": "calls",
+    "competitorId": "category",
+    "type": "call mentions",
+    "url": "Internal: call recordings tracked for competitor names",
+    "internal": true,
+    "frequency": "Continuous",
+    "lookFor": "Competitor mentions by trade and the objections reps hear"
+  },
+  {
+    "id": "mystery-shop",
+    "competitorId": "category",
+    "type": "mystery-shop calls",
+    "url": "Sales calls the CI owner books with Jobber and ServiceTitan as a prospect",
+    "internal": true,
+    "frequency": "Monthly",
+    "lookFor": "How their reps pitch, what they say about Housecall Pro, and how they handle price"
+  },
+  {
+    "id": "cs-notes",
+    "competitorId": "category",
+    "type": "CS notes",
+    "url": "Internal: CS renewal and churn-risk notes",
+    "internal": true,
+    "frequency": "Weekly",
+    "lookFor": "Customers who mention a competitor at renewal or in support tickets"
+  }
 ]

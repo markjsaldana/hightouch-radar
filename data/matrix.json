@@ -1,481 +1,272 @@
 {
   "players": [
     {
-      "id": "hightouch",
-      "name": "Hightouch"
+      "id": "housecallpro",
+      "name": "Housecall Pro"
     },
     {
-      "id": "segment",
-      "name": "Segment"
+      "id": "jobber",
+      "name": "Jobber"
     },
     {
-      "id": "salesforce",
-      "name": "Salesforce Data 360"
-    },
-    {
-      "id": "adobe",
-      "name": "Adobe RT-CDP"
-    },
-    {
-      "id": "rudderstack",
-      "name": "RudderStack"
-    },
-    {
-      "id": "mparticle",
-      "name": "mParticle"
+      "id": "servicetitan",
+      "name": "ServiceTitan"
     }
   ],
   "groups": [
     {
-      "persona": "Marketing",
+      "persona": "Owner",
       "capabilities": [
         {
-          "name": "No-code audience builder",
+          "name": "Marketing campaigns (email, postcards)",
           "cells": {
-            "hightouch": {
+            "housecallpro": {
               "mark": "yes",
-              "note": "Visual builder on warehouse models"
+              "note": "Built in"
             },
-            "segment": {
-              "mark": "yes",
-              "note": "New builder on warehouse-linked data (Signal #14)"
-            },
-            "salesforce": {
-              "mark": "yes",
-              "note": "Segmentation inside Data 360"
-            },
-            "adobe": {
-              "mark": "yes",
-              "note": "Segment builder in AEP"
-            },
-            "rudderstack": {
+            "jobber": {
               "mark": "partial",
-              "note": "Audiences exist, oriented to data teams"
+              "note": "Email campaigns on higher plans"
             },
-            "mparticle": {
+            "servicetitan": {
               "mark": "yes",
-              "note": "Audience builder in platform"
+              "note": "Marketing add-on"
             }
           }
         },
         {
-          "name": "Journey orchestration",
+          "name": "Review requests",
           "cells": {
-            "hightouch": {
-              "mark": "partial",
-              "note": "Journeys; most teams orchestrate in their ESP"
-            },
-            "segment": {
-              "mark": "partial",
-              "note": "Journeys product"
-            },
-            "salesforce": {
+            "housecallpro": {
               "mark": "yes",
-              "note": "With Marketing Cloud"
+              "note": "Automatic after each job"
             },
-            "adobe": {
+            "jobber": {
               "mark": "yes",
-              "note": "With Journey Optimizer"
+              "note": "Automated requests"
             },
-            "rudderstack": {
-              "mark": "no",
-              "note": "Not a focus"
-            },
-            "mparticle": {
-              "mark": "partial",
-              "note": "Basic journey triggers"
+            "servicetitan": {
+              "mark": "yes",
+              "note": "Via marketing tools"
             }
           }
         },
         {
-          "name": "AI decisioning / next best action",
+          "name": "Consumer financing",
           "cells": {
-            "hightouch": {
+            "housecallpro": {
               "mark": "yes",
-              "note": "AI Decisioning product"
+              "note": "Offered inside the estimate"
             },
-            "segment": {
+            "jobber": {
               "mark": "partial",
-              "note": "Predictive traits; decisioning limited"
+              "note": "Marketplace partner (Signal #8)"
             },
-            "salesforce": {
-              "mark": "partial",
-              "note": "Agentforce features; scope varies"
-            },
-            "adobe": {
-              "mark": "partial",
-              "note": "AI features across suite"
-            },
-            "rudderstack": {
-              "mark": "no",
-              "note": "Not offered"
-            },
-            "mparticle": {
-              "mark": "partial",
-              "note": "Predictive audiences"
+            "servicetitan": {
+              "mark": "yes",
+              "note": "Built-in financing options"
             }
           }
         },
         {
-          "name": "Always-on experimentation",
+          "name": "Published pricing",
           "cells": {
-            "hightouch": {
+            "housecallpro": {
               "mark": "yes",
-              "note": "Built into AI Decisioning"
+              "note": "Plans listed on the website"
             },
-            "segment": {
-              "mark": "no",
-              "note": "Not a native feature"
-            },
-            "salesforce": {
-              "mark": "partial",
-              "note": "Via other Salesforce clouds"
-            },
-            "adobe": {
+            "jobber": {
               "mark": "yes",
-              "note": "Via Adobe Target"
+              "note": "Plans listed on the website"
             },
-            "rudderstack": {
+            "servicetitan": {
               "mark": "no",
-              "note": "Not offered"
-            },
-            "mparticle": {
-              "mark": "partial",
-              "note": "Via partners"
+              "note": "Contact sales"
             }
           }
         }
       ]
     },
     {
-      "persona": "Data",
+      "persona": "Office",
       "capabilities": [
         {
-          "name": "Runs on the warehouse without copying data",
+          "name": "Drag-and-drop dispatch board",
           "cells": {
-            "hightouch": {
+            "housecallpro": {
               "mark": "yes",
-              "note": "Core architecture"
+              "note": "Included"
             },
-            "segment": {
-              "mark": "partial",
-              "note": "Warehouse-linked features alongside profile store"
-            },
-            "salesforce": {
-              "mark": "partial",
-              "note": "Zero-copy for some sources (Signal #15)"
-            },
-            "adobe": {
-              "mark": "partial",
-              "note": "Some audiences can query the warehouse; most features need data copied in first (Signal #18)"
-            },
-            "rudderstack": {
+            "jobber": {
               "mark": "yes",
-              "note": "Core architecture"
+              "note": "Included"
             },
-            "mparticle": {
-              "mark": "partial",
-              "note": "Warehouse sync; profile store is primary"
+            "servicetitan": {
+              "mark": "yes",
+              "note": "Included"
             }
           }
         },
         {
-          "name": "Reverse ETL / warehouse sync",
+          "name": "Online booking",
           "cells": {
-            "hightouch": {
+            "housecallpro": {
               "mark": "yes",
-              "note": "Original product"
+              "note": "Included"
             },
-            "segment": {
+            "jobber": {
               "mark": "yes",
-              "note": "Reverse ETL offered"
+              "note": "Now on the entry plan (Signal #9)"
             },
-            "salesforce": {
-              "mark": "partial",
-              "note": "Via connectors"
-            },
-            "adobe": {
-              "mark": "partial",
-              "note": "Via connectors"
-            },
-            "rudderstack": {
+            "servicetitan": {
               "mark": "yes",
-              "note": "Reverse ETL offered"
-            },
-            "mparticle": {
-              "mark": "partial",
-              "note": "Warehouse sync"
+              "note": "Included"
             }
           }
         },
         {
-          "name": "Identity resolution",
+          "name": "AI call answering",
           "cells": {
-            "hightouch": {
-              "mark": "yes",
-              "note": "Runs in the warehouse"
+            "housecallpro": {
+              "mark": "partial",
+              "note": "Call routing; AI answering on the roadmap"
             },
-            "segment": {
+            "jobber": {
               "mark": "yes",
-              "note": "In profile store"
+              "note": "AI receptionist (Signal #5)"
             },
-            "salesforce": {
+            "servicetitan": {
               "mark": "yes",
-              "note": "Now in base edition (Signal #15)"
-            },
-            "adobe": {
-              "mark": "yes",
-              "note": "In AEP"
-            },
-            "rudderstack": {
-              "mark": "yes",
-              "note": "Warehouse-native profiles"
-            },
-            "mparticle": {
-              "mark": "yes",
-              "note": "Built-in identity matching"
+              "note": "AI call tools"
             }
           }
         },
         {
-          "name": "Event collection SDKs",
+          "name": "Two-way texting",
           "cells": {
-            "hightouch": {
-              "mark": "partial",
-              "note": "Events product; younger than incumbents"
-            },
-            "segment": {
+            "housecallpro": {
               "mark": "yes",
-              "note": "Core strength"
+              "note": "Included"
             },
-            "salesforce": {
-              "mark": "partial",
-              "note": "Relies on other tools for collection"
-            },
-            "adobe": {
+            "jobber": {
               "mark": "yes",
-              "note": "Web and mobile SDKs"
+              "note": "Included"
             },
-            "rudderstack": {
+            "servicetitan": {
               "mark": "yes",
-              "note": "Core strength"
-            },
-            "mparticle": {
-              "mark": "yes",
-              "note": "Core strength"
-            }
-          }
-        },
-        {
-          "name": "Version control and review for data changes",
-          "cells": {
-            "hightouch": {
-              "mark": "yes",
-              "note": "Data team can review changes before they go live"
-            },
-            "segment": {
-              "mark": "partial",
-              "note": "Partial"
-            },
-            "salesforce": {
-              "mark": "partial",
-              "note": "Partial"
-            },
-            "adobe": {
-              "mark": "no",
-              "note": "Limited"
-            },
-            "rudderstack": {
-              "mark": "yes",
-              "note": "Data team can review changes before they go live"
-            },
-            "mparticle": {
-              "mark": "partial",
-              "note": "Partial"
+              "note": "Included"
             }
           }
         }
       ]
     },
     {
-      "persona": "Product",
+      "persona": "Tech",
       "capabilities": [
         {
-          "name": "Real-time in-app audiences",
+          "name": "Mobile app with checklists and photos",
           "cells": {
-            "hightouch": {
-              "mark": "partial",
-              "note": "Real-time options; confirm how fast the use case needs it"
-            },
-            "segment": {
+            "housecallpro": {
               "mark": "yes",
-              "note": "Real-time profiles"
+              "note": "Included"
             },
-            "salesforce": {
-              "mark": "partial",
-              "note": "Depends on setup"
-            },
-            "adobe": {
+            "jobber": {
               "mark": "yes",
-              "note": "Real-time segments on site and in app"
+              "note": "Included"
             },
-            "rudderstack": {
-              "mark": "partial",
-              "note": "Event-stream based"
-            },
-            "mparticle": {
+            "servicetitan": {
               "mark": "yes",
-              "note": "On-device evaluation (Signal #9)"
+              "note": "Included"
             }
           }
         },
         {
-          "name": "Mobile SDK depth",
+          "name": "Price book on the phone",
           "cells": {
-            "hightouch": {
+            "housecallpro": {
+              "mark": "yes",
+              "note": "Good-better-best options"
+            },
+            "jobber": {
               "mark": "partial",
-              "note": "Events SDKs"
+              "note": "Line items, simpler options"
             },
-            "segment": {
+            "servicetitan": {
               "mark": "yes",
-              "note": "Mature"
-            },
-            "salesforce": {
-              "mark": "partial",
-              "note": "Via Marketing Cloud SDK"
-            },
-            "adobe": {
-              "mark": "yes",
-              "note": "Mature"
-            },
-            "rudderstack": {
-              "mark": "yes",
-              "note": "Mature"
-            },
-            "mparticle": {
-              "mark": "yes",
-              "note": "Mature, mobile-first"
+              "note": "Deep price book"
             }
           }
         },
         {
-          "name": "Feeds product analytics tools",
+          "name": "Easy to learn in a week",
           "cells": {
-            "hightouch": {
+            "housecallpro": {
               "mark": "yes",
-              "note": "Syncs to analytics destinations"
+              "note": "Most techs live in days"
             },
-            "segment": {
+            "jobber": {
               "mark": "yes",
-              "note": "Core use case"
+              "note": "Simple app"
             },
-            "salesforce": {
+            "servicetitan": {
               "mark": "partial",
-              "note": "Limited"
-            },
-            "adobe": {
-              "mark": "partial",
-              "note": "Mostly Adobe Analytics"
-            },
-            "rudderstack": {
-              "mark": "yes",
-              "note": "Core use case"
-            },
-            "mparticle": {
-              "mark": "yes",
-              "note": "Core use case"
+              "note": "More training for full use"
             }
           }
         }
       ]
     },
     {
-      "persona": "Exec",
+      "persona": "Ops",
       "capabilities": [
         {
-          "name": "Works with the existing stack (no rip-and-replace)",
+          "name": "Job costing",
           "cells": {
-            "hightouch": {
-              "mark": "yes",
-              "note": "Sits on the warehouse and syncs to current tools"
-            },
-            "segment": {
-              "mark": "yes",
-              "note": "Broad catalog"
-            },
-            "salesforce": {
+            "housecallpro": {
               "mark": "partial",
-              "note": "Best inside Salesforce"
+              "note": "Job-level profit reports"
             },
-            "adobe": {
+            "jobber": {
               "mark": "partial",
-              "note": "Best inside Adobe"
+              "note": "On the top plan"
             },
-            "rudderstack": {
+            "servicetitan": {
               "mark": "yes",
-              "note": "Broad catalog"
-            },
-            "mparticle": {
-              "mark": "yes",
-              "note": "Broad catalog"
+              "note": "Detailed job costing"
             }
           }
         },
         {
-          "name": "Bundled with a broader suite",
+          "name": "Multi-location reporting",
           "cells": {
-            "hightouch": {
-              "mark": "no",
-              "note": "Standalone"
-            },
-            "segment": {
-              "mark": "yes",
-              "note": "Twilio"
-            },
-            "salesforce": {
-              "mark": "yes",
-              "note": "Salesforce platform"
-            },
-            "adobe": {
-              "mark": "yes",
-              "note": "Adobe Experience Cloud"
-            },
-            "rudderstack": {
-              "mark": "no",
-              "note": "Standalone"
-            },
-            "mparticle": {
+            "housecallpro": {
               "mark": "partial",
-              "note": "Rokt"
+              "note": "Across crews; limited multi-location"
+            },
+            "jobber": {
+              "mark": "no",
+              "note": "Single business focus"
+            },
+            "servicetitan": {
+              "mark": "yes",
+              "note": "Built for it"
             }
           }
         },
         {
-          "name": "Fast time to first live audience",
+          "name": "Time to go live",
           "cells": {
-            "hightouch": {
+            "housecallpro": {
               "mark": "yes",
-              "note": "Uses models the data team already has"
+              "note": "Days to two weeks"
             },
-            "segment": {
-              "mark": "partial",
-              "note": "Fast if events are already flowing"
+            "jobber": {
+              "mark": "yes",
+              "note": "Days"
             },
-            "salesforce": {
+            "servicetitan": {
               "mark": "partial",
-              "note": "Depends on copying data in first"
-            },
-            "adobe": {
-              "mark": "partial",
-              "note": "Depends on copying data in first"
-            },
-            "rudderstack": {
-              "mark": "partial",
-              "note": "Fast for data teams; slower for marketers"
-            },
-            "mparticle": {
-              "mark": "partial",
-              "note": "Fast for app data"
+              "note": "Weeks to months; 30-day package for small shops (Signal #11)"
             }
           }
         }
@@ -484,63 +275,36 @@
   ],
   "positioning": {
     "xAxis": {
-      "low": "Packaged",
-      "high": "Composable"
+      "low": "Light, quick to start",
+      "high": "Deep, longer setup"
     },
     "yAxis": {
-      "low": "Data-team-led",
-      "high": "Marketer-led"
+      "low": "Runs the jobs",
+      "high": "Grows the business"
     },
     "points": [
       {
-        "id": "hightouch",
-        "name": "Hightouch",
-        "x": 86,
-        "y": 72,
-        "note": "Composable, with self-serve tools aimed at marketers",
+        "id": "housecallpro",
+        "name": "Housecall Pro",
+        "x": 42,
+        "y": 80,
+        "note": "Quick to start, with marketing and financing built in",
         "label": "top"
       },
       {
-        "id": "segment",
-        "name": "Segment",
-        "x": 42,
-        "y": 44,
-        "note": "Packaged, moving toward the warehouse"
+        "id": "jobber",
+        "name": "Jobber",
+        "x": 20,
+        "y": 42,
+        "note": "Easiest start, best for small shops; growth tools mostly on higher plans"
       },
       {
-        "id": "salesforce",
-        "name": "Salesforce Data 360",
-        "x": 18,
-        "y": 70,
-        "note": "Suite, bought by marketing and IT"
-      },
-      {
-        "id": "adobe",
-        "name": "Adobe RT-CDP",
-        "x": 12,
-        "y": 60,
-        "note": "Suite, enterprise marketing"
-      },
-      {
-        "id": "rudderstack",
-        "name": "RudderStack",
-        "x": 84,
-        "y": 18,
-        "note": "Composable, built for data engineers"
-      },
-      {
-        "id": "mparticle",
-        "name": "mParticle",
-        "x": 30,
-        "y": 36,
-        "note": "Packaged, product and mobile teams"
-      },
-      {
-        "id": "braze",
-        "name": "Braze",
-        "x": 24,
-        "y": 90,
-        "note": "Engagement platform, marketer-owned"
+        "id": "servicetitan",
+        "name": "ServiceTitan",
+        "x": 86,
+        "y": 66,
+        "note": "Deep platform for large contractors, moving toward smaller shops (Signals #6, #11)",
+        "label": "left"
       }
     ]
   }

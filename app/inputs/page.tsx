@@ -11,7 +11,7 @@ import type { Tier } from "@/lib/types";
 export const metadata: Metadata = { title: "Inputs" };
 
 const tiers: { id: Tier; note: string }[] = [
-  { id: "Primary", note: "In most competitive deals. Full battlecards, weekly tracking." },
+  { id: "Primary", note: "In most competitive deals. Full battlecards, weekly scraping." },
   { id: "Secondary", note: "In specific segments. Battlecards on demand." },
   { id: "Watch", note: "Not head-to-head yet, but moving toward our buyers." },
 ];
@@ -71,7 +71,8 @@ export default function Page() {
         lede="Who we track, how closely, and a starting hypothesis for why each one wins. Win-loss interviews test the hypotheses in the first 60 days."
       >
         <div className="space-y-6">
-          {tiers.map((tier) => (
+          {/* Only tiers that have competitors in them. */}
+          {tiers.filter((tier) => competitors.some((c) => c.tier === tier.id)).map((tier) => (
             <div key={tier.id}>
               <p className="text-sm">
                 <span className="font-semibold">{tier.id}</span>{" "}
@@ -117,11 +118,11 @@ export default function Page() {
 
       <Section
         index={1}
-        lede={`${sources.length} sources, public and internal. Pick one to see what the Radar checks. Three have saved before-and-after versions, so you can see exactly what changed and the signal it produced.`}
+        lede={`${sources.length} sources: competitor pages and blogs scraped weekly (pricing pages daily), plus internal notes from sales and CS. Pick one to see what the Radar checks. Three have saved before-and-after versions, so you can see exactly what changed and the signal it produced.`}
       >
         <CoverageHeatmap />
         <div className="mt-6">
-          <SourceExplorer diffs={diffs} initialSource="salesforce-pricing" />
+          <SourceExplorer diffs={diffs} initialSource="jobber-pricing" />
         </div>
       </Section>
 

@@ -1,221 +1,379 @@
 [
   {
-    "id": "fernhill",
-    "name": "Fernhill Grocers",
-    "industry": "Grocery & retail",
-    "size": "Enterprise",
-    "region": "EMEA",
-    "hq": "Manchester, UK",
-    "coords": [-2.24, 53.48],
-    "warehouse": "Snowflake",
-    "useCases": ["Audience activation", "Lifecycle marketing", "Identity resolution"],
-    "competitor": { "id": "segment", "outcome": "Replaced" },
+    "id": "rivera",
+    "name": "Rivera Plumbing & Drain",
+    "industry": "Plumbing",
+    "size": "Mid-size",
+    "region": "Southwest",
+    "hq": "Phoenix, AZ",
+    "coords": [
+      -112.07,
+      33.45
+    ],
+    "team": "14 techs, 3 office",
+    "useCases": [
+      "Scheduling & dispatch",
+      "Online booking",
+      "Marketing & reviews"
+    ],
+    "competitor": {
+      "id": "jobber",
+      "outcome": "Switched from"
+    },
     "reference": {
       "status": "Available",
-      "contactRole": "Director of CRM",
-      "personas": ["Marketing"],
-      "formats": ["Reference call", "Peer email"],
-      "lastUsed": "2026-08-21",
-      "goodFor": "Marketers who worry the data team will slow them down. Built their first audiences without SQL in week two."
+      "contactRole": "Owner",
+      "personas": [
+        "Owner"
+      ],
+      "formats": [
+        "Reference call",
+        "Peer email"
+      ],
+      "lastUsed": "2026-09-18",
+      "goodFor": "Plumbers who outgrew Jobber at 10+ techs. Switched in 9 days during busy season."
     }
   },
   {
-    "id": "vasa",
-    "name": "Vasa Outdoor",
-    "industry": "Retail & ecommerce",
-    "size": "Mid-market",
-    "region": "EMEA",
-    "hq": "Stockholm, Sweden",
-    "coords": [18.07, 59.33],
-    "warehouse": "Snowflake (EU region)",
-    "useCases": ["Audience activation", "Paid media", "Data governance"],
-    "competitor": { "id": "segment", "outcome": "Runs alongside" },
+    "id": "northline",
+    "name": "Northline Heating & Air",
+    "industry": "HVAC",
+    "size": "Mid-size",
+    "region": "Midwest",
+    "hq": "Minneapolis, MN",
+    "coords": [
+      -93.27,
+      44.98
+    ],
+    "team": "18 techs, 4 office",
+    "useCases": [
+      "Service plans",
+      "Estimates & price book",
+      "Consumer financing"
+    ],
+    "competitor": {
+      "id": "servicetitan",
+      "outcome": "Chose over"
+    },
     "reference": {
       "status": "Available",
-      "contactRole": "Head of Data",
-      "personas": ["Data"],
-      "formats": ["Reference call", "Site visit"],
-      "lastUsed": "2026-09-30",
-      "goodFor": "Kept Segment for collection and added Hightouch for activation. Speaks well to GDPR and keeping data in an EU warehouse region."
+      "contactRole": "Owner",
+      "personas": [
+        "Owner",
+        "Ops"
+      ],
+      "formats": [
+        "Reference call",
+        "Site visit"
+      ],
+      "lastUsed": "2026-10-07",
+      "goodFor": "HVAC shops weighing ServiceTitan. Will talk about setup time and contract terms."
     }
   },
   {
-    "id": "northpass",
-    "name": "Northpass Financial",
-    "industry": "Financial services",
-    "size": "Enterprise",
-    "region": "North America",
-    "hq": "Toronto, Canada",
-    "coords": [-79.38, 43.65],
-    "warehouse": "Databricks",
-    "useCases": ["AI Decisioning", "Lifecycle marketing", "Data governance"],
-    "competitor": { "id": "salesforce", "outcome": "Chose over" },
+    "id": "brightpath",
+    "name": "BrightPath Electric",
+    "industry": "Electrical",
+    "size": "Small",
+    "region": "Southeast",
+    "hq": "Atlanta, GA",
+    "coords": [
+      -84.39,
+      33.75
+    ],
+    "team": "5 techs, 1 office",
+    "useCases": [
+      "Invoicing & payments",
+      "Scheduling & dispatch"
+    ],
+    "competitor": {
+      "id": "jobber",
+      "outcome": "Switched from"
+    },
+    "reference": {
+      "status": "Available",
+      "contactRole": "Office manager",
+      "personas": [
+        "Office"
+      ],
+      "formats": [
+        "Peer email",
+        "Reference call"
+      ],
+      "lastUsed": "2026-08-12",
+      "goodFor": "Office managers worried about switching mid-year. Moved 1,400 customers in a weekend."
+    }
+  },
+  {
+    "id": "greenleaf",
+    "name": "Greenleaf Lawn & Landscape",
+    "industry": "Lawn care",
+    "size": "Large",
+    "region": "Southeast",
+    "hq": "Charlotte, NC",
+    "coords": [
+      -80.84,
+      35.23
+    ],
+    "team": "24 crew, 3 office",
+    "useCases": [
+      "Service plans",
+      "Marketing & reviews",
+      "Online booking"
+    ],
+    "competitor": {
+      "id": "jobber",
+      "outcome": "Switched from"
+    },
+    "reference": {
+      "status": "Available",
+      "contactRole": "Owner",
+      "personas": [
+        "Owner"
+      ],
+      "formats": [
+        "Reference call"
+      ],
+      "lastUsed": "2026-10-21",
+      "goodFor": "Lawn care, where Jobber is strongest. Runs recurring service plans and postcard campaigns."
+    }
+  },
+  {
+    "id": "sparkle",
+    "name": "Sparkle Home Cleaning",
+    "industry": "Cleaning",
+    "size": "Mid-size",
+    "region": "West",
+    "hq": "Sacramento, CA",
+    "coords": [
+      -121.49,
+      38.58
+    ],
+    "team": "9 cleaners, 1 office",
+    "useCases": [
+      "Online booking",
+      "Invoicing & payments",
+      "Marketing & reviews"
+    ],
+    "competitor": {
+      "id": "jobber",
+      "outcome": "Chose over"
+    },
     "reference": {
       "status": "Limited",
-      "contactRole": "VP Marketing Technology",
-      "personas": ["Exec", "Data"],
-      "formats": ["Reference call"],
-      "lastUsed": "2026-07-14",
-      "goodFor": "Regulated buyers comparing against a suite they already pay for. Needs their legal team's approval for each call."
+      "contactRole": "Owner",
+      "personas": [
+        "Owner",
+        "Office"
+      ],
+      "formats": [
+        "Peer email"
+      ],
+      "lastUsed": "2026-07-30",
+      "goodFor": "Cleaning companies. Owner prefers email, and is slammed before the holidays."
     }
   },
   {
-    "id": "tidewater",
-    "name": "Tidewater Travel",
-    "industry": "Travel & hospitality",
-    "size": "Enterprise",
-    "region": "North America",
-    "hq": "Miami, US",
-    "coords": [-80.19, 25.76],
-    "warehouse": "Snowflake",
-    "useCases": ["Personalization", "AI Decisioning"],
-    "competitor": { "id": "adobe", "outcome": "Chose over" },
+    "id": "summit",
+    "name": "Summit Roofing & Gutters",
+    "industry": "Roofing",
+    "size": "Large",
+    "region": "West",
+    "hq": "Denver, CO",
+    "coords": [
+      -104.99,
+      39.74
+    ],
+    "team": "35 crew, 6 office",
+    "useCases": [
+      "Estimates & price book",
+      "Consumer financing",
+      "Reporting"
+    ],
+    "competitor": {
+      "id": "servicetitan",
+      "outcome": "Chose over"
+    },
     "reference": {
-      "status": "Available",
-      "contactRole": "VP Growth",
-      "personas": ["Marketing", "Exec"],
-      "formats": ["Reference call", "Webinar", "Peer email"],
+      "status": "Limited",
+      "contactRole": "Operations manager",
+      "personas": [
+        "Ops"
+      ],
+      "formats": [
+        "Reference call"
+      ],
       "lastUsed": "2026-09-02",
-      "goodFor": "Execs weighing a suite against composable. Will talk about time to first campaign and total cost."
+      "goodFor": "Larger shops that need financing on big tickets and job costing. Needs the owner's OK for each call."
     }
   },
   {
-    "id": "kestrel",
-    "name": "Kestrel Games",
-    "industry": "Gaming",
-    "size": "Mid-market",
-    "region": "APAC",
-    "hq": "Singapore",
-    "coords": [103.82, 1.35],
-    "warehouse": "BigQuery",
-    "useCases": ["Paid media", "Audience activation"],
-    "competitor": { "id": "mparticle", "outcome": "Chose over" },
-    "reference": {
-      "status": "Available",
-      "contactRole": "Director of User Acquisition",
-      "personas": ["Marketing"],
-      "formats": ["Reference call", "Peer email"],
-      "lastUsed": "2026-06-11",
-      "goodFor": "APAC deals and paid-media buyers. Syncs player LTV audiences to ad platforms daily."
-    }
-  },
-  {
-    "id": "halden",
-    "name": "Halden Care",
-    "industry": "Healthcare",
-    "size": "Enterprise",
-    "region": "North America",
-    "hq": "Boston, US",
-    "coords": [-71.06, 42.36],
-    "warehouse": "Snowflake",
-    "useCases": ["Data governance", "Lifecycle marketing"],
-    "competitor": { "id": "salesforce", "outcome": "Chose over" },
+    "id": "bayou",
+    "name": "Bayou Pest Pros",
+    "industry": "Pest control",
+    "size": "Mid-size",
+    "region": "Southwest",
+    "hq": "Houston, TX",
+    "coords": [
+      -95.37,
+      29.76
+    ],
+    "team": "12 techs, 2 office",
+    "useCases": [
+      "Service plans",
+      "Scheduling & dispatch"
+    ],
+    "competitor": {
+      "id": "jobber",
+      "outcome": "Switched from"
+    },
     "reference": {
       "status": "Resting",
-      "contactRole": "Director of Data Platform",
-      "personas": ["Data"],
-      "formats": ["Reference call"],
-      "lastUsed": "2026-10-08",
-      "goodFor": "Security and compliance reviews. At the three-calls-a-quarter limit until January."
+      "contactRole": "Owner",
+      "personas": [
+        "Owner"
+      ],
+      "formats": [
+        "Reference call"
+      ],
+      "lastUsed": "2026-10-30",
+      "goodFor": "Recurring-route businesses. At the 3-calls-a-quarter limit until January."
     }
   },
   {
-    "id": "marisol",
-    "name": "Marisol Beauty",
-    "industry": "Retail & ecommerce",
-    "size": "Mid-market",
-    "region": "LATAM",
-    "hq": "Mexico City, Mexico",
-    "coords": [-99.13, 19.43],
-    "warehouse": "BigQuery",
-    "useCases": ["Lifecycle marketing", "AI Decisioning"],
-    "competitor": { "id": "braze", "outcome": "Runs alongside" },
+    "id": "mapleleaf",
+    "name": "Maple Leaf Mechanical",
+    "industry": "HVAC & plumbing",
+    "size": "Mid-size",
+    "region": "Canada",
+    "hq": "Toronto, ON",
+    "coords": [
+      -79.38,
+      43.65
+    ],
+    "team": "16 techs, 3 office",
+    "useCases": [
+      "Scheduling & dispatch",
+      "Reporting",
+      "Service plans"
+    ],
+    "competitor": {
+      "id": "servicetitan",
+      "outcome": "Chose over"
+    },
     "reference": {
       "status": "Available",
-      "contactRole": "Head of CRM",
-      "personas": ["Marketing"],
-      "formats": ["Reference call", "Peer email"],
-      "lastUsed": "2026-05-19",
-      "goodFor": "LATAM deals, Spanish-language calls, and teams keeping Braze as their messaging tool."
+      "contactRole": "Operations manager",
+      "personas": [
+        "Ops",
+        "Office"
+      ],
+      "formats": [
+        "Reference call",
+        "Peer email"
+      ],
+      "lastUsed": "2026-09-25",
+      "goodFor": "Canadian shops, and anyone asking about crew reporting."
     }
   },
   {
-    "id": "quayline",
-    "name": "Quayline",
-    "industry": "B2B software",
-    "size": "Commercial",
-    "region": "EMEA",
-    "hq": "Berlin, Germany",
-    "coords": [13.4, 52.52],
-    "warehouse": "Databricks",
-    "useCases": ["Sales & CRM sync", "Identity resolution"],
-    "competitor": { "id": "segment", "outcome": "Replaced" },
+    "id": "harbor",
+    "name": "Harbor Garage Doors",
+    "industry": "Garage doors",
+    "size": "Small",
+    "region": "Northeast",
+    "hq": "Boston, MA",
+    "coords": [
+      -71.06,
+      42.36
+    ],
+    "team": "4 techs, 1 office",
+    "useCases": [
+      "Online booking",
+      "Invoicing & payments"
+    ],
+    "competitor": {
+      "id": "jobber",
+      "outcome": "Chose over"
+    },
     "reference": {
       "status": "Available",
-      "contactRole": "RevOps Lead",
-      "personas": ["Data", "Product"],
-      "formats": ["Peer email"],
-      "lastUsed": "2026-08-04",
-      "goodFor": "B2B and product-led buyers syncing product usage into the CRM."
+      "contactRole": "Owner",
+      "personas": [
+        "Owner",
+        "Tech"
+      ],
+      "formats": [
+        "Reference call"
+      ],
+      "lastUsed": "2026-08-27",
+      "goodFor": "Small shops where the owner still runs calls. Good on the mobile app."
     }
   },
   {
-    "id": "copperleaf",
-    "name": "Copperleaf Media",
-    "industry": "Media & publishing",
-    "size": "Enterprise",
-    "region": "EMEA",
-    "hq": "Amsterdam, Netherlands",
-    "coords": [4.9, 52.37],
-    "warehouse": "BigQuery",
-    "useCases": ["Audience activation", "Paid media", "Personalization"],
-    "competitor": { "id": "adobe", "outcome": "Chose over" },
-    "reference": {
-      "status": "Limited",
-      "contactRole": "Chief Digital Officer",
-      "personas": ["Exec"],
-      "formats": ["Reference call"],
-      "lastUsed": "2026-09-17",
-      "goodFor": "Exec-to-exec calls only. Ask the account's CSM two weeks ahead."
-    }
-  },
-  {
-    "id": "pinegrove",
-    "name": "Pinegrove Insurance",
-    "industry": "Financial services",
-    "size": "Enterprise",
-    "region": "North America",
-    "hq": "Hartford, US",
-    "coords": [-72.68, 41.76],
-    "warehouse": "Snowflake",
-    "useCases": ["AI Decisioning", "Identity resolution"],
-    "competitor": { "id": "salesforce", "outcome": "Chose over" },
+    "id": "cascade",
+    "name": "Cascade Plumbing Co.",
+    "industry": "Plumbing",
+    "size": "Large",
+    "region": "West",
+    "hq": "Seattle, WA",
+    "coords": [
+      -122.33,
+      47.61
+    ],
+    "team": "28 techs, 5 office",
+    "useCases": [
+      "Estimates & price book",
+      "Reporting"
+    ],
+    "competitor": {
+      "id": "servicetitan",
+      "outcome": "Chose over"
+    },
     "reference": null
   },
   {
-    "id": "sundial",
-    "name": "Sundial Fitness",
-    "industry": "Consumer subscription",
-    "size": "Mid-market",
-    "region": "APAC",
-    "hq": "Sydney, Australia",
-    "coords": [151.21, -33.87],
-    "warehouse": "BigQuery",
-    "useCases": ["Lifecycle marketing", "Personalization"],
-    "competitor": { "id": "rudderstack", "outcome": "Chose over" },
+    "id": "lonestar",
+    "name": "Lone Star Electric",
+    "industry": "Electrical",
+    "size": "Mid-size",
+    "region": "Southwest",
+    "hq": "Dallas, TX",
+    "coords": [
+      -96.8,
+      32.78
+    ],
+    "team": "11 techs, 2 office",
+    "useCases": [
+      "Consumer financing",
+      "Marketing & reviews"
+    ],
+    "competitor": {
+      "id": "jobber",
+      "outcome": "Switched from"
+    },
     "reference": null
   },
   {
-    "id": "emberline",
-    "name": "Emberline Marketplace",
-    "industry": "Marketplace",
-    "size": "Enterprise",
-    "region": "North America",
-    "hq": "Austin, US",
-    "coords": [-97.74, 30.27],
-    "warehouse": "Databricks",
-    "useCases": ["Audience activation", "Paid media", "AI Decisioning"],
-    "competitor": { "id": "segment", "outcome": "Replaced" },
+    "id": "lakeshore",
+    "name": "Lakeshore Window Cleaning",
+    "industry": "Cleaning",
+    "size": "Small",
+    "region": "Midwest",
+    "hq": "Chicago, IL",
+    "coords": [
+      -87.63,
+      41.88
+    ],
+    "team": "5 cleaners, 1 office",
+    "useCases": [
+      "Online booking",
+      "Marketing & reviews"
+    ],
+    "competitor": {
+      "id": "jobber",
+      "outcome": "Switched from"
+    },
     "reference": null
   }
 ]

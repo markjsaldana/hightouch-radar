@@ -1,95 +1,39 @@
 [
   {
-    "id": "segment",
-    "name": "Segment",
-    "parent": "Twilio",
-    "tier": "Primary",
-    "category": "Packaged CDP with event collection at its core",
-    "competesFor": ["Data", "Marketing", "Product"],
-    "whyTheyWin": "Already installed for event tracking, so it's the default when a team wants to do more with customer data. Switching feels risky.",
-    "facts": [
-      {
-        "fact": "Acquired by Twilio; deal closed November 2020.",
-        "source": "Twilio press release, Nov 2, 2020"
-      }
-    ]
-  },
-  {
-    "id": "salesforce",
-    "name": "Salesforce Data 360",
-    "parent": "Salesforce",
-    "tier": "Primary",
-    "category": "Suite CDP inside the Salesforce platform (formerly Data Cloud)",
-    "competesFor": ["Exec", "Marketing"],
-    "whyTheyWin": "Bundled into an existing Salesforce relationship. The economic buyer already trusts the vendor and the procurement path is short.",
-    "facts": [
-      {
-        "fact": "Data Cloud was renamed Data 360 in October 2025 as part of Agentforce 360.",
-        "source": "Salesforce developer docs, Oct 14, 2025"
-      }
-    ]
-  },
-  {
-    "id": "adobe",
-    "name": "Adobe Real-Time CDP",
-    "parent": "Adobe",
-    "tier": "Primary",
-    "category": "Suite CDP inside Adobe Experience Platform",
-    "competesFor": ["Exec", "Marketing"],
-    "whyTheyWin": "Enterprise marketing orgs standardized on Adobe Experience Cloud. Seen as the safe, all-in-one choice.",
-    "facts": [
-      {
-        "fact": "Part of Adobe Experience Platform.",
-        "source": "Adobe product documentation"
-      }
-    ]
-  },
-  {
-    "id": "rudderstack",
-    "name": "RudderStack",
+    "id": "jobber",
+    "name": "Jobber",
     "parent": null,
-    "tier": "Secondary",
-    "category": "Warehouse-native customer data infrastructure",
-    "competesFor": ["Data"],
-    "whyTheyWin": "Data engineers like its open-source core and developer-first workflow. Wins when the data team owns the decision outright.",
+    "tier": "Primary",
+    "category": "Field service software for small and growing home service businesses",
+    "competesFor": [
+      "Owner",
+      "Office",
+      "Tech"
+    ],
+    "whyTheyWin": "Cheap and easy to start, and well known in lawn care and cleaning. Often the first software a shop buys, so we meet it most in switch deals.",
     "facts": [
       {
-        "fact": "Positions as warehouse-native: customer data routes to the customer's own warehouse.",
-        "source": "RudderStack website"
+        "fact": "Founded in 2011 by Sam Pillar and Forrest Zeisler; headquartered in Edmonton, Alberta.",
+        "source": "Jobber company and developer pages"
       }
     ]
   },
   {
-    "id": "mparticle",
-    "name": "mParticle",
-    "parent": "Rokt",
-    "tier": "Secondary",
-    "category": "Packaged CDP, strong in mobile and commerce",
-    "competesFor": ["Product", "Marketing"],
-    "whyTheyWin": "Deep mobile SDKs and real-time app data. Wins with app-first brands where product teams own the data.",
-    "facts": [
-      {
-        "fact": "Acquired by Rokt; announced January 2025.",
-        "source": "AdExchanger / MarTech coverage, Jan 2025"
-      }
-    ]
-  },
-  {
-    "id": "braze",
-    "name": "Braze",
+    "id": "servicetitan",
+    "name": "ServiceTitan",
     "parent": null,
-    "tier": "Watch",
-    "category": "Customer engagement platform adding AI decisioning",
-    "competesFor": ["Marketing"],
-    "whyTheyWin": "Partner and competitor at once. Already the lifecycle team's daily tool, so its built-in AI decisioning can look like 'good enough' to a marketer.",
+    "tier": "Primary",
+    "category": "Field service platform built for larger residential and commercial contractors",
+    "competesFor": [
+      "Owner",
+      "Ops",
+      "Office"
+    ],
+    "whyTheyWin": "Seen as the platform serious contractors grow into. Wins when an owner plans to scale well past 20 techs and wants deep reporting, call-center, and price book tools, and will accept a longer setup.",
     "facts": [
       {
-        "fact": "Acquired AI decisioning company OfferFit (announced March 2025).",
-        "source": "Braze press release, Mar 27, 2025"
-      },
-      {
-        "fact": "Also an activation destination Hightouch integrates with.",
-        "source": "Hightouch integrations catalog"
+        "fact": "Began trading on Nasdaq under the ticker TTAN on December 12, 2024.",
+        "source": "ServiceTitan IPO pricing announcement, Dec 11, 2024"
       }
     ]
   }

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Radar } from "lucide-react";
-import { siteName } from "@/lib/site";
+import { formatShortDate } from "@/lib/format";
+import { lastRun, siteName } from "@/lib/site";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { MobileNav } from "@/components/mobile-nav";
 
@@ -17,7 +18,20 @@ export function SiteHeader() {
             Sales enablement assistant proposal
           </span>
         </Link>
-        <ThemeToggle />
+        <div className="flex items-center gap-3">
+          <Link
+            href="/how-it-works#weekly-run"
+            className="hidden items-center gap-1.5 text-xs text-muted hover:text-fg md:inline-flex"
+            title="Refreshed every Monday by scraping competitor pages and blogs"
+          >
+            <span className="relative flex size-2">
+              <span className="animate-pulse-ring absolute inset-0 rounded-full bg-good" aria-hidden />
+              <span className="relative size-2 rounded-full bg-good" />
+            </span>
+            Updated weekly · last run {formatShortDate(lastRun)}
+          </Link>
+          <ThemeToggle />
+        </div>
       </div>
       <MobileNav />
     </header>

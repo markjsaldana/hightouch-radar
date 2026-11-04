@@ -1,0 +1,27 @@
+Mesa Valley Plumbing <> Housecall Pro | Evaluation call | 2026-11-02 | 41 min
+Exported from the call recorder. Sample transcript, invented for illustration.
+
+Speakers:
+  Dan Ortiz, Owner, Mesa Valley Plumbing
+  Kelly Brooks, Office manager, Mesa Valley Plumbing
+  Dana Ruiz, Account Executive, Housecall Pro
+  Sam Cho, Solutions Engineer, Housecall Pro
+
+[00:01:05] Dana Ruiz: Thanks for the time. Last week you said the office is stretched. What's changed?
+[00:01:40] Dan Ortiz: We're at eleven techs now and Jobber worked great at five. It's starting to feel small.
+[00:02:12] Kelly Brooks: It's me and one part-timer answering phones, booking, and chasing invoices.
+[00:03:30] Dan Ortiz: If switching means a week of double entry in November, Kelly will quit on me.
+[00:05:02] Kelly Brooks: We miss a lot of calls after five, and those are the emergency jobs that pay.
+[00:07:45] Sam Cho: How do customers book today?
+[00:08:10] Kelly Brooks: Phone, mostly. Some text. Online booking was on the Jobber plan above ours.
+[00:09:20] Dan Ortiz: Jobber just put online booking on the cheaper plan, so on paper they're cheaper.
+[00:12:40] Kelly Brooks: My worry is moving 2,000 customers and every open estimate without losing anything.
+[00:15:15] Dan Ortiz: I priced it out. Staying on Jobber and adding a couple of add-ons still looks cheaper this year.
+[00:18:30] Kelly Brooks: Voicemails pile up overnight and half of them have already called someone else by morning.
+[00:21:05] Dan Ortiz: ServiceTitan came up too, but a three-month setup is a non-starter for us.
+[00:24:40] Dan Ortiz: Whatever we pick has to be live before the January rush. We can't switch mid-season twice.
+[00:27:55] Kelly Brooks: Jobber sent us an email about an AI receptionist. Would that fix the after-hours calls?
+[00:30:10] Dan Ortiz: I need to see what it costs at fifteen techs, not just today.
+[00:33:20] Kelly Brooks: If the techs have to learn a new app during busy season, that's another problem.
+[00:36:45] Dana Ruiz: Understood. Thursday Sam will walk through a switch plan and after-hours booking on your own jobs.
+[00:39:10] Dan Ortiz: Good. If you've got a plumber our size who switched from Jobber, I'd like to talk to them.

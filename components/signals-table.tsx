@@ -9,7 +9,7 @@ import type { Persona, Signal } from "@/lib/types";
 
 type SortKey = "impact" | "date" | "competitor";
 
-const personas: Persona[] = ["Marketing", "Data", "Product", "Exec"];
+const personas: Persona[] = ["Owner", "Office", "Tech", "Ops"];
 
 const selectClass =
   "rounded-lg border border-line bg-surface px-2.5 py-1.5 text-sm text-fg focus:border-accent focus:outline-none";

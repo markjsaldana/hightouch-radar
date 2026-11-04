@@ -15,6 +15,7 @@ import {
 import { ImpactGauge } from "@/components/impact-gauge";
 import { PageHeader } from "@/components/page-header";
 import { PipelineTrack } from "@/components/pipeline-track";
+import { WeeklyRun } from "@/components/weekly-run";
 import { competitorName, signalById, signalTypeLabel, sources } from "@/lib/data";
 
 export const metadata: Metadata = { title: "How it works" };
@@ -45,7 +46,7 @@ const handsOn = [
 ];
 
 // The worked example traced through every step below.
-const EXAMPLE_SIGNAL = 15;
+const EXAMPLE_SIGNAL = 9;
 
 export default function Page() {
   const signal = signalById(EXAMPLE_SIGNAL)!;
@@ -56,20 +57,20 @@ export default function Page() {
     {
       icon: Globe,
       title: "Sources",
-      body: "Changelogs, release notes, pricing pages, product docs, blogs, webinars, job posts, partner pages, public review themes, win-loss notes, sales-call mentions, and mystery-shop calls with competitors.",
+      body: "Jobber and ServiceTitan pricing pages, product updates, blogs, comparison pages, help centers, job posts, app marketplaces, and investor news, plus review themes, win-loss notes, sales-call mentions, and mystery-shop calls.",
       trace: `${competitor} ${source.type}, checked ${source.frequency.toLowerCase()}.`,
     },
     {
       icon: Camera,
       title: "Snapshots",
-      body: "Each source is captured on a schedule: weekly by default, daily for pricing pages.",
-      trace: "Captured Oct 5 and Oct 6.",
+      body: "Each page is scraped on a schedule: weekly by default, daily for pricing pages. Blogs come in through their RSS feeds.",
+      trace: "Captured Nov 1 and Nov 2.",
     },
     {
       icon: Diff,
       title: "Change detection",
       body: "Compare each snapshot with the last one, line by line. Cosmetic changes like dates, typos, and layout are ignored.",
-      trace: "1 meaningful change: identity resolution moved from Add-ons into the Starter edition. The date stamp change was ignored.",
+      trace: "1 meaningful change: online booking moved from the Connect plan into the entry Core plan. The date stamp change was ignored.",
     },
     {
       icon: Tags,
@@ -80,14 +81,14 @@ export default function Page() {
     {
       icon: Route,
       title: "Route",
-      body: "High-impact items go to Sales the same day. Roadmap-relevant items go to Product. Messaging items go to PMM and the website.",
+      body: "High-impact items go to Sales and SDRs the same day. Roadmap gaps go to Product. Messaging items go to PMM and the website.",
       trace: `${signal.urgency} → ${signal.owners.join(" + ")}.`,
     },
     {
       icon: Inbox,
       title: "Outputs",
-      body: "Weekly digest, live battlecards, the comparison matrix, and alerts for urgent shifts.",
-      trace: "Same-day sales alert, battlecard update, and a top-3 slot in Monday's digest.",
+      body: "Weekly digest, the So what for each team, live battlecards, the comparison matrix, and alerts for urgent shifts.",
+      trace: "Same-day sales alert, a Jobber battlecard update, a top-3 slot in Monday's digest, and an SDR angle in the So what.",
     },
   ];
 
@@ -96,7 +97,7 @@ export default function Page() {
       <PageHeader
         eyebrow="02 · How it works"
         title="From competitor change to sales-ready intel"
-        lede="This is the engine behind the assistant. Six steps run every week. Collection is mostly automated, and a person reviews every change before it reaches a rep."
+        lede="This is the engine behind the assistant. Every Monday it scrapes Jobber and ServiceTitan pages and blogs, finds what changed, and drafts what it means. A person reviews every change before it reaches a rep."
         sample
       />
 
@@ -142,7 +143,9 @@ export default function Page() {
         ))}
       </ol>
 
-      <section className="mt-8 rounded-xl border border-accent/30 bg-accent-soft p-6">
+      <WeeklyRun />
+
+      <section className="mt-12 rounded-xl border border-accent/30 bg-accent-soft p-6">
         <h2 className="flex items-center gap-2 font-semibold">
           <UserCheck className="size-5 text-accent" aria-hidden />
           Automation plus hands-on work

@@ -1,0 +1,222 @@
+[
+  {
+    "competitorId": "jobber",
+    "updatedOn": "2026-11-03",
+    "updatedBySignals": [
+      {
+        "signal": 10,
+        "section": "Objection handling",
+        "change": "Added a response to 'Jobber is cheaper all-in,' from their new comparison page."
+      },
+      {
+        "signal": 9,
+        "section": "Where they win",
+        "change": "Online booking is now on Jobber's entry plan. Rewrote the price play."
+      },
+      {
+        "signal": 5,
+        "section": "Landmine questions",
+        "change": "Added a question on what happens when the AI receptionist can't book a job."
+      }
+    ],
+    "quickDismiss": "Jobber is a good place to start. Housecall Pro is built for the shop that's growing. Marketing and financing live in the same app the office already uses, so the owner isn't adding tools every time they hire.",
+    "whereWeWin": [
+      {
+        "point": "Growth tools in the box",
+        "detail": "Marketing campaigns and consumer financing live where the office already works. There's nothing extra to buy and connect.",
+        "proofType": "Demo moment",
+        "proof": "Send a postcard campaign to past customers who haven't booked in a year, live in the demo."
+      },
+      {
+        "point": "Built for the office and the truck",
+        "detail": "A dispatch board for the office and a simple app for techs, so adoption isn't a fight.",
+        "proofType": "Customer story",
+        "proof": "Pull the case study closest to the prospect's trade and size from References."
+      },
+      {
+        "point": "Cost at the size they're growing to",
+        "detail": "Price the plan they'll need after hiring two more techs.",
+        "proofType": "Cost math",
+        "proof": "Use the AE cost worksheet with their planned tech count in 12 months."
+      }
+    ],
+    "whereTheyWin": [
+      {
+        "point": "Lowest starting price",
+        "handle": "Don't fight the entry price. Ask what they'll need in a year and price both options for that team."
+      },
+      {
+        "point": "Familiar in lawn care and cleaning",
+        "handle": "Agree that it's popular. Bring a case study or a reference from their trade."
+      },
+      {
+        "point": "Online booking on the entry plan (Signal #9)",
+        "handle": "Booking is now table stakes. Move to what happens after the booking: reminders, reviews, and repeat work."
+      }
+    ],
+    "landmines": [
+      "When a customer calls after hours, who picks up today?",
+      "Which add-ons would you turn on when you hire your next two techs?",
+      "How do you ask happy customers for reviews today, and who remembers to do it?",
+      "If the AI receptionist can't fit a job, where does that call go?"
+    ],
+    "objections": [
+      {
+        "objection": "\"Jobber is cheaper.\"",
+        "response": "\"On day one, often. Let's price both for the team you'll have next year, with the tools you'd add included.\""
+      },
+      {
+        "objection": "\"We already use Jobber. Switching is a pain.\"",
+        "response": "\"We move your customers, jobs, and price book with you, and most shops are running in under two weeks. I can connect you with a shop that switched.\""
+      },
+      {
+        "objection": "\"Jobber answers calls with AI now.\"",
+        "response": "\"Ask what happens when it can't fit a job, and who sees that call. Then let's look at where your missed calls go today.\""
+      },
+      {
+        "objection": "\"Jobber says they're cheaper all-in.\"",
+        "response": "\"Their comparison counts today's plan. Let's line up the same features, marketing and financing included, at the size you're hiring toward.\""
+      }
+    ],
+    "byPersona": [
+      {
+        "persona": "Owner",
+        "theyCareAbout": "More booked jobs without hiring more office staff.",
+        "lead": "Marketing and financing that bring in more jobs.",
+        "avoid": "A feature tour before you know their growth plan.",
+        "proofPoint": "Customer story from their trade and size."
+      },
+      {
+        "persona": "Office",
+        "theyCareAbout": "Fewer missed calls and less double entry.",
+        "lead": "Online booking, the dispatch board, and texting in one place.",
+        "avoid": "Talking only to the owner.",
+        "proofPoint": "Demo moment: book, dispatch, and invoice a job in under three minutes."
+      },
+      {
+        "persona": "Tech",
+        "theyCareAbout": "An app that's fast and simple on a job site.",
+        "lead": "Checklists, photos, and the price book on the phone.",
+        "avoid": "Office features they'll never touch.",
+        "proofPoint": "Hand them a phone and let them close out a job."
+      },
+      {
+        "persona": "Ops",
+        "theyCareAbout": "Seeing profit by job and by crew.",
+        "lead": "Job costing and crew reports.",
+        "avoid": "Promising enterprise depth for 50+ techs.",
+        "proofPoint": "Reporting walkthrough on a sample of their jobs."
+      }
+    ]
+  },
+  {
+    "competitorId": "servicetitan",
+    "updatedOn": "2026-11-03",
+    "updatedBySignals": [
+      {
+        "signal": 11,
+        "section": "Where they win",
+        "change": "Their new 30-day onboarding package narrows our speed advantage. Rewrote the handle."
+      },
+      {
+        "signal": 6,
+        "section": "Objection handling",
+        "change": "Added a response to 'ServiceTitan is built for shops like us now.'"
+      },
+      {
+        "signal": 3,
+        "section": "Landmine questions",
+        "change": "Added questions on setup time and contract length."
+      }
+    ],
+    "quickDismiss": "ServiceTitan is built for large contractors with dedicated admin teams. Housecall Pro gives a growing shop what it needs now, live in days, without a long setup or a long contract.",
+    "whereWeWin": [
+      {
+        "point": "Live in under two weeks",
+        "detail": "Most shops are booking and invoicing within two weeks, with the office still running jobs.",
+        "proofType": "Customer story",
+        "proof": "Northline Heating & Air: live in 11 days after a ServiceTitan quote of three months."
+      },
+      {
+        "point": "Easy for the whole team",
+        "detail": "Office staff and techs learn it in days. Nobody needs to become a system admin.",
+        "proofType": "Demo moment",
+        "proof": "Have the office manager book and dispatch a job themselves in the demo."
+      },
+      {
+        "point": "Cost that fits a 5 to 20 tech shop",
+        "detail": "Published plans and no long implementation fees.",
+        "proofType": "Cost math",
+        "proof": "Use the AE cost worksheet: year-one cost including setup."
+      }
+    ],
+    "whereTheyWin": [
+      {
+        "point": "Depth for large, multi-location shops",
+        "handle": "Agree. If they run 50+ techs across locations, qualify carefully before investing in the deal."
+      },
+      {
+        "point": "'We'll grow into it'",
+        "handle": "Ask for the real hiring plan and timeline, then price both options for that team."
+      },
+      {
+        "point": "Faster onboarding for small shops (Signal #11)",
+        "handle": "Thirty days is better than before. Ask what the office does during that month, and what the contract term is after it."
+      }
+    ],
+    "landmines": [
+      "How long did they quote for setup, and who on your team runs it?",
+      "What's the contract length, and what happens if you want to leave?",
+      "How many of the features in the demo will you use this year?",
+      "Who will build and maintain the price book?"
+    ],
+    "objections": [
+      {
+        "objection": "\"ServiceTitan is what serious contractors use.\"",
+        "response": "\"For large contractors, it's a strong choice. Let's look at what a shop your size uses day to day, and what that costs in year one.\""
+      },
+      {
+        "objection": "\"We'll grow into it.\"",
+        "response": "\"What does your team look like in 18 months? Let's price both for that team and see which one you'd outgrow first.\""
+      },
+      {
+        "objection": "\"ServiceTitan is built for shops like us now.\"",
+        "response": "\"They're working on it. Ask for a reference your size who went live in their 30-day package.\""
+      },
+      {
+        "objection": "\"Their reporting is deeper.\"",
+        "response": "\"It is. Which reports would you run every week? Let me show you those on your own jobs.\""
+      }
+    ],
+    "byPersona": [
+      {
+        "persona": "Owner",
+        "theyCareAbout": "Not outgrowing the software in two years.",
+        "lead": "Growth tools now, with room to add crews.",
+        "avoid": "Dismissing their growth plans.",
+        "proofPoint": "Reference from a shop that grew from 10 to 20 techs on Housecall Pro."
+      },
+      {
+        "persona": "Office",
+        "theyCareAbout": "Not drowning in setup while still booking jobs.",
+        "lead": "Fast setup with a dedicated onboarding contact.",
+        "avoid": "Hand-waving the switch plan.",
+        "proofPoint": "Day-by-day switch plan for their shop."
+      },
+      {
+        "persona": "Tech",
+        "theyCareAbout": "One app that does what they need and nothing else.",
+        "lead": "Simple mobile app, quick to learn.",
+        "avoid": "Long training sessions.",
+        "proofPoint": "Let a tech close out a job on a phone."
+      },
+      {
+        "persona": "Ops",
+        "theyCareAbout": "Reports leadership can trust.",
+        "lead": "Job costing and crew reports for a growing team.",
+        "avoid": "Promising call-center depth.",
+        "proofPoint": "Reporting walkthrough on their data."
+      }
+    ]
+  }
+]

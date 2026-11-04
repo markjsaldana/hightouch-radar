@@ -13,8 +13,8 @@ const unique = (values: string[]) => [...new Set(values)].sort();
 
 const facets = [
   { key: "useCase", label: "Use case", options: unique(referenceable.flatMap((c) => c.useCases)) },
-  { key: "region", label: "Geo", options: unique(referenceable.map((c) => c.region)) },
-  { key: "industry", label: "Industry", options: unique(referenceable.map((c) => c.industry)) },
+  { key: "region", label: "Region", options: unique(referenceable.map((c) => c.region)) },
+  { key: "industry", label: "Trade", options: unique(referenceable.map((c) => c.industry)) },
   {
     key: "competitor",
     label: "Competitor",
@@ -140,8 +140,8 @@ export function ReferenceFinder() {
                       </dd>
                     </>
                   ) : null}
-                  <dt className="text-muted">Stack</dt>
-                  <dd>{c.warehouse}</dd>
+                  <dt className="text-muted">Team</dt>
+                  <dd>{c.team}</dd>
                   <dt className="text-muted">Formats</dt>
                   <dd>{ref.formats.join(", ")}</dd>
                   <dt className="text-muted">Last used</dt>

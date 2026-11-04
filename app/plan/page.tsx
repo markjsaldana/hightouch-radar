@@ -12,12 +12,12 @@ const paths = [
     summary: "This repo is the starting point. Everything on the site comes from it.",
     items: [
       "Fork the repo. The JSON files in /data define every schema, and npm run check:data keeps them consistent.",
-      "Replace the sample data with your own competitors, sources, reference customers, and case studies.",
-      "Schedule scripts/radar.py weekly with a Claude API key. It drafts signals, and a person approves each one.",
+      "Replace the sample data with real Jobber and ServiceTitan source URLs, reference customers, and case studies.",
+      "Schedule scripts/radar.py every Monday with a Claude API key. It scrapes, compares, and drafts; a person approves each signal.",
       "Follow the 90-day rollout below.",
     ],
     needsLabel: "You'll need",
-    needs: "One CI owner (usually in PMM), sales ops for Gong and CRM access, and an engineer for the pipeline setup.",
+    needs: "One CI owner (usually in PMM), sales ops for call recording and CRM access, and an engineer for the pipeline setup.",
   },
   {
     name: "With me",
@@ -40,19 +40,19 @@ const phases = [
     items: [
       "Interview reps, SEs, PMs, and CS about where competitors show up and what they need in the moment.",
       "Audit existing competitive content and retire anything out of date.",
-      "Pull win-loss and call data to see which competitors you actually lose to.",
-      "Pick the primary competitors based on that data.",
-      "Ship v1 battlecards for the top 3.",
+      "Pull win-loss and call data to see which competitors you lose to most.",
+      "Confirm Jobber and ServiceTitan as the primary competitors, and decide who else to watch.",
+      "Ship v1 battlecards for both.",
     ],
-    done: "Reps have current battlecards for the 3 competitors they see most.",
+    done: "Reps have current Jobber and ServiceTitan battlecards.",
   },
   {
     days: "Days 31–60",
     name: "Systematize",
     items: [
-      "Launch the weekly digest and a sales alert channel.",
+      "Turn on the Monday scrape, and launch the weekly digest, the So what, and a sales alert channel.",
       "Start a monthly win-loss interview cadence.",
-      "Start monthly mystery-shop calls, rotating through the primary competitors.",
+      "Start monthly mystery-shop calls, alternating Jobber and ServiceTitan.",
       "Build the comparison matrix and the first comparison pages.",
     ],
     done: "The Radar runs every week without anyone having to chase it.",
@@ -61,7 +61,7 @@ const phases = [
     days: "Days 61–90",
     name: "Prove impact",
     items: [
-      "Set the KPI baseline and report win rate against each primary competitor.",
+      "Set the KPI baseline and report win rate against Jobber and ServiceTitan.",
       "Feed a quarterly competitive review into roadmap planning.",
       "Run a field enablement session on the top competitive plays.",
     ],
@@ -73,8 +73,8 @@ export default function Page() {
   return (
     <>
       <PageHeader
-        eyebrow="09 · Build it"
-        title="How Hightouch could build this internally"
+        eyebrow="10 · Build it"
+        title="How Housecall Pro could build this internally"
         lede="Everything on this site runs from one repo: the data, the pipeline, and the assistant reps use. A team could stand it up in 90 days, on its own or with me."
       />
 
@@ -131,8 +131,8 @@ export default function Page() {
         <p className="font-mono text-xs text-accent">Next · After day 90</p>
         <h2 className="mt-1 text-xl font-semibold tracking-tight">Phase 2: the deal assistant</h2>
         <p className="mt-2 max-w-3xl text-pretty">
-          Once the Radar has about 3 months of content, the same data powers the assistant reps use on every deal: upload the
-          call transcript, get the buyer&apos;s concerns, the proof, and the follow-up email.
+          Once the Radar has about 3 months of content, the same data powers the assistant reps use on every deal. A rep
+          uploads the call transcript and gets back what the buyer cares about, with proof and a follow-up email.
         </p>
         <Link
           href="/assistant"

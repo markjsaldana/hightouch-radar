@@ -1,8 +1,10 @@
 # Deal Radar
 
-A proposal for a sales enablement assistant that SDRs and AEs can rely on at every stage of the deal, from prospecting to renewal. It answers from current competitive intel, battlecards, and customer references, and cites a source for every line. The site shows the system behind it, what reps receive, and how Hightouch could build it internally, on its own or with me.
+A proposal for Housecall Pro: a sales enablement assistant that SDRs and AEs can rely on at every stage of the deal, from prospecting to renewal. It answers from weekly competitive intel on Jobber and ServiceTitan, battlecards, and customer references, and cites a source for every line. Each week a "So what" turns the changes into actions for leadership, SDRs, and the rest of the team. The site shows the system behind it, what reps receive, and how Housecall Pro could build it internally, on its own or with me.
 
-**Sample data for illustration. Not real competitive claims.** Company names give category context. Ownership facts in `data/competitors.json` are public and sourced. Every event, rating, and talk track is invented.
+**Sample data for illustration. Not real competitive claims.** Company names are real. The facts in `data/competitors.json` are public and sourced. Every event, rating, customer, and talk track is invented.
+
+In production the Radar refreshes every Monday by scraping Jobber and ServiceTitan pages and blogs. This repo does not scrape live sites: the source URLs are placeholders, and the How it works page explains the weekly run and where a person reviews it.
 
 ## Run locally
 
@@ -23,7 +25,8 @@ Everything the UI shows comes from JSON in `/data`, so swapping sample data for 
 | `rules.json` | Deal-impact scoring, urgency, confidence, routing table |
 | `signals.json` | Scored signals across three weeks |
 | `digest.json` | This week's top-3, trends, and win-loss questions |
-| `battlecard_segment.json` | Sample battlecard |
+| `battlecards.json` | One battlecard per competitor |
+| `so_what.json` | This week's "so what" for leadership, SDRs, and the team |
 | `matrix.json` | Capability matrix and positioning map |
 | `routing_log.json` | Where intel went, plus the KPI scorecard |
 | `customers.json` | Customers, with reference details (contact role, status, formats) for those who take calls |

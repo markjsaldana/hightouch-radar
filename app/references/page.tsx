@@ -11,7 +11,7 @@ export const metadata: Metadata = { title: "References" };
 const rules = [
   "Request through the account's CSM, never by contacting the customer directly.",
   "Each reference takes at most 3 calls a quarter. After that they're marked Resting.",
-  "Match on at least two of use case, geo, industry, and competitor. Geo matters most in EMEA, because of data residency.",
+  "Match on at least two of trade, size, region, and competitor. Trade matters most: a plumber wants to hear from a plumber.",
   "Log every call so CS can thank the customer and the next rep sees when they were last used.",
 ];
 
@@ -19,9 +19,9 @@ export default function Page() {
   return (
     <>
       <PageHeader
-        eyebrow="07 · References"
+        eyebrow="08 · References"
         title="Customer references and case studies"
-        lede="Find the customer a prospect will believe: same use case, same region, same competitor. The deal assistant picks from this list too."
+        lede="Find the customer a prospect will believe: same trade, same size, same competitor. The deal assistant picks from this list too."
         sample
       />
 

@@ -1,5 +1,6 @@
 import { competitorName, matrix } from "@/lib/data";
 import type { MatrixMark } from "@/lib/types";
+import { company, companyId } from "@/lib/site";
 
 const fill: Record<MatrixMark, number> = { yes: 1, partial: 0.5, no: 0 };
 const word: Record<MatrixMark, string> = { yes: "Yes", partial: "Partial", no: "No" };
@@ -16,17 +17,17 @@ function Ball({ mark, us, delay }: { mark: MatrixMark; us: boolean; delay: numbe
   );
 }
 
-// Hightouch against one competitor, capability by capability, from the matrix.
+// Our product against one competitor, capability by capability, from the matrix.
 export function BattlecardScorecard({ competitorId }: { competitorId: string }) {
   const them = competitorName(competitorId);
   let n = 0;
   return (
     <section className="rounded-xl border border-line bg-surface p-5">
       <div className="flex flex-wrap items-baseline justify-between gap-2">
-        <h2 className="font-semibold">Scorecard: Hightouch vs. {them}</h2>
+        <h2 className="font-semibold">Scorecard: {company} vs. {them}</h2>
         <p className="flex items-center gap-3 text-xs text-muted">
           <span className="inline-flex items-center gap-1">
-            <Ball mark="yes" us delay={0} /> Hightouch
+            <Ball mark="yes" us delay={0} /> {company}
           </span>
           <span className="inline-flex items-center gap-1">
             <Ball mark="yes" us={false} delay={0} /> {them}
@@ -40,15 +41,17 @@ export function BattlecardScorecard({ competitorId }: { competitorId: string }) 
             <p className="text-xs font-medium tracking-wide text-muted uppercase">{g.persona}</p>
             <ul className="mt-2 divide-y divide-line">
               {g.capabilities.map((cap) => {
-                const ours = cap.cells.hightouch;
+                const ours = cap.cells[companyId];
                 const theirs = cap.cells[competitorId];
                 const delay = 100 + n++ * 60;
                 return (
                   <li key={cap.name} className="flex items-center gap-3 py-2 text-sm">
                     <span className="min-w-0 flex-1 text-pretty">{cap.name}</span>
-                    <span title={`Hightouch: ${word[ours.mark]}. ${ours.note}`}>
+                    <span title={`${company}: ${word[ours.mark]}. ${ours.note}`}>
                       <Ball mark={ours.mark} us delay={delay} />
-                      <span className="sr-only">Hightouch {word[ours.mark]}</span>
+                      <span className="sr-only">
+                        {company} {word[ours.mark]}
+                      </span>
                     </span>
                     <span title={`${them}: ${word[theirs.mark]}. ${theirs.note}`}>
                       <Ball mark={theirs.mark} us={false} delay={delay + 30} />

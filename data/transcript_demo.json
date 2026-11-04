@@ -1,117 +1,118 @@
 {
   "file": {
-    "name": "larkspur-evaluation-call.txt",
-    "path": "samples/transcripts/larkspur-evaluation-call.txt",
-    "source": "Gong export",
-    "duration": "38 min",
+    "name": "mesa-valley-evaluation-call.txt",
+    "path": "samples/transcripts/mesa-valley-evaluation-call.txt",
+    "source": "Call recorder export",
+    "duration": "41 min",
     "speakers": 4
   },
   "prospect": {
-    "name": "Larkspur Home",
-    "industry": "Home goods retail",
-    "size": "Mid-market",
-    "region": "EMEA",
+    "name": "Mesa Valley Plumbing",
+    "industry": "Plumbing",
+    "size": "Mid-size",
+    "region": "Southwest",
     "personas": [
-      "Marketing",
-      "Data"
+      "Owner",
+      "Office"
     ],
-    "competitorId": "segment",
+    "competitorId": "jobber",
     "stage": "Evaluation",
     "nextStep": "Demo Thursday"
   },
   "parsing": [
-    "Read 38 minutes, 4 speakers (2 from Larkspur)",
-    "Found Segment in the deal, mentioned 6 times",
-    "Matched buyers: Head of CRM (Marketing), Data Engineering Lead (Data)",
+    "Read 41 minutes, 4 speakers (2 from Mesa Valley)",
+    "Found Jobber in the deal, mentioned 6 times; ServiceTitan once",
+    "Matched buyers: the owner and the office manager",
     "Stage: Evaluation. Next step: demo Thursday",
     "Grouped 10 buyer statements into 3 concerns"
   ],
   "concerns": [
     {
-      "concern": "Marketing waits on the data team for every audience",
-      "quote": "My team can't wait two weeks for every audience, not in peak season.",
-      "speaker": "Priya Nair, Head of CRM",
-      "at": "00:01:30",
+      "concern": "Switching mid-season will swamp the office",
+      "quote": "If switching means a week of double entry in November, Kelly will quit on me.",
+      "speaker": "Dan Ortiz, Owner",
+      "at": "00:03:30",
       "mentions": 4,
-      "objection": 2
-    },
-    {
-      "concern": "Why add another tool next to Segment",
-      "quote": "My worry is we already have Segment, so why are we adding another tool?",
-      "speaker": "Priya Nair, Head of CRM",
-      "at": "00:05:20",
-      "mentions": 3,
       "objection": 1
     },
     {
-      "concern": "Customer data must stay in their EU warehouse",
-      "quote": "Legal will ask whether customer data leaves our EU Snowflake region.",
-      "speaker": "Tom Ellery, Data Engineering Lead",
-      "at": "00:18:22",
-      "mentions": 3
+      "concern": "Jobber looks cheaper on paper",
+      "quote": "Jobber just put online booking on the cheaper plan, so on paper they're cheaper.",
+      "speaker": "Dan Ortiz, Owner",
+      "at": "00:09:20",
+      "mentions": 3,
+      "objection": 0
+    },
+    {
+      "concern": "Missed calls after hours",
+      "quote": "We miss a lot of calls after five, and those are the emergency jobs that pay.",
+      "speaker": "Kelly Brooks, Office manager",
+      "at": "00:05:02",
+      "mentions": 3,
+      "objection": 2
     }
   ],
   "resources": [
     {
       "kind": "caseStudy",
-      "ref": "fernhill-self-serve",
+      "ref": "brightpath-switch",
+      "addresses": [
+        1
+      ],
+      "why": "Office manager moved 1,400 customers and every open invoice off Jobber in one weekend."
+    },
+    {
+      "kind": "reference",
+      "ref": "rivera",
       "addresses": [
         1,
         2
       ],
-      "why": "UK retailer, same buyer, replaced Segment's audiences. Audience launch went from 2 weeks to 1 day."
+      "why": "Arizona plumber, similar size, switched from Jobber in 9 days during busy season. The owner can talk numbers with Dan."
     },
     {
-      "kind": "reference",
-      "ref": "vasa",
+      "kind": "caseStudy",
+      "ref": "rivera-growth",
       "addresses": [
         2,
         3
       ],
-      "why": "EMEA retailer that kept Segment. Their Head of Data has been through a GDPR review and can talk to Tom directly."
-    },
-    {
-      "kind": "caseStudy",
-      "ref": "vasa-alongside",
-      "addresses": [
-        3
-      ],
-      "why": "Zero customer data copies outside the EU warehouse. Send to legal before they ask."
+      "why": "18% more booked jobs after adding online booking and after-hours call routing. Send it before Thursday."
     },
     {
       "kind": "objection",
-      "ref": "2",
+      "ref": "0",
       "addresses": [
-        1
+        2
       ],
-      "why": "Say this before Thursday, then prove it by building an audience live on their loyalty model."
+      "why": "Price the team they'll have next year. Use the cost worksheet with 15 techs."
     }
   ],
   "email": {
-    "to": "Priya Nair, Tom Ellery",
-    "subject": "Before Thursday: two retailers that had your questions",
+    "to": "Dan Ortiz, Kelly Brooks",
+    "subject": "Before Thursday: two shops that switched from Jobber",
     "paragraphs": [
       {
-        "text": "Hi Priya and Tom,"
+        "text": "Hi Dan and Kelly,"
       },
       {
         "text": "Thanks for Monday. You raised three things, and I'd like to answer them before the demo."
       },
       {
-        "text": "Waiting on the data team for every audience. Fernhill Grocers in Manchester had the same two-week queue. After their data team modeled the loyalty data, the CRM team started launching audiences in a day.",
+        "text": "Switching in November. BrightPath Electric had the same worry. Their office manager closed out Friday on Jobber and opened Monday on Housecall Pro, with 1,400 customers and every open invoice moved over.",
         "resource": 1,
-        "linkText": "Fernhill's story"
+        "linkText": "How BrightPath switched"
       },
       {
-        "text": "Adding a tool next to Segment. You'd keep Segment for tracking. Vasa Outdoor runs both: Segment collects events, and Hightouch builds audiences on what's already in Snowflake.",
+        "text": "Cost. You're right that Jobber's entry plan now includes booking. On Thursday we'll price both for 15 techs with the tools you'd add, so you're comparing the same thing.",
         "resource": 3,
-        "linkText": "How Vasa runs both"
+        "linkText": "What Rivera Plumbing pays for and uses"
       },
       {
-        "text": "Keeping data in your EU region. No customer data left Vasa's EU warehouse, and their Head of Data has been through the GDPR review with us. Tom, I can set up a 30-minute call with them this week if that helps."
+        "text": "After-hours calls. Rivera Plumbing in Phoenix added after-hours routing and online booking and now books 18% more jobs a month. Their owner is happy to talk with you, Dan. Want me to set that up this week?"
       },
       {
-        "text": "On Thursday Sam will build an audience live on your loyalty model, with no ticket to the data team."
+        "text": "Thursday, Sam will walk through a day-by-day switch plan for your shop and book a job after hours on your own calendar."
       }
     ],
     "signoff": "Dana"
@@ -120,19 +121,19 @@
     "fields": [
       {
         "label": "Company",
-        "value": "Larkspur Home"
+        "value": "Mesa Valley Plumbing"
       },
       {
-        "label": "Industry · size · region",
-        "value": "Retail · Mid-market · EMEA"
+        "label": "Trade · size · region",
+        "value": "Plumbing · 11 techs · Southwest"
       },
       {
         "label": "Buyer",
-        "value": "Marketing"
+        "value": "Owner"
       },
       {
         "label": "Competitor",
-        "value": "Segment"
+        "value": "Jobber"
       },
       {
         "label": "Stage",
@@ -140,31 +141,31 @@
       },
       {
         "label": "Main concern",
-        "value": "Adding another tool next to Segment"
+        "value": "Jobber looks cheaper"
       }
     ],
     "concerns": [
       2
     ],
     "resources": [
-      1,
-      2
+      2,
+      3
     ],
-    "missed": "The transcript of this call found 2 more concerns the form didn't: the data-team bottleneck and EU data residency.",
+    "missed": "The transcript of this call found 2 more concerns the form didn't: switching mid-season and missed after-hours calls.",
     "email": {
-      "to": "Priya Nair",
-      "subject": "Keeping Segment and adding Hightouch",
+      "to": "Dan Ortiz",
+      "subject": "Comparing Jobber and Housecall Pro at 15 techs",
       "paragraphs": [
         {
-          "text": "Hi Priya,"
+          "text": "Hi Dan,"
         },
         {
-          "text": "Thanks for Monday. On your question about adding a tool next to Segment: you'd keep it. Vasa Outdoor uses Segment to collect events and Hightouch to build audiences on their Snowflake data.",
+          "text": "Thanks for Monday. On cost: Jobber's entry plan now includes booking, so on Thursday let's price both for 15 techs with the tools you'd add.",
           "resource": 3,
-          "linkText": "How Vasa runs both"
+          "linkText": "What Rivera Plumbing pays for and uses"
         },
         {
-          "text": "Their Head of Data is happy to talk about how the two fit together. Want me to set up a call before Thursday's demo?"
+          "text": "Rivera Plumbing in Phoenix is about your size and switched from Jobber this year. Their owner is happy to talk numbers. Want me to set up a call before Thursday?"
         }
       ],
       "signoff": "Dana"

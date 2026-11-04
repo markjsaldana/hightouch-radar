@@ -4,6 +4,7 @@ import { Fragment, useState } from "react";
 import { Check, Minus, X } from "lucide-react";
 import { matrix } from "@/lib/data";
 import type { MatrixMark, Persona } from "@/lib/types";
+import { companyId, personaLabel } from "@/lib/site";
 
 const markStyle: Record<MatrixMark, { icon: typeof Check; label: string; tone: string }> = {
   yes: { icon: Check, label: "Yes", tone: "bg-good-soft text-good" },
@@ -75,7 +76,7 @@ export function MatrixTable() {
                 <th
                   key={p.id}
                   scope="col"
-                  className={`px-3 py-3 text-center font-semibold ${p.id === "hightouch" ? "bg-accent-soft text-accent" : ""}`}
+                  className={`px-3 py-3 text-center font-semibold ${p.id === companyId ? "bg-accent-soft text-accent" : ""}`}
                 >
                   {p.name}
                 </th>
@@ -91,7 +92,7 @@ export function MatrixTable() {
                     colSpan={matrix.players.length + 1}
                     className="px-4 py-2 text-xs font-semibold tracking-wide text-muted uppercase"
                   >
-                    {g.persona} buyer cares about
+                    What {personaLabel[g.persona] ?? g.persona} cares about
                   </th>
                 </tr>
                 {g.capabilities.map((c) => (
@@ -105,7 +106,7 @@ export function MatrixTable() {
                         <td
                           key={p.id}
                           title={cell.note}
-                          className={`px-3 py-3 text-center align-top ${p.id === "hightouch" ? "bg-accent-soft/50" : ""}`}
+                          className={`px-3 py-3 text-center align-top ${p.id === companyId ? "bg-accent-soft/50" : ""}`}
                         >
                           <Mark mark={cell.mark} />
                           {showNotes ? (
