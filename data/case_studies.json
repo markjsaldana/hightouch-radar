@@ -1,14 +1,14 @@
 [
   {
-    "id": "rivera-growth",
-    "customerId": "rivera",
-    "title": "Rivera Plumbing books 18% more jobs after leaving Jobber",
+    "id": "tallowbrook-growth",
+    "customerId": "tallowbrook",
+    "title": "Tallowbrook Plumbing books 18% more jobs after leaving Jobber",
     "visibility": "Public",
     "useCases": [
       "Online booking",
       "Marketing & reviews"
     ],
-    "challenge": "At 12 techs, Rivera was adding apps for marketing and reviews on top of Jobber, and after-hours calls went to voicemail.",
+    "challenge": "At 12 techs, Tallowbrook was adding apps for marketing and reviews on top of Jobber, and after-hours calls went to voicemail.",
     "solution": "Switched in nine days during busy season. Turned on online booking, after-hours call routing, and automatic review requests.",
     "results": [
       {
@@ -30,15 +30,15 @@
     }
   },
   {
-    "id": "northline-speed",
-    "customerId": "northline",
-    "title": "Northline chose Housecall Pro over a three-month ServiceTitan setup",
+    "id": "brindlewood-speed",
+    "customerId": "brindlewood",
+    "title": "Brindlewood chose Housecall Pro over a three-month ServiceTitan setup",
     "visibility": "Public",
     "useCases": [
       "Service plans",
       "Consumer financing"
     ],
-    "challenge": "ServiceTitan quoted three months to go live. Northline couldn't take the office offline before heating season.",
+    "challenge": "ServiceTitan quoted three months to go live. Brindlewood couldn't take the office offline before heating season.",
     "solution": "Went live in 11 days, moved 900 maintenance plans over, and added financing to every replacement quote.",
     "results": [
       {
@@ -60,9 +60,9 @@
     }
   },
   {
-    "id": "brightpath-switch",
-    "customerId": "brightpath",
-    "title": "BrightPath moved off Jobber in a weekend and gets paid in days",
+    "id": "copperwren-switch",
+    "customerId": "copperwren",
+    "title": "Copperwren moved off Jobber in a weekend and gets paid in days",
     "visibility": "Public",
     "useCases": [
       "Invoicing & payments",
@@ -86,9 +86,9 @@
     }
   },
   {
-    "id": "greenleaf-plans",
-    "customerId": "greenleaf",
-    "title": "Greenleaf grew recurring revenue with service plans and postcards",
+    "id": "fernvale-plans",
+    "customerId": "fernvale",
+    "title": "Fernvale grew recurring revenue with service plans and postcards",
     "visibility": "Public",
     "useCases": [
       "Service plans",
@@ -112,9 +112,9 @@
     }
   },
   {
-    "id": "summit-financing",
-    "customerId": "summit",
-    "title": "Summit Roofing closes bigger jobs with financing in the estimate",
+    "id": "ridgequill-financing",
+    "customerId": "ridgequill",
+    "title": "Ridgequill Roofing closes bigger jobs with financing in the estimate",
     "visibility": "Internal only",
     "useCases": [
       "Consumer financing",
@@ -138,9 +138,9 @@
     }
   },
   {
-    "id": "mapleleaf-reporting",
-    "customerId": "mapleleaf",
-    "title": "Maple Leaf sees profit by crew without a data analyst",
+    "id": "larchmoor-reporting",
+    "customerId": "larchmoor",
+    "title": "Larchmoor sees profit by crew without a data analyst",
     "visibility": "Internal only",
     "useCases": [
       "Reporting",
@@ -164,9 +164,9 @@
     }
   },
   {
-    "id": "cascade-pricebook",
-    "customerId": "cascade",
-    "title": "Cascade standardized pricing across 28 techs",
+    "id": "saltmeadow-pricebook",
+    "customerId": "saltmeadow",
+    "title": "Saltmeadow standardized pricing across 28 techs",
     "visibility": "Public",
     "useCases": [
       "Estimates & price book",
@@ -190,9 +190,9 @@
     }
   },
   {
-    "id": "lonestar-financing",
-    "customerId": "lonestar",
-    "title": "Lone Star Electric adds financing and reviews after leaving Jobber",
+    "id": "thistledown-financing",
+    "customerId": "thistledown",
+    "title": "Thistledown Electric adds financing and reviews after leaving Jobber",
     "visibility": "Public",
     "useCases": [
       "Consumer financing",
@@ -216,9 +216,9 @@
     }
   },
   {
-    "id": "lakeshore-booking",
-    "customerId": "lakeshore",
-    "title": "Lakeshore fills its calendar with online booking",
+    "id": "bramblewick-booking",
+    "customerId": "bramblewick",
+    "title": "Bramblewick fills its calendar with online booking",
     "visibility": "Public",
     "useCases": [
       "Online booking",

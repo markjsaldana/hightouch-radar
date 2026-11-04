@@ -12,7 +12,8 @@ export function SampleBanner() {
       <p>
         <strong className="font-semibold">{sampleDisclaimer}</strong>{" "}
         <span className="opacity-90">
-          Company names are real; events, ratings, and talk tracks are invented.
+          Housecall Pro, Jobber, and ServiceTitan are real. Every customer, prospect, and person named here is
+          invented, and so are the events and quotes.
           {/* Phones get the short version; the header's "Updated weekly" badge is hidden there. */}
           <span className="sm:hidden"> Updated weekly from Jobber and ServiceTitan pages and blogs.</span>
           <span className="hidden sm:inline">
