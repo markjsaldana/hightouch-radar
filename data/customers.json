@@ -1,7 +1,7 @@
 [
   {
-    "id": "rivera",
-    "name": "Rivera Plumbing & Drain",
+    "id": "tallowbrook",
+    "name": "Tallowbrook Plumbing & Drain",
     "industry": "Plumbing",
     "size": "Mid-size",
     "region": "Southwest",
@@ -35,8 +35,8 @@
     }
   },
   {
-    "id": "northline",
-    "name": "Northline Heating & Air",
+    "id": "brindlewood",
+    "name": "Brindlewood Heating & Air",
     "industry": "HVAC",
     "size": "Mid-size",
     "region": "Midwest",
@@ -71,8 +71,8 @@
     }
   },
   {
-    "id": "brightpath",
-    "name": "BrightPath Electric",
+    "id": "copperwren",
+    "name": "Copperwren Electric",
     "industry": "Electrical",
     "size": "Small",
     "region": "Southeast",
@@ -105,8 +105,8 @@
     }
   },
   {
-    "id": "greenleaf",
-    "name": "Greenleaf Lawn & Landscape",
+    "id": "fernvale",
+    "name": "Fernvale Lawn & Landscape",
     "industry": "Lawn care",
     "size": "Large",
     "region": "Southeast",
@@ -139,8 +139,8 @@
     }
   },
   {
-    "id": "sparkle",
-    "name": "Sparkle Home Cleaning",
+    "id": "glimmerhouse",
+    "name": "Glimmerhouse Cleaning",
     "industry": "Cleaning",
     "size": "Mid-size",
     "region": "West",
@@ -174,8 +174,8 @@
     }
   },
   {
-    "id": "summit",
-    "name": "Summit Roofing & Gutters",
+    "id": "ridgequill",
+    "name": "Ridgequill Roofing & Gutters",
     "industry": "Roofing",
     "size": "Large",
     "region": "West",
@@ -208,8 +208,8 @@
     }
   },
   {
-    "id": "bayou",
-    "name": "Bayou Pest Pros",
+    "id": "marshbell",
+    "name": "Marshbell Pest Control",
     "industry": "Pest control",
     "size": "Mid-size",
     "region": "Southwest",
@@ -241,8 +241,8 @@
     }
   },
   {
-    "id": "mapleleaf",
-    "name": "Maple Leaf Mechanical",
+    "id": "larchmoor",
+    "name": "Larchmoor Mechanical",
     "industry": "HVAC & plumbing",
     "size": "Mid-size",
     "region": "Canada",
@@ -277,8 +277,8 @@
     }
   },
   {
-    "id": "harbor",
-    "name": "Harbor Garage Doors",
+    "id": "hollowpine",
+    "name": "Hollowpine Garage Doors",
     "industry": "Garage doors",
     "size": "Small",
     "region": "Northeast",
@@ -311,8 +311,8 @@
     }
   },
   {
-    "id": "cascade",
-    "name": "Cascade Plumbing Co.",
+    "id": "saltmeadow",
+    "name": "Saltmeadow Plumbing Co.",
     "industry": "Plumbing",
     "size": "Large",
     "region": "West",
@@ -333,8 +333,8 @@
     "reference": null
   },
   {
-    "id": "lonestar",
-    "name": "Lone Star Electric",
+    "id": "thistledown",
+    "name": "Thistledown Electric",
     "industry": "Electrical",
     "size": "Mid-size",
     "region": "Southwest",
@@ -355,8 +355,8 @@
     "reference": null
   },
   {
-    "id": "lakeshore",
-    "name": "Lakeshore Window Cleaning",
+    "id": "bramblewick",
+    "name": "Bramblewick Window Cleaning",
     "industry": "Cleaning",
     "size": "Small",
     "region": "Midwest",

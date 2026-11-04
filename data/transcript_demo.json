@@ -1,13 +1,13 @@
 {
   "file": {
-    "name": "mesa-valley-evaluation-call.txt",
-    "path": "samples/transcripts/mesa-valley-evaluation-call.txt",
+    "name": "quarrystone-evaluation-call.txt",
+    "path": "samples/transcripts/quarrystone-evaluation-call.txt",
     "source": "Call recorder export",
     "duration": "41 min",
     "speakers": 4
   },
   "prospect": {
-    "name": "Mesa Valley Plumbing",
+    "name": "Quarrystone Plumbing",
     "industry": "Plumbing",
     "size": "Mid-size",
     "region": "Southwest",
@@ -20,7 +20,7 @@
     "nextStep": "Demo Thursday"
   },
   "parsing": [
-    "Read 41 minutes, 4 speakers (2 from Mesa Valley)",
+    "Read 41 minutes, 4 speakers (2 from Quarrystone)",
     "Found Jobber in the deal, mentioned 6 times; ServiceTitan once",
     "Matched buyers: the owner and the office manager",
     "Stage: Evaluation. Next step: demo Thursday",
@@ -55,7 +55,7 @@
   "resources": [
     {
       "kind": "caseStudy",
-      "ref": "brightpath-switch",
+      "ref": "copperwren-switch",
       "addresses": [
         1
       ],
@@ -63,7 +63,7 @@
     },
     {
       "kind": "reference",
-      "ref": "rivera",
+      "ref": "tallowbrook",
       "addresses": [
         1,
         2
@@ -72,7 +72,7 @@
     },
     {
       "kind": "caseStudy",
-      "ref": "rivera-growth",
+      "ref": "tallowbrook-growth",
       "addresses": [
         2,
         3
@@ -99,17 +99,17 @@
         "text": "Thanks for Monday. You raised three things, and I'd like to answer them before the demo."
       },
       {
-        "text": "Switching in November. BrightPath Electric had the same worry. Their office manager closed out Friday on Jobber and opened Monday on Housecall Pro, with 1,400 customers and every open invoice moved over.",
+        "text": "Switching in November. Copperwren Electric had the same worry. Their office manager closed out Friday on Jobber and opened Monday on Housecall Pro, with 1,400 customers and every open invoice moved over.",
         "resource": 1,
-        "linkText": "How BrightPath switched"
+        "linkText": "How Copperwren switched"
       },
       {
         "text": "Cost. You're right that Jobber's entry plan now includes booking. On Thursday we'll price both for 15 techs with the tools you'd add, so you're comparing the same thing.",
         "resource": 3,
-        "linkText": "What Rivera Plumbing pays for and uses"
+        "linkText": "What Tallowbrook Plumbing pays for and uses"
       },
       {
-        "text": "After-hours calls. Rivera Plumbing in Phoenix added after-hours routing and online booking and now books 18% more jobs a month. Their owner is happy to talk with you, Dan. Want me to set that up this week?"
+        "text": "After-hours calls. Tallowbrook Plumbing in Phoenix added after-hours routing and online booking and now books 18% more jobs a month. Their owner is happy to talk with you, Dan. Want me to set that up this week?"
       },
       {
         "text": "Thursday, Sam will walk through a day-by-day switch plan for your shop and book a job after hours on your own calendar."
@@ -121,7 +121,7 @@
     "fields": [
       {
         "label": "Company",
-        "value": "Mesa Valley Plumbing"
+        "value": "Quarrystone Plumbing"
       },
       {
         "label": "Trade · size · region",
@@ -162,10 +162,10 @@
         {
           "text": "Thanks for Monday. On cost: Jobber's entry plan now includes booking, so on Thursday let's price both for 15 techs with the tools you'd add.",
           "resource": 3,
-          "linkText": "What Rivera Plumbing pays for and uses"
+          "linkText": "What Tallowbrook Plumbing pays for and uses"
         },
         {
-          "text": "Rivera Plumbing in Phoenix is about your size and switched from Jobber this year. Their owner is happy to talk numbers. Want me to set up a call before Thursday?"
+          "text": "Tallowbrook Plumbing in Phoenix is about your size and switched from Jobber this year. Their owner is happy to talk numbers. Want me to set up a call before Thursday?"
         }
       ],
       "signoff": "Dana"

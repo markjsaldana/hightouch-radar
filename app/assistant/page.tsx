@@ -83,7 +83,7 @@ const transcript = readFileSync(
   "utf8",
 ).split("\n");
 
-const channels = ["deal-mesa-valley", "comp-alerts", "sdr-team", "jobber-switches"];
+const channels = ["deal-quarrystone", "comp-alerts", "sdr-team", "jobber-switches"];
 
 export default function Page() {
   return (
@@ -121,12 +121,12 @@ export default function Page() {
       <section className="mt-12">
         <h2 className="text-xl font-semibold tracking-tight">Try it: one call, start to finish</h2>
         <p className="mt-1 max-w-2xl text-sm text-pretty text-muted">
-          An AE just finished an evaluation call with Mesa Valley Plumbing, an 11-tech shop in Arizona that runs on Jobber today.
+          An AE just finished an evaluation call with Quarrystone Plumbing, an 11-tech shop in Arizona that runs on Jobber today. The shop, the people on the call, and every customer it mentions are invented.
         </p>
         <figure className="mt-4 rounded-xl border border-dashed border-line bg-surface-2 p-3 sm:p-5">
           <figcaption className="text-xs text-muted">
             Mockup of one exchange, built from a sample call transcript, the battlecard, and the references library.
-            Not a working tool. Links open the real pages in this site.
+            Not a working tool. Links open the matching pages in this site.
           </figcaption>
           {/* A Slack-style window, so it reads as something reps use where they already work. */}
           <div className="mt-4 overflow-hidden rounded-xl border border-line bg-surface shadow-sm">
@@ -162,7 +162,7 @@ export default function Page() {
                 <div className="flex items-center justify-between gap-2 border-b border-line px-4 py-2.5">
                   <p className="flex items-center gap-1.5 text-sm font-semibold">
                     <Hash className="size-4 text-muted" aria-hidden />
-                    deal-mesa-valley
+                    deal-quarrystone
                   </p>
                   <p className="flex items-center gap-1 text-xs text-muted">
                     <Lock className="size-3" aria-hidden />

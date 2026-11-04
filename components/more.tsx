@@ -4,7 +4,7 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
 import { ChevronDown } from "lucide-react";
 
 // Folded detail: a summary line that opens the rest. It also opens itself when
-// the URL points at something inside it, so links like #cs-rivera-growth land.
+// the URL points at something inside it, so links like #cs-tallowbrook-growth land.
 export function More({ label, hint, children }: { label: string; hint?: string; children: ReactNode }) {
   const [open, setOpen] = useState(false);
   const body = useRef<HTMLDivElement>(null);

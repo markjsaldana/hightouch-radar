@@ -2,7 +2,7 @@
 
 Dispatch is the sales enablement assistant I'd build as a product marketing manager at Housecall Pro, and this site is how I'd build and ship it in my first 90 days. SDRs and AEs rely on it at every stage of the deal, from prospecting to renewal. It answers from weekly competitive intel on Jobber and ServiceTitan, battlecards, and customer references, and cites a source for every line. Each week a "So what" turns the changes into actions for leadership, SDRs, and the rest of the team.
 
-**Sample data for illustration. Not real competitive claims.** Company names are real. The facts in `data/competitors.json` are public and sourced. Every event, rating, customer, and talk track is invented.
+**Sample data for illustration. Not real competitive claims.** Housecall Pro, Jobber, and ServiceTitan are real, and the facts in `data/competitors.json` are public and sourced. Every customer, prospect, and person named in the data is invented, along with every event, rating, quote, and talk track.
 
 In production Dispatch refreshes every Monday by scraping Jobber and ServiceTitan pages and blogs. This repo does not scrape live sites: the source URLs are placeholders, and the How it works page explains the weekly run and where a person reviews it.
 

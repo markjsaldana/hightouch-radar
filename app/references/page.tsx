@@ -99,7 +99,7 @@ export default function Page() {
       <PageHeader
         eyebrow={eyebrowFor("/references")}
         title="Customer references and case studies"
-        lede="Find the customer a prospect will believe: same trade, same size, same competitor. The deal assistant picks from this list too."
+        lede="Find the customer a prospect will believe: same trade, same size, same competitor. The deal assistant picks from this list too. Every customer here is invented."
         sample
       />
 
