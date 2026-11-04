@@ -26,7 +26,7 @@ const phases = [
     items: [
       "Sit in on 20 SDR and AE calls, and join a few CS renewal calls.",
       "Learn the product inside and out: run a test shop from first booking to getting paid, and sit in on onboarding and support calls.",
-      "Call customers in our key segments: current customers, churned customers, and people who signed up but never converted.",
+      "Call customers in our key segments, starting with 5 to 20 tech plumbing and HVAC shops: current customers, churned customers, and people who signed up but never converted.",
       "Interview sales leaders, SDRs, AEs, CS, and Product about where Jobber and ServiceTitan show up and what reps need in the moment.",
       "Audit the competitive content that exists today and retire anything out of date.",
       "Pull win-loss and call data to see where we lose to each competitor, by trade and shop size.",
