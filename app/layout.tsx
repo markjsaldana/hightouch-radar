@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { siteDescription, siteName, siteTagline } from "@/lib/site";
+import { CreditBar } from "@/components/credit-bar";
 import { SiteHeader } from "@/components/site-header";
 import { SideNav } from "@/components/side-nav";
 import { SiteFooter } from "@/components/site-footer";
@@ -45,6 +46,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
       <body className="flex min-h-full flex-col bg-bg font-sans text-fg">
+        <CreditBar />
         <SiteHeader />
         <div className="mx-auto flex w-full max-w-7xl flex-1 gap-8 px-4 sm:px-6 lg:px-8">
           <SideNav />

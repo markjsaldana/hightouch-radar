@@ -14,6 +14,9 @@ export const siteDescription =
   "Dispatch: the sales enablement assistant I'd build as a PMM at Housecall Pro. SDRs and AEs rely on it at every stage of the deal, with weekly intel on Jobber and ServiceTitan. Sample data.";
 
 export const personName = "Mark Saldaña";
+export const personRole = "Senior Product Marketing Manager I (VoC and Competitive Intelligence)";
+export const personLinkedIn = "https://www.linkedin.com/in/markjsaldana/";
+export const personEmail = "mark.j.saldana@gmail.com";
 
 export const sampleDisclaimer = "Sample data for illustration. Not real competitive claims.";
 
