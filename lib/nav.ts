@@ -4,12 +4,13 @@ export type NavItem = {
   step: string;
 };
 
-// The four pages that tell the story. Most readers only need these.
+// The pages that tell the story. Most readers only need these.
 export const navItems: NavItem[] = [
   { href: "/", label: "Overview", step: "01" },
   { href: "/so-what", label: "So what", step: "02" },
   { href: "/assistant", label: "Deal assistant", step: "03" },
   { href: "/plan", label: "90-day plan", step: "04" },
+  { href: "/service-plans", label: "Service Plans Brief", step: "05" },
 ];
 
 // The system behind them, for anyone who wants the detail.
