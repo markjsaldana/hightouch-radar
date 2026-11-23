@@ -211,6 +211,16 @@ export default function Page() {
         </Card>
       </div>
 
+      {/* Deliberately lighter than the sections above: an idea, not a finding. */}
+      <section className="mt-6 rounded-xl border border-dashed border-line bg-surface-2/60 px-5 py-4">
+        <h2 className="text-sm font-semibold">One bet worth exploring</h2>
+        <p className="mt-1.5 max-w-3xl text-sm text-pretty">
+          When a tech services an older AC unit or water heater, the estimate automatically suggests a maintenance plan.
+          Older equipment needs more upkeep, so these homeowners are the most likely to sign up.
+        </p>
+        <p className="mt-2 text-xs text-muted">Hypothesis to test before it becomes a recommendation.</p>
+      </section>
+
       <p className="mt-8 border-t border-line pt-4 text-sm text-muted">
         Prepared by Mark Saldaña. Competitive data from public sources; loss data is illustrative.
       </p>
