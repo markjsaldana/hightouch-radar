@@ -190,8 +190,7 @@ export default function Page() {
 
       <blockquote className="mt-12 rounded-xl bg-fg p-8 text-bg">
         <p className="text-xl leading-relaxed font-medium text-balance">
-          Competitive intel pays off when it changes what a rep says on the next call. That&apos;s the bar I&apos;ll
-          hold Dispatch to.
+          Competitive intel pays off when it changes what a rep says on the next call.
         </p>
         <footer className="mt-4 text-sm opacity-70">{personName}</footer>
       </blockquote>
