@@ -135,7 +135,10 @@ export default function Page() {
           </div>
 
           <div className="mt-4 flex flex-wrap gap-4 text-xs text-muted" aria-label="Legend">
-            {(Object.keys(ratingStyle) as Rating[]).map((r) => (
+            {/* Only the ratings the table uses, in strong-to-weak order. */}
+            {(Object.keys(ratingStyle) as Rating[])
+              .filter((r) => snapshot.some((row) => row.cells.some((c) => c.rating === r)))
+              .map((r) => (
               <span key={r} className="inline-flex items-center gap-1.5">
                 <span className={`size-2.5 rounded-full ${ratingStyle[r].dot}`} aria-hidden />
                 {ratingStyle[r].label}
