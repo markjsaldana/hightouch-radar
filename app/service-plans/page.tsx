@@ -29,7 +29,7 @@ const snapshot: { capability: string; cells: { text: string; rating: Rating }[] 
   {
     capability: "Selling a plan in the field",
     cells: [
-      { text: "To validate", rating: "validate" },
+      { text: "Shipped: plans on jobs and estimates", rating: "strong" },
       { text: "Strong", rating: "strong" },
       { text: "Limited", rating: "moderate" },
     ],
@@ -48,6 +48,10 @@ const sources = [
   { label: "ServiceTitan: ServiceTitan vs. Jobber", href: "https://www.servicetitan.com:443/comparison/servicetitan-vs-jobber" },
   { label: "Housecall Pro", href: "https://www.housecallpro.com/?p=99270" },
   { label: "Capterra: Jobber vs. Housecall Pro", href: "https://www.capterra.com/compare/127994-140363/Jobber-vs-HouseCall-Pro" },
+  {
+    label: "Housecall Pro: HVAC, plumbing, and electrical software",
+    href: "https://www.housecallpro.com/resources/trade-specific-software-hvac-plumbing-electrical/",
+  },
 ];
 
 const lossReasons: LossReason[] = [
@@ -58,14 +62,20 @@ const lossReasons: LossReason[] = [
 ];
 
 const soWhat = [
-  { label: "Opportunity", text: "The biggest opportunity is likely helping Pros sell plans. More plan features can wait." },
-  { label: "Test", text: "Let techs offer a plan on site, right at the invoice." },
-  { label: "Measure", text: "Plans attached per job, and member retention at 12 months." },
+  {
+    label: "Status",
+    text: "Membership plans on jobs and estimates are already live in the HVAC, Plumbing and Electrical packages. The open question is adoption.",
+  },
+  { label: "Metric", text: "Measure how often techs attach a plan to an estimate or job, by trade." },
+  {
+    label: "Research",
+    text: "Interview techs who don't offer plans to find out what stops them: training, pricing confidence, or the flow itself.",
+  },
 ];
 
 const validateFirst = [
-  "5 customer calls with Pros who don't offer service plans today",
-  "5 calls with Pros who left for ServiceTitan",
+  "5 calls with techs who rarely attach a plan to estimates or jobs",
+  "5 calls with Pros who left for ServiceTitan over membership flexibility",
 ];
 
 function Card({ title, badge, children }: { title: string; badge?: React.ReactNode; children: React.ReactNode }) {
